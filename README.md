@@ -52,4 +52,6 @@ komutu ile çalıştırınız. Editör açıldıktan sonra ayarlar bölümünden
  * dosya yazdırma
 
 # Programın ekran görüntüsü:
-![image](https://user-images.githubusercontent.com/30179132/112771996-18e20a00-9037-11eb-8832-7a828d10b3db.png)
+
+![image](https://user-images.githubusercontent.com/81390521/127643290-89358b7d-df41-4655-9109-476cc46644bf.png)
+
