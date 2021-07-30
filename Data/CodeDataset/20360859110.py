@@ -1,0 +1,1 @@
+bilmiyorum ve birinci sorudan baska bir soruya geçiş yapamadım.

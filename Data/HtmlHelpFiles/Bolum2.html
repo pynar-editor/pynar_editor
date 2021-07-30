@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bolum2</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; } /* Alert */
+    code span.an { color: #008000; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #0000ff; } /* ControlFlow */
+    code span.ch { color: #008080; } /* Char */
+    code span.cn { } /* Constant */
+    code span.co { color: #008000; } /* Comment */
+    code span.cv { color: #008000; } /* CommentVar */
+    code span.do { color: #008000; } /* Documentation */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.im { } /* Import */
+    code span.in { color: #008000; } /* Information */
+    code span.kw { color: #0000ff; } /* Keyword */
+    code span.op { } /* Operator */
+    code span.ot { color: #ff4000; } /* Other */
+    code span.pp { color: #ff4000; } /* Preprocessor */
+    code span.sc { color: #008080; } /* SpecialChar */
+    code span.ss { color: #008080; } /* SpecialString */
+    code span.st { color: #008080; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #008080; } /* VerbatimString */
+    code span.wa { color: #008000; font-weight: bold; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="data:text/css,%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0Awidth%3A%20728px%3B%0Amax%2Dwidth%3A%2099%25%3B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%2030px%2030px%208rem%2030px%3B%0Amargin%2Dleft%3A%20auto%3B%0Amargin%2Dright%3A%20auto%3B%0A%7D%0Abody%20a%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Abody%20a%3Aactive%2C%0Abody%20a%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Abody%20img%20%7B%0Aborder%3A%200%3B%0A%7D%0Abody%20hr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Abody%20pre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Abody%20code%2C%0Abody%20kbd%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20input%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20html%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Abody%20input%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Abody%20input%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20table%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Abody%20td%2C%0Abody%20th%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Abody%20input%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Abody%20a%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20a%3Ahover%2C%0Abody%20a%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20hr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Abody%20hr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%20hr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Abody%20blockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Abody%20ul%2C%0Abody%20ol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Abody%20ul%20ul%20ol%2C%0Abody%20ul%20ol%20ol%2C%0Abody%20ol%20ul%20ol%2C%0Abody%20ol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Abody%20dd%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Abody%20code%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20pre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0Abody%20%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0Abody%20%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0Abody%20%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0Abody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0Abody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Abody%20a%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0Abody%20%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Abody%20h1%20%2Eocticon%2Dlink%2C%0Abody%20h2%20%2Eocticon%2Dlink%2C%0Abody%20h3%20%2Eocticon%2Dlink%2C%0Abody%20h4%20%2Eocticon%2Dlink%2C%0Abody%20h5%20%2Eocticon%2Dlink%2C%0Abody%20h6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%2C%0Abody%20h2%3Ahover%20%2Eanchor%2C%0Abody%20h3%3Ahover%20%2Eanchor%2C%0Abody%20h4%3Ahover%20%2Eanchor%2C%0Abody%20h5%3Ahover%20%2Eanchor%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Abody%20h1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Abody%20h2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E225%3B%0A%7D%0Abody%20h2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Abody%20h3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Abody%20h6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20p%2C%0Abody%20blockquote%2C%0Abody%20ul%2C%0Abody%20ol%2C%0Abody%20dl%2C%0Abody%20table%2C%0Abody%20pre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20hr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Abody%20ul%2C%0Abody%20ol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Abody%20ul%20ul%2C%0Abody%20ul%20ol%2C%0Abody%20ol%20ol%2C%0Abody%20ol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20li%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Abody%20dl%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20dl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20blockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Abody%20blockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20table%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Abody%20table%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20table%20th%2C%0Abody%20table%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Abody%20table%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Abody%20table%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Abody%20img%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Abody%20code%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%3B%0Apadding%2Dbottom%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Abody%20code%3Abefore%2C%0Abody%20code%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Abody%20pre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Abody%20%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20%2Ehighlight%20pre%2C%0Abody%20pre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2EsourceCode%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Abody%20%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20pre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20pre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Abody%20pre%20code%3Abefore%2C%0Abody%20pre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Abody%20kbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0Abody%20%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0Abody%20%2Epl%2Dc1%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0Abody%20%2Epl%2De%2C%0Abody%20%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0Abody%20%2Epl%2Ds%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0Abody%20%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0Abody%20%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0Abody%20%2Epl%2Dpds%2C%0Abody%20%2Epl%2Ds%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsr%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsra%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0Abody%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0Abody%20%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0Abody%20%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0Abody%20%2Epl%2Dmh%2C%0Abody%20%2Epl%2Dmh%20%2Epl%2Den%2C%0Abody%20%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0Abody%20%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%20%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0Abody%20%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0Abody%20%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Abody%20kbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="modül-2">Modül 2</h1>
+<h1 id="yorum-satirlarideğişkenler-veri-tipleri-ve-operatörler">YORUM SATIRLARI,DEĞİŞKENLER, VERİ TİPLERİ VE OPERATÖRLER</h1>
+<h2 id="yorum-satırlarını-kullanma">2.1. Yorum Satırlarını Kullanma</h2>
+<p>Yorum satırları, Python yorumlayıcısı tarafından dikkate alınmayan ve yorumlanmayan ifadelerdir. Python’da yorum satırları genel olarak aşağıdaki işlemler için kullanılır: * Bir hatırlatma eklemek * Program veya kodlarla ilgili bir açıklama yapmak * Kullanılmayan bir kod satırını pasif hale getirmek * Süsleme yapmak</p>
+<p>Bu tür açıklama satırları kodun başkaları tarafından daha iyi anlaşılmasını sağlar. Python’da tek satırlık açıklama için “#” işareti kullanılır. “#” işareti kullandığınızda o satırdaki metin kod olarak işlenmez.</p>
+<p><strong>Örnek 1</strong></p>
+<p>Aşağıdaki yorum satırları Python tarafından dikkate alınmamaktadır. Bu nedenle sadece “print()” komutu çalışır.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Bu kod ekrana yazı yazılmasını sağlamaktadır. </span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;Konu: Yorum satırlarını kullanma&quot;</span>) </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Her satırın başına # işareti eklenerek</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#alt alta yorum satırları oluşturulabilir.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Konu: Yorum satırlarını kullanma</span></code></pre></div>
+<p><strong>Örnek 2</strong></p>
+<p>Yorum satırlarını kod satırının devamında aynı satırda kullanabilirsiniz. Bu kullanımda önce kod gelir, devamında yorum satırı “#” işareti ile başlar (öndeki kod çalışır), daha sonra satır sonuna kadar yorum satırı olarak dikkate alınmaz.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">2</span><span class="op">+</span><span class="dv">3</span>) <span class="co"># Bu kod satırı ekrana 2 sayının toplamını yazar.</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span></span></code></pre></div>
+<p>Her satırın başına “#” işareti ekleyerek alt alta yorum satırları oluşturabilirsiniz. Yorum satırlarında özel karakterler etkisizdir.</p>
+<p><strong>Örnek 3</strong></p>
+<p>Birden fazla yorum satırı kullanılacaksa yorumlar üçlü tek tırnak veya üçlü çift tırnak blokları arasına yazılır.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">&#39;&#39;&#39;Python&#39;da birden fazla açıklama satırı kullanmak için üçlü tek tırnak veya çift</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">tırnak kullanılır. Açıklama satırını bitirmek için aynı işaretler kullanılır.&#39;&#39;&#39;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;Python&#39;</span>da birden fazla<span class="op">\</span>naçıklama satırı<span class="op">\</span>nkullanmak için üçlü tek tırnak veya çift<span class="op">\</span>n</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> tırnak kullanılır. Açıklama satırını bitirmek için <span class="op">\</span>naynı şekilde kullanılır.<span class="st">&#39;</span></span></code></pre></div>
+<p>Konsol çıktısında açıklamalar birden fazla satırda olduğu için satır sonlarına kaçış dizisi karakterini konsol otomatik olarak eklemiştir. Aynı yorum satırını ′′′′′′yorum satırları′′′′′′ üçlü çift tırnak kullanarak da yapılabilir. Yorum satırları içinde kaçış dizisi karakterlerinin de çalışmadığı unutulmamalıdır.</p>
+<p><strong>Örnek 4</strong></p>
+<p>Yorum satırlarını Python yorumlayıcı dikkate almaz. Ancak aşağıdaki kod satırları yorum satırı olarak değerlendirilmez.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/usr/bin/env python3</span></span></code></pre></div>
+<p>“#!/usr/bin/env python3” kodu Python 3 yorumlayıcısının Linux için dosya konumunu belirtir.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!c:/Python/python.exe</span></span></code></pre></div>
+<p>“#!c:/Python/python.exe” kodu Python 3 yorumlayıcısının Windows için dosya konumunu belirtir.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -*- coding: utf-8 -*-</span></span></code></pre></div>
+<p>“# -<em>- coding: utf-8 -</em>-” Kullanacağınız karakter kodlamasını belirtmek için kullanılır.</p>
+<p>utf-8 Türkçe alfabeyi de destekleyen bir karakter kodlama sistemidir.</p>
+<p><strong>Örnek 5</strong></p>
+<p>Yorum satırları süsleme amacıyla da kullanılabilir. Bazı program dosyalarında aşağıdaki gibi süslü açıklamalar, etiketler görülebilir.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#####################################################################</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#******************************************************************##</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Python Öğreniyorum                                               ##</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Python 3                                                         ##</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#******************************************************************##</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">#####################################################################</span></span></code></pre></div>
+<h2 id="değişkenler">2.2. Değişkenler</h2>
+<p>Kod yazarken sadece sabit değerler üzerinden işlemler yapılmaz. Kullanıcıdan veya başka kaynaklar- dan veri alınması gerekir. Örneğin, kullanıcıya ismiyle “merhaba” diyeceğimiz bir kod yazmak ister- sek her kullanıcıdan ismini girdi olarak almamız gerekir. İşlem yapabilmek için bu girdiler (değerler) bellekte tutulmalıdır. Bu girdileri depolamak amacıyla bellekte belirli bir yer ayrılması gerekir. Bir değişken tanımlandığında yorumlayıcı, veri türüne bağlı olarak bellekte yer ayırır ve ayrılan bölümde hangi türden verilerin saklanabileceğini belirler. Değişkenler bir isim, sayı veya farklı türdeki bir veri için bellekte ayrılan bu yeri temsil eder. Değişkenlere farklı veri tiplerinde değerler atanabilir. Değer atama ile (bir değişkeni bir değere eşleyerek) tam sayı, ondalık sayı, dizi veya karakter dizisi türünde değerler değişkenlerde tutulabilir. Python, bu konuda çok esnektir. Python’da değişkenlerinin veri tiplerini açıkça bildirmeye gerek yoktur. Aynı değişken farklı veri tiplerinde değerler alabilir. Aynı de- ğişkene önce sayı, sonra bir metin daha sonra başka türde bir değer atanabilir. Bir değişkene değer atandığında veri tipi otomatik olarak tanımlanır. Eşittir operatörü “=” değişkenlere değer atamak için kullanılır. “=” Operatörünün solunda değişkenin adı ve “=” operatörünün sağında ise bu değişkene atanacak değer yer alır.</p>
+<p><strong>Örnek 6</strong></p>
+<p>Değişken oluşturma ve değer atamaya ilişkin örnekler:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#sayi1 değişkenine 5 sayısı atandı.</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Değişkenin içindeki sayı: &#39;</span>, sayi1)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">10</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Değişkenin içindeki sayı: &#39;</span>, sayi1, <span class="st">&#39;oldu&#39;</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="st">&#39;Murat&#39;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Değişkenin içindeki değer: &#39;</span>, sayi1, <span class="st">&#39;oldu&#39;</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="fl">10.5</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Değişkenin içindeki sayı: &#39;</span>, sayi1, <span class="st">&#39;oldu&#39;</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Değişkenin içindeki sayı: <span class="dv">5</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Değişkenin içindeki sayı: <span class="dv">10</span> oldu</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Değişkenin içindeki değer: Murat oldu</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Değişkenin içindeki sayı: <span class="fl">10.5</span> oldu</span></code></pre></div>
+<p>Örnekte aynı değişkene hem karakter dizisi (string) hem de sayısal değerler atanmıştır. Bir değişkene değer atanırken birden fazla yöntem kullanılabilir. Örnekte buna ilişkin kodlar verilmiştir.</p>
+<p id="ornek7" ><strong>Örnek 7</strong></p>
+<p>Aşağıda 3 değişkene de tek satırda 1 değeri atanmıştır.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> b <span class="op">=</span> c <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;1. sayı=&#39;</span>, a)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;2. sayı=&#39;</span>, b)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;3. sayı=&#39;</span>, c)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">1.</span> sayı<span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">2.</span> sayı<span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">3.</span> sayı<span class="op">=</span> <span class="dv">1</span></span></code></pre></div>
+<p><strong>Örnek 8</strong></p>
+<p>Değişkenler aralarına virgül eklenerek yan yana yazılır. Değerleri de aynı sıralama ile karşılarına yazılır.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>adi, soyadi, yasi<span class="op">=</span><span class="st">&#39;Canan&#39;</span>, <span class="st">&#39;DAĞDEVİREN&#39;</span>, <span class="dv">34</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;Adı=&quot;</span>, adi)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;Soyadı=&quot;</span>, soyadi,)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;Yaşı=&quot;</span>, yasi)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Adı<span class="op">=</span> Canan</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Soyadı<span class="op">=</span> DAĞDEVİREN</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Yaşı<span class="op">=</span> <span class="dv">34</span></span></code></pre></div>
+<p><strong>Örnek 9</strong></p>
+<p>Değişkenlere değer atamak için başka bir yöntem aralarına noktalı virgül “;” ekleyerek değişken - değer ikilileri şeklinde yazmaktır.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>adi<span class="op">=</span><span class="st">&#39;Aziz&#39;</span><span class="op">;</span> soyadi<span class="op">=</span><span class="st">&#39;SANCAR&#39;</span><span class="op">;</span> yasi<span class="op">=</span><span class="dv">73</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;Adı=&quot;</span>, adi)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;Soyadı=&quot;</span>, soyadi,)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;Yaşı=&quot;</span>, yasi)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Adı<span class="op">=</span> Aziz</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Soyadı<span class="op">=</span> SANCAR</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Yaşı<span class="op">=</span> <span class="dv">73</span></span></code></pre></div>
+<p><strong>Örnek 10</strong></p>
+<p>Değer atanmayan ve/veya tanımlanmamış bir değişken kullanılırsa Python hata verir.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (yenisayi)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Python değişkenleri değer atandığında tanımlandığı için hata mesajı alırsınız.</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># yenisayi değişkeni tanımlanmamış olduğu için hata mesajı alınır.</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">NameError</span> Traceback (most recent call last)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">1</span><span class="op">-</span><span class="dv">9</span>ff08615337f<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">----&gt;</span> <span class="dv">1</span> <span class="bu">print</span> (yenisayi)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">NameError</span>: name <span class="st">&#39;yenisayi&#39;</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code></pre></div>
+<p>Değer atamadan tanımlamak için yenisayi=int( ) kodu kullanılabilir. Bu durumda değişkene ilk değer olarak “0” sıfır atanır.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>yenisayi<span class="op">=</span><span class="bu">int</span>( )</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(yenisayi)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">0</span></span></code></pre></div>
+<p><strong>Örnek 11</strong></p>
+<p>Değişkenler veri tiplerine göre kullanılmazsa Python hata verir.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">=</span><span class="st">&#39;deneme&#39;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">+</span>metin1) <span class="co">#Bir sayı ile bir metin, kelime toplanamaz.</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">TypeError</span> Traceback (most recent call last)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">47</span><span class="op">-</span>e585c633881d<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> sayi1<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> metin1<span class="op">=</span><span class="st">&#39;deneme&#39;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">----&gt;</span> <span class="dv">3</span> <span class="bu">print</span>(sayi1<span class="op">+</span>metin1)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>  <span class="co">#Bir sayı ile bir metin, kelime toplanamaz.</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">TypeError</span>: unsupported operand <span class="bu">type</span>(s) <span class="cf">for</span> <span class="op">+</span>: <span class="st">&#39;int&#39;</span> <span class="kw">and</span> <span class="st">&#39;str&#39;</span></span></code></pre></div>
+<h3 id="değişken-adlandırmada-kurallar">2.2.1. Değişken Adlandırmada Kurallar</h3>
+<p>Değişken adı verilirken uyulması gereken bazı kurallar ve kurallar kadar katı olmasa da yararlı kullanım önerileri vardır.</p>
+<p>Değişken adlandırma kuralları: * Değişkenler bir harf (a - z, A - Z) veya alt çizgi (<em>) ile başlamalıdır. Bunların dışında sayı veya başka bir karakter ile de başlayamaz. * Değişken adında rakam, alt çizgi(</em>), büyük veya küçük harf olabilir. * Değişken adları herhangi bir uzunlukta olabilir.</p>
+<p>Python, değişken adlandırmada Türkçe karakterlerin (ç , ğ, ı, ö, ş ve ü) kullanımına izin vermektedir. Ek olarak Python programlama dilinde ayrılmış sözcükler kullanılamaz. Bu özel sözcüklerin listesini görmek için aşağıdaki kod kullanılabilir.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> keyword</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>keyword.kwlist</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>[<span class="st">&#39;False&#39;</span>, <span class="st">&#39;None&#39;</span>, <span class="st">&#39;True&#39;</span>, <span class="st">&#39;and&#39;</span>, <span class="st">&#39;as&#39;</span>, <span class="st">&#39;assert&#39;</span>, <span class="st">&#39;break&#39;</span>, <span class="st">&#39;class&#39;</span>, <span class="st">&#39;continue&#39;</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;def&#39;</span>, <span class="st">&#39;del&#39;</span>, <span class="st">&#39;elif&#39;</span>, <span class="st">&#39;else&#39;</span>, <span class="st">&#39;except&#39;</span>, <span class="st">&#39;finally&#39;</span>, <span class="st">&#39;for&#39;</span>, <span class="st">&#39;from&#39;</span>, <span class="st">&#39;global&#39;</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;if&#39;</span>, <span class="st">&#39;import&#39;</span>, <span class="st">&#39;in&#39;</span>, <span class="st">&#39;is&#39;</span>, <span class="st">&#39;lambda&#39;</span>, <span class="st">&#39;nonlocal&#39;</span>, <span class="st">&#39;not&#39;</span>, <span class="st">&#39;or&#39;</span>, <span class="st">&#39;pass&#39;</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;raise&#39;</span>, <span class="st">&#39;return&#39;</span>, <span class="st">&#39;try&#39;</span>, <span class="st">&#39;while&#39;</span>, <span class="st">&#39;with&#39;</span>, <span class="st">&#39;yield&#39;</span>]</span></code></pre></div>
+<p>Büyük harf ve küçük harf kullanılarak tanımlanan değişkenlerin adı aynı olsa bile farklı değişkenler olduğu unutulmamalıdır.</p>
+<p><strong>Örnek 12</strong></p>
+<p>Python dilinde uygun değişken adı örnekleri:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Uygun değişken isimleri</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>Sayi1<span class="op">=</span><span class="dv">2</span></span></code></pre></div>
+<p>Sayi1’ ekrana yazdırılırsa çıktı ne olur?</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(Sayi1)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Büyük harf ve küçük harf kullanarak tanımlanan değişkenlerin adı aynı olsa bile</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>farklı değişkenler olduğunu unutulmamalıdır.</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>sayı<span class="dv">1</span><span class="op">=</span><span class="dv">3</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Python değişken adlandırmada Türkçe karakter kullanımına izin vermektedir.</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayı<span class="dv">1</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span></span></code></pre></div>
+<p><strong>Örnek 13</strong></p>
+<p>Python’da hatalı değişken adı kullanımı örneği:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>sayi<span class="op">=</span><span class="dv">5</span> <span class="co">#Hatalı değişken adı.</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="fl">1.</span>sayi)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> File <span class="st">&quot;&lt;ipython-input-52-a0b35430cdb5&gt;&quot;</span>, line <span class="dv">1</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span>sayi<span class="op">=</span><span class="dv">5</span> <span class="co">#Hatalı değişken adı.</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">^</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">SyntaxError</span>: invalid syntax</span></code></pre></div>
+<h3 id="değişken-adlandırma-için-standartlar">2.2.2. Değişken Adlandırma için Standartlar</h3>
+<p>Değişken adlandırma için bazı standartlar vardır. Bu standartlar değişken adının ve içeriğinin anlaşılma- sına yardımcı olarak programcıların daha kolay çalışmasını sağlar. Değişken adı, onun içeriği hakkında</p>
+<p>bilgi verirse kodun anlaşılması kolaylaşır. Değişken adlarının yazımında bazı standart kullanımlar vardır.</p>
+<p>Birden fazla kelimenin kullanılacağı değişken adlarında kelimelerin ilk harfi büyük olabilir. Camel stan- dardında (başka standartlar da bulunmaktadır) değişken adlarının görünüşü deve hörgücüne benzetil- mektedir. Değişkenin adına küçük harfle başlanır ve sonraki her kelime büyük harfle başlar.</p>
+<p><strong>Örnek 14</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>adi<span class="op">=</span> <span class="st">&quot;Elif&quot;</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>soyadi<span class="op">=</span><span class="st">&quot;Altun&quot;</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>dogumYili<span class="op">=</span><span class="dv">1981</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>universiteMezunuMu<span class="op">=</span><span class="va">True</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>universiteyeBasladigiYil<span class="op">=</span><span class="dv">1999</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>mezuniyetNotu<span class="op">=</span><span class="fl">2.00</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Adı: &#39;</span>, adi)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Soyadı: &#39;</span>, soyadi)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Üniversite Mezunu mu? &#39;</span>, universiteMezunuMu)</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Üniversiteye Başladığı Yıl: &#39;</span>, universiteyeBasladigiYil)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Mezuniyet Notu: &#39;</span>, mezuniyetNotu)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Adı: Elif</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Soyadı: Altun</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Üniversite Mezunu mu? <span class="va">True</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Üniversiteye Başladığı Yıl: <span class="dv">1999</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Mezuniyet Notu: <span class="fl">2.0</span></span></code></pre></div>
+<h3 id="veri-tipleri">2.3. Veri Tipleri</h3>
+<p>Veri tiplerini anlayabilmek için aşağıdaki kod satırı incelenebilir. Aşağıda bir sayı ile bir karakter dizisi üzerinde operatörleri kullanarak işlemler yapılmıştır.</p>
+<p><strong>Örnek 15</strong></p>
+<p>Hatalı veri tipi kullanımına örnek: “sayi2” değişkeninin tek tırnak içinde verildiğine ve bir karakter dizisi olduğuna dikkat edilmelidir.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="st">&#39;3&#39;</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1<span class="op">+</span>sayi2)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">TypeError</span> Traceback (most recent call last)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">55</span><span class="op">-</span><span class="dv">294</span>ee141ba94<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> sayi2<span class="op">=</span><span class="st">&#39;3&#39;</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">----&gt;</span> <span class="dv">3</span> <span class="bu">print</span> (sayi1<span class="op">+</span>sayi2)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">TypeError</span>: unsupported operand <span class="bu">type</span>(s) <span class="cf">for</span> <span class="op">+</span>: <span class="st">&#39;int&#39;</span> <span class="kw">and</span> <span class="st">&#39;str&#39;</span></span></code></pre></div>
+<p>Kod çalıştırıldığında bir hata mesajı alınır. Bir aritmetik operatörü kullanılırken bir sayı ile bir karakter dizisi (ikinci değişkenin adı sizi yanıltmasın) toplamaya çalışıldığı için Python hata verir. Veri tipleri, de- ğişkenler üzerinde yapılabilecek işlemleri belirler.</p>
+<p><strong>Örnek 16</strong></p>
+<p>Operatörler konusunda * operatörü ile ilgili bir ayrıntıdan bahsedilmiştir.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="st">&#39;3&#39;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co">#sayi2 değişkenin tek tırnak içinde verildiğinde bir karakter dizisi olduğuna dikkat</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>ediniz.</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1<span class="op">*</span>sayi2)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Sizce nasıl bir sonuç çıkar?</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">33333</span></span></code></pre></div>
+<p>Örnekte görüldüğü gibi kod “çarpma” işlemi yapamamıştır. Çünkü ortada iki sayısal değer yoktur. İkinci örnekte 3 sayısını bir karakter olarak 5 defa yazmıştır. Python’da değişkenlere değer atanırken veri tipleri belirtilmez. Python, atanan değere göre veri türünü kendisi belirler. Ancak programlama yaparken veri tiplerini bilmek ve ona göre kullanmak gerekir.</p>
+<h3 id="pythonda-sık-kullanılan-veri-tipleri">2.3.1. Python’da Sık Kullanılan Veri Tipleri</h3>
+<p>Python programlama dilinde sıkça kullanılan veri tipleri aşağıdaki tabloda sunulmuştur:</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 28%" />
+<col style="width: 40%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Veri Tipi</th>
+<th>Sınıfı</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Integer</td>
+<td>int</td>
+<td>Tam Sayı (Örnek: 3, 5, 369963)</td>
+</tr>
+<tr class="even">
+<td>Float</td>
+<td>float</td>
+<td>Ondalıklı sayı. (Örnek: 10.45)</td>
+</tr>
+<tr class="odd">
+<td>Complex</td>
+<td>complex</td>
+<td>Karmaşık sayılar A + Bj şeklinde kullanılır. (Örnek: 4+5j)</td>
+</tr>
+<tr class="even">
+<td>Karakter dizisi (String)</td>
+<td>str</td>
+<td>Karakter dizilerini (metinleri) göstermek için kullanılır. Çift tırnak veya tek tırnak içinde gösterilir. “Merhaba Dünya”</td>
+</tr>
+<tr class="odd">
+<td>Boolean</td>
+<td>bool</td>
+<td>Sadece True veya False değeri alır. int(True)=1 iken int(False)=0 dır.</td>
+</tr>
+<tr class="even">
+<td>Liste</td>
+<td>list</td>
+<td>Farklı veri türleri içerebilir.listem=[‘Çınar’, 24, ‘Mühendis’, True]</td>
+</tr>
+<tr class="odd">
+<td>Demet (tuple)</td>
+<td>tuple</td>
+<td>Farklı veri türleri içerebilir. demet1=(‘Çınar’, 24, ‘Mühendis’, True)</td>
+</tr>
+<tr class="even">
+<td>Sözlük</td>
+<td>(dictionary) dict</td>
+<td>Farklı veri türleri içerebilir.sozluk={‘adi’: ‘Çınar’,’yasi’=24, ‘meslekUnvani’:’Mühendis’, ‘askerlikDurumu’: True}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sayısal-int-float-ve-complex-veri-tipleri">2.3.2. Sayısal (int, float ve complex) Veri Tipleri</h3>
+<p>“int” veri tipi Python’da tam sayıların tutulduğu veri tipidir: 3, 5, 198763 gibi değerleri tutar. En çok kullanılan veri tiplerinden biridir.</p>
+<p>“float” veri tipi ondalıklı sayıların tutulduğu veri tipidir: 0.5, 234678.67 gibi değerleri tutar.</p>
+<p>“complex” veri tipi ise karmaşık sayıların tutulduğu veri tipidir. A+Bj tipinde veriler tutulur: 4+5j gibi değerleri tutar.</p>
+<p><strong>Örnek 17</strong></p>
+<p>Python’da bir değişkene değer atandığında veri tipleri atanan değere göre otomatik olarak belirlenir.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>piSayisi<span class="op">=</span><span class="fl">3.14</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">#float tipinde bir veri</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;pi sayısı=&#39;</span>, piSayisi)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>rCm<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">#integer tipinde veri</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>alan<span class="op">=</span><span class="fl">3.14</span><span class="op">*</span><span class="dv">2</span><span class="op">**</span><span class="dv">2</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Alan=&#39;</span>, alan)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co">#sonuç float tipinde</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Yarıçapı 2 olan dairenin alanı &#39;</span>, alan, <span class="st">&#39; cm 2 dir&#39;</span> )</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>karmasikSayi<span class="op">=</span><span class="dv">4</span><span class="op">+</span><span class="ot">5j</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Bir karmaşık sayı=&#39;</span>, karmasikSayi<span class="op">+</span><span class="ot">3j</span>)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> pi sayısı<span class="op">=</span> <span class="fl">3.14</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Alan<span class="op">=</span> <span class="fl">12.56</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Yarıçapı <span class="dv">2</span> olan dairenin alanı <span class="fl">12.56</span> cm <span class="dv">2</span> <span class="bu">dir</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Bir karmaşık sayı<span class="op">=</span> (<span class="dv">4</span><span class="op">+</span><span class="ot">8j</span>)</span></code></pre></div>
+<h3 id="karakter-dizisi-string-veri-tipi">2.3.3. Karakter Dizisi (string) Veri Tipi</h3>
+<p>Karakter dizisi, kullanıcıdan alınan değerlerin metin formatında tutulduğu veri tipleridir. Python karakter dizisi oldukça kullanışlı işlevlere sahiptir.</p>
+<p><strong>Örnek 18</strong></p>
+<p>Bir karakter dizisi ekrana yazdırılabilir, başka bir karakter dizisiyle birleştirilebilir.</p>
+<p>“len( )” metodu bir karakter dizisinin uzunluğunu vermektedir.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>metin1 <span class="op">=</span> <span class="st">&#39;Merhaba &#39;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>metin2 <span class="op">=</span> <span class="st">&#39;Mars&#39;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin1) <span class="co"># karakter dizisinin tamamını yazar</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin1 <span class="op">*</span> <span class="dv">2</span>) <span class="co"># karakter dizisini 2 defa yazar</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin1 <span class="op">+</span> metin2) <span class="co"># iki karakter dizisini birleştirir</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;metin1 adlı değişkendeki değerin uzunluğu:&#39;</span>, <span class="bu">len</span>(metin1))</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Boşluğun da bir karakter olduğunu gözden kaçırmayınız.</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba Merhaba</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba Mars</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> metin1 adlı değişkendeki değerin uzunluğu: <span class="dv">8</span></span></code></pre></div>
+<h4 id="karakter-dizilerinde-string-dilimleme-işlemleri">2.3.3.1. Karakter Dizilerinde (string) Dilimleme İşlemleri</h4>
+<p>Bir karakter dizisinin içindeki karakterlere tek tek veya belirli bir aralıkta erişilebilir. Köşeli parantez içinde [ ] tek bir sayı verildiğinde bu karakter dizisinin indisini ifade eder. İndis numarası “0” dan başlayarak karakterin metindeki kaçıncı sırada yer aldığını gösterir. metin[0] ifadesi metin değişkenindeki 1. karakteri verir. Belirli bir aralıktaki karakteri alırken “[başlangıç indisi:bitiş indisi]” şeklinde ifade edilir. metin[0:5] metin değişkeninde indisi 0, 1, 2, 3 ve 4 olan karakterleri dilimler. Bitiş indisi dilimlemeye dahil edilmez. İndislerin “0” dan başladığı unutulmamalıdır.</p>
+<p>Başlangıç indisi verilmeyen karakter dizisinde örnek: metin[:7] başlangıç indisi otomatik olarak sıfır (0) olur. Örnek 0, 1, 2, 3, 4, 5 ve 6. karakterlerden oluşan bir metin verir. Bitiş indisi değeri verilmezse başlangıç indisinden başlanarak son karakter dâhil dilimleme işlemi yapılır.</p>
+<p><strong>Negatif İndis Sayıları:</strong> Karakter dizisine sondan başlandığını ifade eder. metin[-1] karakter dizisinin en sonundaki karakteri verir. metin [-2] ise sondan ikinci karakteri verir.</p>
+<p>Karakter dizilerinde indisler ritmik atlanarak dilimleme yapılabilir. Bunun için [başlangıç indisi: bitiş indi- si: ritmik artış miktarı] şeklinde kullanılır. “metin[0:8:2]” : 0’dan başlayarak 0, 2, 4 ve 6 indis numaralı karakterleri dilimler.</p>
+<p><strong>Örnek 19</strong></p>
+<p>Karakter dizilerinin kullanımı ile ilgili örnekler:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>metin<span class="op">=</span><span class="st">&#39;Merhaba Mars&#39;</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin[<span class="dv">0</span>]) <span class="co"># ifadenin ilk karakterini yazar.</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin[<span class="dv">4</span>:<span class="dv">7</span>]) <span class="co"># ifadenin 5, 6 ve 7. karakterlerini yazar.</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin[<span class="dv">8</span>::]) <span class="co"># 9. karakterden sonuncu karaktere kadar yazar.</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin[<span class="op">-</span><span class="dv">2</span>]) <span class="co"># karakter dizisinin en sondan ikinci karakterini yazar.</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin [:<span class="dv">7</span>]) <span class="co"># indisi 0&#39; dan 7&#39;ye kadar olan (7 dahil değil) karakterleri yazar.</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin[<span class="dv">8</span>:]) <span class="co"># başlangıç indisinden sonra tüm karakterleri yazar.</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metin[<span class="dv">0</span>:<span class="dv">8</span>:<span class="dv">2</span>]) <span class="co"># 0, 2, 4 ve 6 indis numaralı karakterleri dilimler.</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> M</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> aba</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Mars</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> r</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Mars</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Mraa</span></code></pre></div>
+<p>Liste, demet ve sözlükler kapsamlı konular olduğu için ayrı bölümlerde verilmiştir.</p>
+<h2 id="type-metodu-kullanımı">2.4. type( ) Metodu Kullanımı</h2>
+<p>Python, her ne kadar veri tiplerini otomatik olarak verse de bir değişkenin veri tipini kontrol etmek ve kullanım amacına göre değiştirmek gerekebilir. Bir değişkenin veri tipini öğrenmek için “type( )” komutu kullanılır.</p>
+<p><strong>Örnek 20</strong></p>
+<p>Bir değişkenin veri tipi type( ) komutuyla kontrol edilir. type (degiskenAdi) şeklinde yazılır.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">10.556</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">=</span><span class="st">&quot;1&quot;</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co">#metin1 değişkenine tırnak içinde verilen sayının string tipinde bir değişken</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>olduğuna dikkat ediniz.</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>sayi3<span class="op">=</span><span class="dv">4</span><span class="op">+</span><span class="ot">5j</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>askerlikYaptiMi<span class="op">=</span><span class="va">True</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">#True doğru, 1, evet anlamındadır.</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;1. değişkenin veri tipi: &quot;</span>, <span class="bu">type</span>(sayi1))</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;2. değişkenin veri tipi: &quot;</span>, <span class="bu">type</span>(sayi2))</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;3. değişkenin veri tipi: &quot;</span>, <span class="bu">type</span>(metin1))</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;4. değişkenin veri tipi: &quot;</span>, <span class="bu">type</span>(sayi3))</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;5. değişkenin veri tipi: &quot;</span>, <span class="bu">type</span>(askerlikYaptiMi))</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>listem<span class="op">=</span>[<span class="st">&#39;Çınar&#39;</span>, <span class="dv">24</span>, <span class="st">&#39;Mühendis&#39;</span>, <span class="va">True</span>]</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;6. değişkenin veri tipi: &quot;</span>, <span class="bu">type</span>(listem))</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>demet1<span class="op">=</span>(<span class="st">&#39;Çınar&#39;</span>, <span class="dv">24</span>, <span class="st">&#39;Mühendis&#39;</span>, <span class="va">True</span>)</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;7. değişkenin veri tipi: &quot;</span>, <span class="bu">type</span>(demet1))</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>sozluk<span class="op">=</span>{<span class="st">&#39;adi&#39;</span>: <span class="st">&#39;Çınar&#39;</span>,<span class="st">&#39;yasi&#39;</span>: <span class="dv">24</span>, <span class="st">&#39;meslekUnvani&#39;</span>:<span class="st">&#39;Mühendis&#39;</span>, <span class="st">&#39;askerlikDurumu&#39;</span>: <span class="va">True</span>}</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;8. değişkenin veri tipi: &quot;</span>, <span class="bu">type</span>(sozluk))</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">1.</span> değişkenin veri tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;int&#39;</span><span class="op">&gt;</span></span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">2.</span> değişkenin veri tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;float&#39;</span><span class="op">&gt;</span></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">3.</span> değişkenin veri tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;str&#39;</span><span class="op">&gt;</span></span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">4.</span> değişkenin veri tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;complex&#39;</span><span class="op">&gt;</span></span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">5.</span> değişkenin veri tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;bool&#39;</span><span class="op">&gt;</span></span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">6.</span> değişkenin veri tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;list&#39;</span><span class="op">&gt;</span></span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">7.</span> değişkenin veri tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;tuple&#39;</span><span class="op">&gt;</span></span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">8.</span> değişkenin veri tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;dict&#39;</span><span class="op">&gt;</span></span></code></pre></div>
+<h2 id="veri-tiplerini-dönüştürmek">2.5. Veri Tiplerini Dönüştürmek</h2>
+<p>Tam sayılarla işlem yapıldığında “integer”, kesirli sayılarla işlem yapıldığında “float” veri tipi kullanılmaktadır. Değerler üzerinde işlem yaparken (örneğin “input” ile kullanıcıdan veri alırken) içinde sadece rakamlar bulunan “string” ifadeyi sayısal veri tipine dönüştürmek, bazen de bunun tersini yapmak gerekebilir. Bunun için bazı fonksiyonlar bulunmaktadır. Veri tipini dönüştürmek için kullanılan temel fonksiyonlar şunlardır:</p>
+<p>int( ) : Veri tipini integer’a çevirir.</p>
+<p>float() : Veri tipini float’a çevirir.</p>
+<p>str() : Veri tipini karakter dizisine çevirir.</p>
+<p>“integer” tipinde bir sayıyla “float” tipinde bir sayı çarpıldığında sonuç “float” tipinde olacağı için Python bu veri tipini otomatik olarak belirler.</p>
+<p><strong>Örnek 21</strong></p>
+<p>Aşağıdaki örnekte iki sayının da tırnak içinde verilmiş olduğuna dikkat ediniz.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">=</span><span class="st">&#39;5&#39;</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>metin2<span class="op">=</span><span class="st">&#39;3&#39;</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (metin1<span class="op">+</span>metin2)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">53</span></span></code></pre></div>
+<p>Yukarıda kullanılan değerler tırnak içinde verildiğinden karakter dizisi veri tipindedir. Kod sonuç olarak iki karakteri yan yana yazacaktır.</p>
+<p><strong>Örnek 22</strong></p>
+<p>İki değişkenin veri tipini dönüştürünüz. Veri tipi dönüştürüldüğünde karakter dizisi sayıya çevrilmiş ola- caktır. Böylece iki sayısal değer üzerinde toplama işlemi yapılabilir.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">int</span>(metin1)<span class="op">+</span><span class="bu">int</span>(metin2))</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">8</span></span></code></pre></div>
+<p>Karakter dizisi olan bir değer sayısal bir ifadeye dönüştürüldüğünde bu ifadenin sadece sayısal karakter- ler içermesi gerekir. “A” harfi veya metinsel bir ifade int(“A”) kullanılarak sayıya çevrilemez.</p>
+<p>Veri tipi, kullanılan değerler ile uyumlu olmalıdır. Veri tipi dönüşümünde bazı değerlerde kayıplar olabilir.</p>
+<p><strong>Örnek 23</strong></p>
+<p>Aşağıdaki örnekte pi değerinin “float” ve “integer” veri tiplerinde kullanıldığında çıkan sonuca dikkat ediniz.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>piDegeri<span class="op">=</span><span class="fl">3.14</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Veri Tipi: &#39;</span>,<span class="bu">type</span>(piDegeri))</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co">#3.14 değerini verdiğimizde piDegeri float veri tipi olarak tanımlanacaktır.</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>yariCap<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>daireninAlani<span class="op">=</span>((piDegeri<span class="op">*</span><span class="dv">2</span>)<span class="op">*</span>yariCap)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Dairenin Alanı (float)=&#39;</span>, daireninAlani)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>piDegeriInt<span class="op">=</span>(<span class="bu">int</span>(piDegeri))</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co"># int(piDegeri*2) ifadesi float değeri int veri tipine dönüştürüldü.</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Int veri tipine dönüştürülen piDegeri: &#39;</span>, piDegeriInt)</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>daireninAlani<span class="op">=</span>((piDegeriInt<span class="op">*</span><span class="dv">2</span>)<span class="op">*</span>yariCap)</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Dairenin Alanı (int)=&#39;</span>, daireninAlani)</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Veri Tipi: <span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;float&#39;</span><span class="op">&gt;</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Dairenin Alanı (<span class="bu">float</span>)<span class="op">=</span> <span class="fl">31.400000000000002</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Int veri tipine dönüştürülen piDegeri: <span class="dv">3</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Dairenin Alanı (<span class="bu">int</span>)<span class="op">=</span> <span class="dv">30</span></span></code></pre></div>
+<p><strong>Örnek 24</strong></p>
+<p>Boolean veri tipini sayısal veri tipine ve string veri tipine dönüştürebilirsiniz. Bu işlemin tersini de yapabilirsiniz.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>askerlikYaptiMi<span class="op">=</span><span class="va">True</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Askerlik yaptı mı?&#39;</span>, askerlikYaptiMi)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>askerlikYaptiMiInt<span class="op">=</span><span class="bu">int</span>(askerlikYaptiMi) <span class="co">#integer tipine dönüştürüldü.</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Askerlik yaptı mı?&#39;</span>, askerlikYaptiMiInt)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>askerlikYaptiMiStr<span class="op">=</span><span class="bu">str</span>(askerlikYaptiMi) <span class="co">#string tipine dönüştürüldü.</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Askerlik yaptı mı?&#39;</span>, askerlikYaptiMiStr)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Çıktı olarak True verir ancak bu boolean tipinde değildir.</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Askerlik yaptı mı? <span class="va">True</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Askerlik yaptı mı? <span class="dv">1</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Askerlik yaptı mı? <span class="va">True</span></span></code></pre></div>
+<h2 id="operatörler">2.6. Operatörler</h2>
+<p>Python’da aritmetik, mantıksal işlemler ve ilişkisel karşılaştırmalar gibi işlemler yapmak için operatör (iş- leç) adı verilen semboller ve özel sözcükler kullanılır. Bu bölümde Python’da kullanılan temel operatörler yer almaktadır.</p>
+<h3 id="aritmetik-operatörler">2.6.1. Aritmetik operatörler</h3>
+<p>Toplama, çıkarma, çarpma ve bölme gibi işlemler başta olmak üzere aritmetik işlemleri yapmak için kullanılan operatörlerdir.</p>
+<table>
+<thead>
+<tr class="header">
+<th>İşaret</th>
+<th>İşlem</th>
+<th>Örnek</th>
+<th>Sonuç</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+</td>
+<td>Toplama</td>
+<td>5+3</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>Çıkarma</td>
+<td>5-3</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>*</td>
+<td>Çarpma</td>
+<td>5*3</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>/</td>
+<td>Bölme</td>
+<td>5/3</td>
+<td>1.6666666666666667</td>
+</tr>
+<tr class="odd">
+<td>**</td>
+<td>Kuvvet</td>
+<td>5**3</td>
+<td>125</td>
+</tr>
+<tr class="even">
+<td>//</td>
+<td>Tam sayı bölme</td>
+<td>5//3</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>%</td>
+<td>Mod</td>
+<td>5%3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Toplama Operatörü</strong></p>
+<p>Bu operatör iki veya daha fazla sayısal değeri toplamak için kullanılır.</p>
+<p><strong>Örnek 25</strong></p>
+<p>Sayısal değerler “integer” , “float” veya “complex” tipinde olabilir.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">5</span><span class="op">+</span><span class="dv">3</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">5</span><span class="op">+</span><span class="dv">3</span><span class="op">+</span><span class="dv">3</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">10</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1<span class="op">+</span><span class="dv">5</span>)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Aynı şekilde değişken kullanarak da yapabiliriz.</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">10.34</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1<span class="op">+</span>sayi2<span class="op">+</span><span class="fl">5.5</span>) <span class="co">#farklı veri tiplerindeki sayıları ve değişkenleri de kullanabiliriz</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">8</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">11</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">15</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">25.84</span></span></code></pre></div>
+<p><strong>Örnek 26</strong></p>
+<p>Toplama operatörünün karakter dizilerinde farklı bir kullanımı vardır: İki veya daha fazla karakter dizisini birleştirmek için kullanılabilir.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Merhaba &#39;</span> <span class="op">+</span> <span class="st">&#39;Mars&#39;</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">=</span><span class="st">&#39;Merhaba &#39;</span> <span class="op">+</span> <span class="st">&#39;Mars&#39;</span> <span class="op">+</span> <span class="st">&#39; nasılsın?&#39;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metin1)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba Mars</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba Mars nasılsın?</span></code></pre></div>
+<p><strong>Çıkarma Operatörü</strong></p>
+<p>Bu operatör, sayıların farkını bulmak için kullanılır.</p>
+<p><strong>Örnek 27</strong></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">-</span><span class="dv">3</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="dv">3</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">-</span>sayi2)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">3</span><span class="op">-</span><span class="dv">4</span><span class="op">-</span><span class="dv">5</span>)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">-</span><span class="dv">6</span></span></code></pre></div>
+<p><strong>Çarpma Operatörü</strong></p>
+<p>Çarpma operatörü iki veya daha fazla sayıyı çarpmak için kullanılır.</p>
+<p><strong>Örnek 28</strong></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">*</span><span class="dv">3</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">*</span><span class="dv">3</span><span class="op">*</span><span class="dv">2</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="dv">3</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">*</span>sayi2)</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">15</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">30</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">15</span></span></code></pre></div>
+<p>Çarpma operatörü, toplama operatöründe olduğu gibi karakter dizilerinde farklı bir amaç için kullanılmaktadır.</p>
+<p><strong>Örnek 29</strong></p>
+<p>Bir karakter dizisini istediğiniz kadar yazdırmak için çarpma operatörünü kullanabilirsiniz.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">20</span><span class="op">*</span><span class="st">&#39;BA&#39;</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> BABABABABABABABABABABABABABABABABABABABA</span></code></pre></div>
+<p><strong>Bölme Operatörü</strong></p>
+<p>Bu operatör, iki sayıyı bölmek için kullanılır.</p>
+<p><strong>Örnek 30</strong></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">5</span><span class="op">/</span><span class="dv">3</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">0.8333333333333334</span></span></code></pre></div>
+<p>Bölme operatörünü ikiden fazla sayıyı bölmek için de kullanabilirsiniz.</p>
+<p><strong>Örnek 31</strong></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">18</span><span class="op">/</span><span class="dv">3</span><span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">3.0</span></span></code></pre></div>
+<p>Bu tür durumlarda Python işlemleri soldan başlayarak sırayla yapar. Önce 18/3 işlemini yapar ve sonucu 2’ye böler.</p>
+<p><strong>Kuvvet Alma Operatörü</strong></p>
+<p>Bir sayının kuvvetini almak için kullanılır. Bir sayının kuvveti o sayının kendisiyle kuvvet kadar çarpılmasıyla bulunur. 5**3=5<em>5</em>5</p>
+<p><strong>Örnek 32</strong></p>
+<p>5’in 3. kuvvetinin bulunması:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">125</span></span></code></pre></div>
+<p>Kuvvet alma operatörü bir sayının kökünü almak için “1/kuvvet” olarak kullanılabilir.</p>
+<p><strong>Örnek 33</strong></p>
+<p>49’un karekökünü almak için 1/2 kuvveti alınır.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">49</span><span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>))</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">7.0</span></span></code></pre></div>
+<p><strong>Tam Bölüm Operatörü</strong></p>
+<p>İki sayının birbirine tam bölüm sonucunu verir. Bölüm sonucu ondalıklı sayı ise ondalıklı kısmını almaz.</p>
+<p><strong>Örnek 34</strong></p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="fl">121.00</span><span class="op">//</span><span class="dv">3</span>)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">40.0</span></span></code></pre></div>
+<p><strong>Mod Alma Operatörü</strong> Bir sayının diğer bir sayıya bölümünden kalanını verir.</p>
+<p><strong>Örnek 35</strong></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">5</span><span class="op">%</span><span class="dv">3</span>) <span class="co">#Sayının 3 ile bölümünden kalan.</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">9</span><span class="op">%</span><span class="dv">2</span>) <span class="co">#Kalan 0 ise sayı çifttir.</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span></span></code></pre></div>
+<h3 id="ilişkisel-operatörler">2.6.2. İlişkisel Operatörler</h3>
+<p>İlişkisel operatörler, değerler arasındaki ilişkiyi kontrol ederek sonucu “boolean” bir değer olarak (True, False) döndürür. “True” değeri şartın, ilişkinin veya koşulun sağlandığı anlamına gelirken, “False” değeri ise ilişkinin sağlanmadığı anlamına gelir.</p>
+<table>
+<thead>
+<tr class="header">
+<th>İşaret</th>
+<th>İşlem</th>
+<th>Örnek</th>
+<th>Sonuç</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>==</td>
+<td>Eşit mi?</td>
+<td>5==3</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>!=</td>
+<td>Farklı mı?</td>
+<td>5!=3</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>&gt;</td>
+<td>Büyüktür?</td>
+<td>5&gt;3</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>&lt;</td>
+<td>Küçüktür?</td>
+<td>5&lt;3</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>&gt;=</td>
+<td>Büyük veya eşittir?</td>
+<td>3&gt;=3</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>&lt;=</td>
+<td>Küçük veya eşittir?</td>
+<td>5&lt;=3</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>is</td>
+<td>Değerler eşit mi?</td>
+<td>‘Elif’ is ‘elif’</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>is not</td>
+<td>Değerler farklı mı?</td>
+<td>‘Elif’ is not ‘elif’</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>in</td>
+<td>İçeriyor mu?</td>
+<td>‘bil’ in ‘bilişim’</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>not in</td>
+<td>İçermiyor mu?</td>
+<td>‘bil’ not in ‘bilişim’</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Eşittir Operatörü</strong></p>
+<p>“==” operatörü iki değerin birbirine eşit olup olmadığını anlamak için kullanılır. İki değer birbirine eşitse “True”, eşit değilse “False” değeri verir.</p>
+<p><strong>Örnek 36</strong></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">==</span><span class="dv">3</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co">#değişkenlere atadığınız değerleri de aynı şekilde kontrol edebilirsiniz.</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="dv">3</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">==</span>sayi2)</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">==</span><span class="dv">5</span>)</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span></code></pre></div>
+<p><strong>Örnek 37</strong></p>
+<p>“==” Operatörü karakter dizilerinde de değerlerin eşitliğini kontrol etmek için kullanılır.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Emre&#39;</span><span class="op">==</span><span class="st">&#39;emre&#39;</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Küçük büyük harf duyarlılığına (case sensetive) dikkat ediniz.</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">=</span><span class="st">&#39;Emre&#39;</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>metin2<span class="op">=</span><span class="st">&#39;emre&#39;</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metin1<span class="op">==</span>metin2)</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metin1<span class="op">==</span><span class="st">&#39;Emre&#39;</span>)</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span></code></pre></div>
+<p><strong>Eşit Değildir Operatörü</strong></p>
+<p>“!=” operatörü iki değerin birbirinden farklı olup olmadığını anlamak için kullanılır. “==” operatörü- nün tersine değerler birbirine eşitse “False”, eşit değilse “True” değerini döndürür.</p>
+<p><strong>Örnek 38</strong></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">5</span><span class="op">!=</span><span class="dv">3</span>)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="dv">3</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">!=</span>sayi2)</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">!=</span><span class="dv">5</span>)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Çıktıların == operatörünün tersi olduğuna dikkat ediniz.</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p><strong>Örnek 39</strong></p>
+<p>“!=” operatörü karakter dizilerinde de değerlerin farklılığını kontrol etmek için kullanılır.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;Emre&#39;</span><span class="op">!=</span><span class="st">&#39;emre&#39;</span>)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Küçük büyük harf duyarlılığına (case sensetive) dikkat ediniz.</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">=</span><span class="st">&#39;Emre&#39;</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>metin2<span class="op">=</span><span class="st">&#39;emre&#39;</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metin1<span class="op">!=</span>metin2)</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metin1<span class="op">!=</span><span class="st">&#39;Emre&#39;</span>)</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p><strong>Büyüktür Operatörü</strong></p>
+<p>Büyüktür “&gt;” operatörü iki değeri karşılaştırmak için kullanılır. 1. sayı 2. sayıdan büyükse “True” değilse “False” değerini döndürür.</p>
+<p><strong>Örnek 40</strong></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="fl">6.06</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">6.07</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&gt;</span>sayi2)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p>“sayi2” değişkenine yeni bir değer atandığını gözden kaçırmayınız.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="dv">6</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1<span class="op">&gt;</span>sayi2)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">6.06</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&gt;</span>sayi2)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p><strong>Küçüktür Operatörü</strong></p>
+<p>Küçüktür “&lt;” operatörü iki değeri karşılaştırmak için kullanılır. 1. sayı 2. sayıdan küçükse “True” değilse “False” değerini döndürür. Büyüktür operatörünün tersi işlevini görür.</p>
+<p><strong>Örnek 41</strong></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="fl">6.06</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">6.07</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&lt;</span>sayi2)</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span></code></pre></div>
+<p>Programımıza devam edelim. “sayi2” değişkenine yeni bir değer atadığımızı gözden kaçırmayın.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="dv">6</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1<span class="op">&lt;</span>sayi2)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">6.06</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&lt;</span>sayi2)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p>Karakter dizileri, alfabetik olarak sıralandığında sonra gelen ifade daha büyük olarak değerlendirilir.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;z&#39;</span><span class="op">&gt;</span><span class="st">&#39;a&#39;</span>)</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;a&#39;</span><span class="op">&lt;</span><span class="st">&#39;z&#39;</span>)</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span></code></pre></div>
+<p><strong>Büyük Eşittir (&gt;=) ve Küçük Eşittir Operatörleri</strong></p>
+<p>Büyük eşittir “&gt;=” operatörü iki değeri karşılaştırmak için kullanılır. Birinci değer ikinciden büyükse veya ikinciye eşitse “True” değilse “False” değerini döndürür. Küçük eşittir “&lt;=” operatörü ise birinci değer ikinci değerden küçükse veya ikinci değere eşitse “True” değilse “False” değerini döndürür.</p>
+<p><strong>Örnek 42</strong></p>
+<p><strong>Büyük Eşittir (&gt;=) ve Küçük Eşittir (&lt;=) Operatörleri kullanımı:</strong></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="fl">6.06</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">6.06</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&gt;=</span>sayi2)</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1<span class="op">&lt;=</span>sayi2)</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="co">#sayılar eşit olduğu için iki operatör de True değeri döndürür.</span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">6.07</span></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&gt;=</span>sayi2)</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&lt;=</span>sayi2)</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="co">#1.sayı 2. sayıdan küçük olduğu için sadece &lt;= operatörü True değerini döndürür.</span></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>sayi2<span class="op">=</span><span class="fl">6.05</span></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&gt;=</span>sayi2)</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1<span class="op">&lt;=</span>sayi2)</span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a><span class="co">#sayi2 değişkeni 6.05 olduğu ve sayi1 sayi2 den büyük olacağı için sadece &gt;= operatörü True değeri döndürür.</span></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p><strong>“is” ve “is not” Operatörleri</strong></p>
+<p>“is operatörü” ve “==” operatörü benzer işleve sahiptir ve iki değerin eşit olup olmadığını kontrol etmek için kullanılır. Değerler eşitse “True” değilse “False” değerini döndürür.</p>
+<p>“is not” operatörü ise is operatörünün tersi işlev görür. “is” not operatörü değerler farklı ise True değerini değerler aynıysa “False” değerini döndürür.</p>
+<p>“==” operatörü değerlerin eşitliğini kontrol ederken “is” aynı zamanda her iki değerin aynı nes- neyi referans gösterip göstermediğini kontrol eder.</p>
+<p><strong>Örnek 43</strong></p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1 <span class="kw">is</span> <span class="dv">5</span>)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1 <span class="kw">is</span> <span class="kw">not</span> <span class="dv">5</span>) <span class="co">#is operatörünün tersini verir.</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p>“is” operatörü karakter dizisinde de kullanılabilir.</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;elif&#39;</span> <span class="kw">is</span> <span class="st">&#39;Elif&#39;</span>)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Yukarıdaki kod için büyük harf küçük harf duyarlılığını hatırlayınız.</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>adi<span class="op">=</span><span class="st">&#39;Elif&#39;</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (adi <span class="kw">is</span> <span class="st">&#39;Elif&#39;</span>)</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (adi <span class="kw">is</span> <span class="kw">not</span> <span class="st">&#39;Elif&#39;</span>) <span class="co">#is operatörünün tersini verir.</span></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p><strong>“in” ve “not in” Operatörleri</strong></p>
+<p>“in” operatörü bir karakter dizisinin başka bir karakter dizisinde yer alıp almadığını kontrol etmek için kullanılır. Karakter dizisi, diğer karakter dizisi içinde yer alıyorsa “True” değeri, yer almıyorsa “False” değeri döndürür. “not in” operatörü ise içinde yer almıyorsa “True” yer alıyorsa “False” değeri döndürür.</p>
+<p><strong>Örnek 44</strong></p>
+<p><strong>in operatörü kullanımı</strong></p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Bil&#39;</span> <span class="kw">in</span> <span class="st">&#39;Bilişim&#39;</span>)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. karakter dizisi içinde 1. karakter dizisi var mı?</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Bil&#39;</span> <span class="kw">not</span> <span class="kw">in</span> <span class="st">&#39;Bilişim&#39;</span>)</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="co"># in operatörünün tersi sonuç verir.</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p>“in operatörünün” for döngüsünde işlevsel bir kullanımı vardır. “Döngüler” konusunda bu kullanımına yer verilmiştir.</p>
+<h3 id="atama-operatörleri">2.6.3. Atama Operatörleri</h3>
+<p>Atama operatörleri değişkene değer atamak için kullanılır. Değişkeni başka bir değerle işleme alarak sonucun yine aynı değişkene atanmasını sağlar.</p>
+<table>
+<thead>
+<tr class="header">
+<th>İşaret</th>
+<th>İşlem</th>
+<th>Örnek</th>
+<th>Sonuç</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>+=</td>
+<td>Artırarak atama</td>
+<td>sayi1+=3</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>-=</td>
+<td>Eksilterek atama</td>
+<td>sayi1-=3</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>*=</td>
+<td>Çarparak atama</td>
+<td>sayi1*=3</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>/=</td>
+<td>Bölerek atama</td>
+<td>sayi1/=3</td>
+<td>1.6666666666666667</td>
+</tr>
+<tr class="odd">
+<td>* *=</td>
+<td>Kuvvet alarak atama</td>
+<td>sayi1**=3</td>
+<td>125</td>
+</tr>
+<tr class="even">
+<td>//=</td>
+<td>Tam sayı bölerek atama</td>
+<td>sayi1//=3</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>%=</td>
+<td>Mod alarak atama</td>
+<td>sayi1%=3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Not</strong> &gt;sayi1=5 olarak atanmıştır.</p>
+<p><strong>Artırarak Atama Operatörü</strong></p>
+<p>Bir değişkenin üstüne sayısal değerleri toplayarak sonucun aynı değişkene atanmasını sağlar.</p>
+<p><strong>Örnek 45</strong></p>
+<p>Aşağıdaki kod ”sayi1=sayi1+3” koduyla aynı işlevi görür.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">+=</span><span class="dv">3</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1)</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">=</span><span class="st">&#39;Merhaba &#39;</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">+=</span><span class="st">&#39;Mars&#39;</span> <span class="co">#metin1=metin1+&quot;Mars&quot; koduyla aynı işlevi görür.</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metin1)</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">8</span></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba Mars</span></code></pre></div>
+<p><strong>Eksilterek Atama Operatörü</strong></p>
+<p>Bir değişkenden bir sayısal değeri eksilterek sonucun aynı değişkene atanmasını sağlar.</p>
+<p><strong>Örnek 46</strong></p>
+<p>Aşağıdaki kod “sayi1=sayi1-3” koduyla aynı işlevi görür.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">-=</span><span class="dv">3</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1)</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span></code></pre></div>
+<p><strong>Çarparak Atama Operatörü</strong></p>
+<p>Bir değişkeni bir sayısal değer ile çarparak sonucun aynı değişkene atanmasını sağlar.</p>
+<p><strong>Örnek 47</strong></p>
+<p>Aşağıdaki kod “sayi1=sayi1*3” koduyla aynı işlevi görür.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">*=</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1)</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Aynı şekilde karakter dizilerinde de kullanabilirsiniz.</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">=</span><span class="st">&#39;Merhaba &#39;</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>metin1<span class="op">*=</span><span class="dv">3</span> <span class="co">#metin1=metin1*3 koduyla aynı işlevi görür.</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metin1)</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">15</span></span></code></pre></div>
+<p>Merhaba Merhaba Merhaba</p>
+<p><strong>Bölerek Atama Operatörü</strong></p>
+<p>Bir değişkeni bir sayısal değere bölerek sonucun aynı değişkene atanmasını sağlar.</p>
+<p><strong>Örnek 48</strong></p>
+<p>Aşağıdaki kod “sayi1=sayi1/3” koduyla aynı işlevi görür.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">/=</span><span class="dv">3</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayi1)</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">1.6666666666666667</span></span></code></pre></div>
+<p><strong>Kuvvet Alarak Atama Operatörü</strong></p>
+<p>Bir değişkenin kuvvetini alarak sonucun aynı değişkene atanmasını sağlar.</p>
+<p><strong>Örnek 49</strong></p>
+<p>Aşağıdaki kod “sayi1=sayi1**3” koduyla aynı işlevi görür.</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">**=</span><span class="dv">3</span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1)</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">125</span></span></code></pre></div>
+<p><strong>Tam Sayı Bölerek Atama Operatörü</strong></p>
+<p>Bir değişken sayıya bölündüğünde sonucun (ondalık kısmını atarak) aynı değişkene atanmasını sağlar.</p>
+<p><strong>Örnek 50</strong></p>
+<p>Aşağıdaki “kod sayi1=sayi1//3” koduyla aynı işlevi görür.</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">//=</span><span class="dv">3</span></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1)</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span></span></code></pre></div>
+<p><strong>Mod Alarak Atama Operatörü</strong></p>
+<p>Bir değişkenin bir sayıya bölümünden kalanın aynı değişkene atanmasını sağlar.</p>
+<p><strong>Örnek 51</strong></p>
+<p>Aşağıdaki kod “sayi1=sayi1%3” koduyla aynı işlevi görür.</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">%=</span><span class="dv">3</span></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1)</span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span></code></pre></div>
+<h3 id="mantıksal-operatörler">2.6.4. Mantıksal Operatörler</h3>
+<p>İfadeleri mantıksal olarak bağlamak için kullanılan: “or”, “and” ve “not” operatörleridir.</p>
+<p><strong>“or” Operatörü</strong></p>
+<p>“or” operatörü “veya” anlamındadır. Belirtilen koşullardan birinin sağlanması durumunda “True” değeri döndürür. Bir sayı 6’dan küçük veya 10’dan büyükse koşulunu düşünelim. Sayımız 5 ise 6’dan küçük olduğu için bu şartı sağlayacaktır. Sayımız 6, 7, 8, 9 veya 10 olursa şartların her ikisini de sağlamadığı için “False” değeri döndürülür.</p>
+<p><strong>Örnek 52</strong></p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>sayi1<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co">#or operatörü kullanımı</span></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sayi1<span class="op">&lt;</span><span class="dv">6</span> <span class="kw">or</span> sayi1<span class="op">&gt;</span><span class="dv">10</span>)</span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>adi<span class="op">=</span><span class="st">&#39;Elif&#39;</span></span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (adi<span class="op">==</span><span class="st">&#39;Elif&#39;</span> <span class="kw">or</span> adi<span class="op">==</span><span class="st">&#39;Emre&#39;</span>)</span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Adı Elif veya Emre ise True değerini döndürür.</span></span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a>meslekUnvani<span class="op">=</span><span class="st">&#39;Mühendis&#39;</span></span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (meslekUnvani<span class="op">==</span><span class="st">&#39;Öğretmen&#39;</span> <span class="kw">or</span> meslek<span class="op">==</span><span class="st">&#39;Doktor&#39;</span>)</span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Meslek ünvanı Öğretmen veya Doktor olmadığı için False döndürür.</span></span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (meslekUnvani<span class="op">==</span><span class="st">&#39;Öğretmen&#39;</span> <span class="kw">or</span> meslekUnvani<span class="op">==</span><span class="st">&#39;Doktor&#39;</span> <span class="kw">or</span></span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a>meslekUnvani<span class="op">==</span><span class="st">&#39;Mühendis&#39;</span>)</span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a><span class="co">#Meslek Ünvanı Öğretmen veya Doktor veya Mühendis&#39;ten biri ise True değerini</span></span>
+<span id="cb61-13"><a href="#cb61-13" aria-hidden="true" tabindex="-1"></a>döndürür.</span>
+<span id="cb61-14"><a href="#cb61-14" aria-hidden="true" tabindex="-1"></a><span class="co"># İkiden fazla koşul için de kullanılabilir.</span></span>
+<span id="cb61-15"><a href="#cb61-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-16"><a href="#cb61-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb61-17"><a href="#cb61-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb61-18"><a href="#cb61-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb61-19"><a href="#cb61-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span></code></pre></div>
+<p><strong>“and” Operatörü</strong></p>
+<p>Bu operatör “ve” anlamındadır. Belirtilen koşulların hepsinin sağlanması durumunda “True” değerini döndürür. Bir öğrencinin ders puanı 50’den büyük ve 60’tan küçükse koşulunu düşünüldüğünde öğrencinin puanı 50 ise her iki şartı da sağlayacaktır ve “True” değerini döndürecektir.</p>
+<p><strong>Örnek 53</strong></p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>ogrenciDersPuani<span class="op">=</span><span class="dv">50</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (ogrenciDersPuani<span class="op">&gt;</span><span class="dv">50</span> <span class="kw">and</span> ogrenciDersPuani<span class="op">&lt;</span><span class="dv">60</span>)</span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>adi<span class="op">=</span><span class="st">&#39;Emre&#39;</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>yasi<span class="op">=</span><span class="dv">24</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (adi<span class="op">==</span><span class="st">&#39;Emre&#39;</span> <span class="kw">and</span> yasi<span class="op">&gt;=</span><span class="dv">20</span>)</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Adı Emre ve yaşı en az 20 ise True değerini döndürür.</span></span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>meslekUnvani<span class="op">=</span><span class="st">&#39;Mühendis&#39;</span></span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>askerlikDurumu<span class="op">=</span><span class="st">&#39;Yaptı&#39;</span></span>
+<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a>isTecrubeYil<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (meslekUnvani<span class="op">==</span><span class="st">&#39;Mühendis&#39;</span> <span class="kw">and</span> askerlikDurumu<span class="op">==</span><span class="st">&#39;Yaptı&#39;</span>)</span>
+<span id="cb62-11"><a href="#cb62-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (meslekUnvani<span class="op">==</span><span class="st">&#39;Mühendis&#39;</span> <span class="kw">and</span> askerlikDurumu<span class="op">==</span><span class="st">&#39;Yaptı&#39;</span> <span class="kw">and</span> isTecrubeYil<span class="op">&gt;=</span><span class="dv">3</span>)</span>
+<span id="cb62-12"><a href="#cb62-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-13"><a href="#cb62-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span>
+<span id="cb62-14"><a href="#cb62-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb62-15"><a href="#cb62-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb62-16"><a href="#cb62-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">False</span></span></code></pre></div>
+<p>Meslek unvanı Mühendis ise ve askerliğini yapmışsa “True” değerini döndürür.</p>
+<p>Meslek ünvanı Mühendis ise, askerliğini yapmışsa ve en az 3 yıl iş tecrübesi varsa “True” değerini döndürür.</p>
+<p><strong>“not” Operatörü</strong></p>
+<p>Bu operatör “değil” anlamındadır. Belirtilen koşulun tersi doğruysa “True” değeri verir. Bir öğrencinin puanı 45’ten küçük değilse ifadesi düşünüldüğünde öğrencinin puanı 50 ise “True” değerini döndürür.</p>
+<p><strong>Örnek 54</strong></p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>ogrenciDersPuani<span class="op">=</span><span class="dv">50</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="kw">not</span>(ogrenciDersPuani<span class="op">&lt;</span><span class="dv">45</span>))</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (ogrenciDersPuani<span class="op">&gt;</span><span class="dv">45</span>) <span class="co">#Yukarıdaki ifade ile aynı işlevi görür.</span></span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span></code></pre></div>
+<h3 id="operatörlerde-öncelik-sırası">2.6.5. Operatörlerde Öncelik Sırası</h3>
+<p>Farklı operatörler birlikte kullanılabilir. Operatörler birlikte kullanılırken hangi işlemin önce yapılacağına dair bir sıralama vardır.</p>
+<ul>
+<li>Parantez içindeki işlemler her zaman öncelikli olarak yapılır.</li>
+<li>Çarpma ve bölme işlemleri toplama ve çıkarma işlemine göre önce yapılır.</li>
+<li>Aynı derecedeki operatörlerde işlem sırası önceliği soldan sağa doğrudur.</li>
+<li>İşlemlerde öncelik sırasını belirtmek için en iyi yöntem operatörleri parantez içinde kullanmaktır.</li>
+</ul>
+<p><strong>Örnek 55</strong></p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((<span class="dv">3</span><span class="op">+</span><span class="dv">5</span>)<span class="op">*</span><span class="dv">2</span>) <span class="co">#Bu işlemin sonucunu tahmin ediniz.</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Öncelikle parantez içi yapıldığında 8*2=16</span></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">3</span><span class="op">+</span><span class="dv">5</span><span class="op">*</span><span class="dv">2</span>) <span class="co">#Bu işlemin sonucu kaçtır?</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Öncelikle çarpma işlemi yapıldığından 3+10=13</span></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">3</span><span class="op">**</span><span class="dv">2</span><span class="op">*</span><span class="dv">2</span>)</span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">6</span><span class="op">*</span><span class="dv">7</span><span class="op">/</span><span class="dv">7</span>)</span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="dv">6</span><span class="op">*</span><span class="dv">3</span><span class="op">/</span><span class="dv">2</span><span class="op">+</span><span class="dv">8</span><span class="op">/</span><span class="dv">2</span><span class="op">*</span><span class="dv">3</span>)</span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">16</span></span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">13</span></span>
+<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">18</span></span>
+<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">6.0</span></span>
+<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">21.0</span></span></code></pre></div>
+<p>Bu bölümde temel operatörler verilmiştir. Python’da bu operatörlerin yanında başka operatörlerde yer almaktadır. Ayrıca kullandığınız Python sürümüne göre farklı operatörler kullanılabilir.</p>
+</body>
+</html>
