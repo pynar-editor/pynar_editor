@@ -1,11 +1,9 @@
 # Pynar Türkçe Kod Editörü
 Tübitak bünyesinde geliştirilen PyNar projesi, Python programlama için Türkçe derleme ortamı sunmayı amaçlamaktadır.
 
-PyNar Ülkemizdeki çocukların programlama öğrenme merakını gidermek ve onlara programlamanın temellerini Python diliyle öğretmek için oluşturulmuş bir editördür. Editör dilinin Türkçe olması programlamaya yeni başlamış çocukların gözünü korkutmayacak, içerisinde bulunan Chatbot ile iletişime geçebilecek, Hata ve uyarı mesajlarını Türkçe olarak alacak dolayısıyla gelecekte iyi birer programcı olabilmek için gerekeli güven ve motivasyona sahip olacaklardır.
+PyNar, programlamanın temellerini Python diliyle öğretmek için oluşturulmuş bir editördür. Editörü kullananlar içerisinde bulunan Chatbot ile iletişime geçebilecek, Hata ve uyarı mesajlarını Türkçe olarak alacak dolayısıyla gelecekte iyi birer programcı olabilmek için gerekeli güven ve motivasyona sahip olacaklardır.
 
 Kullanıcılar Uygulama içerisinde gerekli Python Kod Örneklerini sürükle bırak yöntemi ile seçip çalıştırabilecek, Yeni Kodlar oluşturabilecek, Online ortamda kodlarını saklayabilecek, Hazır Kod dökümanları indirip yükleyebileceklerdir.
-
-Uygulama içerisinde Geliştirilen chatbot ise derleme ortamı içerisinde bir klavuz görevi görmesi planlanmaktadır.
 
 # Kurulum
 # 1.Windows 10
@@ -20,7 +18,7 @@ Ek olarak program için gerekli paketlerin kurulumu:
     
 ![req](https://user-images.githubusercontent.com/30179132/99789976-7c61a580-2b34-11eb-9cae-7a85278219bd.PNG)
 
-# 2.TÜBİTAK PARDUS
+# 2.TÜBİTAK PARDUS 19 ve üstü
 
 Aşağıdaki paketleri kurunuz
 
@@ -39,7 +37,7 @@ Programı çalıştırabilmek için indirdiğiniz dosyada ana dizin içerisinde 
     
     1) Windows -> Komut İstemi 
     2) cd proje_yolu
-    3) D:\PyQt5_Projects\PyNar_Backend> python3 main.py
+    3) python3 main.py
     
 ![Ekran Alıntısı](https://user-images.githubusercontent.com/30179132/103465502-28f69000-4d4d-11eb-998f-ee9d7be8d41d.PNG)
 
