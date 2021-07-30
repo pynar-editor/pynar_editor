@@ -18,6 +18,15 @@ Program için gerekli paketlerin kurulumu:
     
 ![req](https://user-images.githubusercontent.com/30179132/99789976-7c61a580-2b34-11eb-9cae-7a85278219bd.PNG)
 
+# Programı Çalıştırma
+Programı çalıştırabilmek için indirdiğiniz dosyada ana dizin içerisinde komut satırını (CMD) başlatıp aşağıdaki işlemleri yapabilirsiniz:
+    
+    1) Windows -> Komut İstemi 
+    2) cd proje_yolu
+    3) python main.py
+    
+![Ekran Alıntısı](https://user-images.githubusercontent.com/30179132/103465502-28f69000-4d4d-11eb-998f-ee9d7be8d41d.PNG)
+
 # 2.TÜBİTAK PARDUS 19 ve üstü
 
 Aşağıdaki paketleri kurunuz
@@ -32,14 +41,7 @@ Programı indirdiğiniz klasöre girerek
 
 komutu ile çalıştırınız. Editör açıldıktan sonra ayarlar bölümünden Komutlar seçenek bölümünde "Pardus" seçiniz.
 
-# Programı Çalıştırma
-Programı çalıştırabilmek için indirdiğiniz dosyada ana dizin içerisinde komut satırını (CMD) başlatıp aşağıdaki işlemleri yapabilirsiniz:
-    
-    1) Windows -> Komut İstemi 
-    2) cd proje_yolu
-    3) python3 main.py
-    
-![Ekran Alıntısı](https://user-images.githubusercontent.com/30179132/103465502-28f69000-4d4d-11eb-998f-ee9d7be8d41d.PNG)
+
 
 # Özellikler
  * syntax highlighting
