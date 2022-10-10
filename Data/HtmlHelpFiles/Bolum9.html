@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bolum9</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; } /* Alert */
+    code span.an { color: #008000; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #0000ff; } /* ControlFlow */
+    code span.ch { color: #008080; } /* Char */
+    code span.cn { } /* Constant */
+    code span.co { color: #008000; } /* Comment */
+    code span.cv { color: #008000; } /* CommentVar */
+    code span.do { color: #008000; } /* Documentation */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.im { } /* Import */
+    code span.in { color: #008000; } /* Information */
+    code span.kw { color: #0000ff; } /* Keyword */
+    code span.op { } /* Operator */
+    code span.ot { color: #ff4000; } /* Other */
+    code span.pp { color: #ff4000; } /* Preprocessor */
+    code span.sc { color: #008080; } /* SpecialChar */
+    code span.ss { color: #008080; } /* SpecialString */
+    code span.st { color: #008080; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #008080; } /* VerbatimString */
+    code span.wa { color: #008000; font-weight: bold; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="data:text/css,%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0Awidth%3A%20728px%3B%0Amax%2Dwidth%3A%2099%25%3B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%2030px%2030px%208rem%2030px%3B%0Amargin%2Dleft%3A%20auto%3B%0Amargin%2Dright%3A%20auto%3B%0A%7D%0Abody%20a%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Abody%20a%3Aactive%2C%0Abody%20a%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Abody%20img%20%7B%0Aborder%3A%200%3B%0A%7D%0Abody%20hr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Abody%20pre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Abody%20code%2C%0Abody%20kbd%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20input%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20html%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Abody%20input%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Abody%20input%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20table%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Abody%20td%2C%0Abody%20th%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Abody%20input%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Abody%20a%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20a%3Ahover%2C%0Abody%20a%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20hr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Abody%20hr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%20hr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Abody%20blockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Abody%20ul%2C%0Abody%20ol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Abody%20ul%20ul%20ol%2C%0Abody%20ul%20ol%20ol%2C%0Abody%20ol%20ul%20ol%2C%0Abody%20ol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Abody%20dd%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Abody%20code%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20pre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0Abody%20%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0Abody%20%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0Abody%20%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0Abody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0Abody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Abody%20a%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0Abody%20%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Abody%20h1%20%2Eocticon%2Dlink%2C%0Abody%20h2%20%2Eocticon%2Dlink%2C%0Abody%20h3%20%2Eocticon%2Dlink%2C%0Abody%20h4%20%2Eocticon%2Dlink%2C%0Abody%20h5%20%2Eocticon%2Dlink%2C%0Abody%20h6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%2C%0Abody%20h2%3Ahover%20%2Eanchor%2C%0Abody%20h3%3Ahover%20%2Eanchor%2C%0Abody%20h4%3Ahover%20%2Eanchor%2C%0Abody%20h5%3Ahover%20%2Eanchor%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Abody%20h1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Abody%20h2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E225%3B%0A%7D%0Abody%20h2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Abody%20h3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Abody%20h6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20p%2C%0Abody%20blockquote%2C%0Abody%20ul%2C%0Abody%20ol%2C%0Abody%20dl%2C%0Abody%20table%2C%0Abody%20pre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20hr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Abody%20ul%2C%0Abody%20ol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Abody%20ul%20ul%2C%0Abody%20ul%20ol%2C%0Abody%20ol%20ol%2C%0Abody%20ol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20li%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Abody%20dl%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20dl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20blockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Abody%20blockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20table%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Abody%20table%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20table%20th%2C%0Abody%20table%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Abody%20table%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Abody%20table%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Abody%20img%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Abody%20code%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%3B%0Apadding%2Dbottom%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Abody%20code%3Abefore%2C%0Abody%20code%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Abody%20pre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Abody%20%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20%2Ehighlight%20pre%2C%0Abody%20pre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2EsourceCode%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Abody%20%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20pre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20pre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Abody%20pre%20code%3Abefore%2C%0Abody%20pre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Abody%20kbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0Abody%20%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0Abody%20%2Epl%2Dc1%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0Abody%20%2Epl%2De%2C%0Abody%20%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0Abody%20%2Epl%2Ds%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0Abody%20%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0Abody%20%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0Abody%20%2Epl%2Dpds%2C%0Abody%20%2Epl%2Ds%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsr%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsra%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0Abody%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0Abody%20%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0Abody%20%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0Abody%20%2Epl%2Dmh%2C%0Abody%20%2Epl%2Dmh%20%2Epl%2Den%2C%0Abody%20%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0Abody%20%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%20%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0Abody%20%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0Abody%20%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Abody%20kbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="sözlükler-ve-demetler">9. SÖZLÜKLER VE DEMETLER</h1>
+<p>Sözlükler, gerçek hayattaki sözlükler gibi davranan bir veri tipi olarak bilinmektedir. Python ile JSON formatında verilerde İsim Değer Çifti Koleksiyonu sözlük yapısıyla birebir uyumludur. Bundan dolayı sözlük yapısı JSON verilerinde kullanılmaktadır. Sözlüğün içindeki her bir eleman indeks olarak değil, anahtar (key) ve değer (value) olarak tutulur. Anahtar değer çiftleri virgülle ayrılarak bir öğeyi oluştururlar. Değer kısmı bütün veri türünü içerebilir fakat anahtar kısmı sadece string ve int tipinde olabilir. Sözlükler sırasız bir öge koleksiyonudur. Anahtar ve değer yapısında veri kümeleri oluştururlar. Değerler herhangi bir veri türüne ait olabilir ve tekrarlanabilir fakat anahtarlar kesinlikle benzersiz olmalıdır.</p>
+<h2 id="sözlük-oluşturma">9.1. Sözlük Oluşturma</h2>
+<p>Sözlük oluştururken dikkat edilmesi gerekenler:</p>
+<ul>
+<li>İki noktayı ve virgülü nereye koyduğumuza,</li>
+<li>Ögelerimizi tanımlarken ayraç parantez “()” yerine Küme Parantezi “{}” kullandığınıza,</li>
+<li>Anahtar-değer ilişkisine,</li>
+<li>Anahtar değeri tanımlarken tırnak işareti “” kullandığınıza dikkat ediniz.</li>
+</ul>
+<p>Aşağıdaki örnekte, süslü parantez ve iki nokta {:} ile anahtar değerlerinizi yerleştirerek kişi bilgilerini içeren bir sözlük oluşturunuz.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>kisisel_bilgiler<span class="op">=</span>{<span class="st">&quot;ad&quot;</span>:<span class="st">&quot;ali&quot;</span>,<span class="st">&quot;telefon&quot;</span>:<span class="st">&quot;05554442211&quot;</span>,<span class="st">&quot;e_posta&quot;</span>:<span class="st">&quot;ali@abc.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="st">com&quot;</span>,<span class="st">&quot;ülke&quot;</span>:<span class="st">&quot;Türkiye&quot;</span>,<span class="st">&quot;il&quot;</span>:<span class="st">&quot;istanbul&quot;</span>,<span class="st">&quot;ilçe&quot;</span>:<span class="st">&quot;beşiktaş&quot;</span>}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisisel_bilgiler)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;ad&#39;</span>: <span class="st">&#39;ali&#39;</span>, <span class="st">&#39;telefon&#39;</span>: <span class="st">&#39;05554442211&#39;</span>, <span class="st">&#39;e_posta&#39;</span>: <span class="st">&#39;ali@abc.com&#39;</span>, <span class="st">&#39;ülke&#39;</span>: <span class="st">&#39;Türkiye&#39;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&#39;il&#39;</span>: <span class="st">&#39;istanbul&#39;</span>, <span class="st">&#39;ilçe&#39;</span>: <span class="st">&#39;beşiktaş&#39;</span>}</span></code></pre></div>
+<p>Şimdi de key tiplerine göre sözlükler oluşturup ekrana yazdırınız. <strong>dict(  ) fonksiyonu</strong> kullanarak sözlük oluşturabilirsiniz. Örnek 1’de görüldüğü gibi sozluk4 adında 2 adet ögesi olan sözlük oluşturulmuştur.</p>
+<p><strong>Örnek 1</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># bos bir sozluk</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sozluk1 <span class="op">=</span> {}</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk1)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># integer veri tipi oluşturulan keyler</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>sozluk2<span class="op">=</span> {<span class="dv">1</span>: <span class="st">&#39;adana&#39;</span>, <span class="dv">2</span>: <span class="st">&#39;adıyaman&#39;</span>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk2)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># string ve integer veri tipi ile oluşan keyler</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sozluk3 <span class="op">=</span> {<span class="st">&#39;isim&#39;</span>: <span class="st">&#39;ali&#39;</span>, <span class="dv">1</span>: [<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>]}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk3)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># dict fonksiyonu</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>sozluk4 <span class="op">=</span> <span class="bu">dict</span>({<span class="dv">1</span>:<span class="st">&#39;erik&#39;</span>, <span class="dv">2</span>:<span class="st">&#39;ayva&#39;</span>})</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk4)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {}</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="dv">1</span>: <span class="st">&#39;adana&#39;</span>, <span class="dv">2</span>: <span class="st">&#39;adıyaman&#39;</span>}</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;isim&#39;</span>: <span class="st">&#39;ali&#39;</span>, <span class="dv">1</span>: [<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">3</span>]}</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="dv">1</span>: <span class="st">&#39;erik&#39;</span>, <span class="dv">2</span>: <span class="st">&#39;ayva&#39;</span>}</span></code></pre></div>
+<p>Örnek 2’de 3 adet anahtara sahip sözlük oluşturularak listelenmiştir.</p>
+<p><strong>Örnek 2</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sozluk <span class="op">=</span> {<span class="st">&quot;bilgisayar&quot;</span> : <span class="st">&quot;computer&quot;</span>,<span class="st">&quot;sarı&quot;</span> : <span class="st">&quot;yellow&quot;</span>,<span class="st">&quot;masa&quot;</span> : <span class="st">&quot;chair&quot;</span>}</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;bilgisayar&#39;</span>: <span class="st">&#39;computer&#39;</span>, <span class="st">&#39;sarı&#39;</span>: <span class="st">&#39;yellow&#39;</span>, <span class="st">&#39;masa&#39;</span>: <span class="st">&#39;chair&#39;</span>}</span></code></pre></div>
+<h2 id="sözlük-anahtar-ve-değerlerine-erişim">9.2. Sözlük Anahtar ve Değerlerine Erişim</h2>
+<p>Sözlük anahtar ve değerlerini listelemek için keys ve values komutları kullanılır.</p>
+<p><strong>Örnek 3</strong></p>
+<p>#keys(  ) metodu sözlükteki anahtarları yazdırır.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>iller<span class="op">=</span>{ <span class="st">&quot;konya&quot;</span> :<span class="st">&quot;42&quot;</span>,<span class="st">&quot;istanbul&quot;</span> :<span class="st">&quot;34&quot;</span>,<span class="st">&quot;ankara&quot;</span> :<span class="st">&quot;06&quot;</span> }</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> ( iller.keys())</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#values()metodu sözlükteki değerleri bize yazdırır.</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (iller.values())</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dict_keys([<span class="st">&#39;konya&#39;</span>, <span class="st">&#39;istanbul&#39;</span>, <span class="st">&#39;ankara&#39;</span>])</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dict_values([<span class="st">&#39;42&#39;</span>, <span class="st">&#39;34&#39;</span>, <span class="st">&#39;06&#39;</span>])</span></code></pre></div>
+<h2 id="sözlüklerde-eleman-seçme-silme-ekleme-değiştirme">9.3. Sözlüklerde Eleman Seçme, Silme, Ekleme, Değiştirme</h2>
+<h3 id="sözlükte-eleman-seçme-işlemleri">9.3.1. Sözlükte Eleman Seçme İşlemleri</h3>
+<p>Örnek 4’te meyveler adında sözlük oluşturulmuştur. Bu sözlükte adı, türü ve kg adında 3 adet anahtar ve bu anahtarlara ait değerleri mevcuttur. Araçlar sözlüğünde adı ve kg anahtarları ekrana yazdırılarak eleman seçme işlemi yapılmıştır</p>
+<p><strong>Örnek 4</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>meyveler<span class="op">=</span>{<span class="st">&quot;Adı&quot;</span>: <span class="st">&quot;Portakal&quot;</span>,<span class="st">&quot;Türü&quot;</span>: <span class="st">&quot;Turunçgiller&quot;</span>,<span class="st">&quot;Kg&quot;</span>: <span class="dv">20</span>}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(meyveler[<span class="st">&quot;Adı&quot;</span>])</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(meyveler[<span class="st">&quot;Kg&quot;</span>])</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Portakal</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">20</span></span></code></pre></div>
+<p><strong>Örnek 5</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri <span class="op">=</span> {<span class="st">&#39;ad&#39;</span>:<span class="st">&#39;ali&#39;</span>,<span class="st">&#39;yas&#39;</span>:<span class="dv">40</span>,<span class="st">&#39;memleketi&#39;</span>:<span class="st">&#39;konya&#39;</span>}</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># deger değiştirme</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri[<span class="st">&#39;yas&#39;</span>] <span class="op">=</span><span class="dv">45</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># deger ekleme</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri[<span class="st">&#39;adres&#39;</span>] <span class="op">=</span> <span class="st">&#39;nişantaşı&#39;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;ad&#39;</span>: <span class="st">&#39;ali&#39;</span>, <span class="st">&#39;yas&#39;</span>: <span class="dv">40</span>, <span class="st">&#39;memleketi&#39;</span>: <span class="st">&#39;konya&#39;</span>} <span class="fl">1.</span><span class="er">çıktı</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;ad&#39;</span>: <span class="st">&#39;ali&#39;</span>, <span class="st">&#39;yas&#39;</span>: <span class="dv">45</span>, <span class="st">&#39;memleketi&#39;</span>: <span class="st">&#39;konya&#39;</span>} <span class="fl">2.</span><span class="er">çıktı</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;ad&#39;</span>: <span class="st">&#39;ali&#39;</span>, <span class="st">&#39;yas&#39;</span>: <span class="dv">45</span>, <span class="st">&#39;memleketi&#39;</span>: <span class="st">&#39;konya&#39;</span>, <span class="st">&#39;adres&#39;</span>: <span class="st">&#39;nişantaşı&#39;</span>} <span class="fl">3.</span><span class="er">çıktı</span></span></code></pre></div>
+<p>Örnek 5’te kişi bilgileri adında sözlük oluşturulmuştur. Bu sözlükte ad, yas, memleketi adında 3 anahtar ve değerleri tanımlanmıştır. Bu değerler 1.çıktıda ekrana yazdırılmıştır. Daha sonra yas değeri 45 olarak değiştirilmiştir. 2. çıktıda tüm değerler ekrana yazdırılarak yas değerinin 45 olarak değiştirildiği görülmüştür. 3. çıktıda ise adres adında anahtar ve değeri eklenerek listelenmiştir.</p>
+<h3 id="sözlükte-eleman-silme-işlemleri">9.3.2. Sözlükte Eleman Silme İşlemleri</h3>
+<p><strong>pop(  )</strong> metodu, öğeyi belirtilen anahtar adıyla kaldırmak için kullanılır.</p>
+<p><strong>Örnek 6</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri<span class="op">=</span> {<span class="st">&quot;Adı&quot;</span>: <span class="st">&quot;Ekrem&quot;</span>,<span class="st">&quot;Soyadı&quot;</span>: <span class="st">&quot;Yıldırır&quot;</span>,”Yaşı<span class="st">&quot;: 40 } print(kisi_</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="st">bilgileri)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="st">kisi_bilgileri.pop(&quot;</span>Yaşı<span class="st">&quot;)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="st">print(kisi_bilgileri) </span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">&gt;&gt;&gt; {&#39;Adı&#39;: &#39;Ekrem&#39;, &#39;Soyadı&#39;: &#39;Yıldırır&#39;, &#39;Yaşı&#39;: 40}</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">&gt;&gt;&gt; {‘Adı&#39;: &#39;Ekrem&#39;, &#39;Soyadı&#39;: &#39;Yıldırır&#39;}</span></span></code></pre></div>
+<p>Örnek 6’yı incelediğimizde Yaşı anahtarı pop metodu ile kaldırılmıştır. Kisi_bilgileri sözlüğü listelenerek sadece Adı ve Soyadı anahtarlarının olduğu görülmüştür.</p>
+<p><strong>popitem(  )</strong> metodu, eklenen son öğeyi kaldırmak için kullanılır. Örnek 7’de popitem metodu kullanılmıştır. Bu metot kullanılarak, kisi_bilgileri adlı sözlükte son anahtar olan Yaşı kaldırılmıştır.</p>
+<p><strong>Örnek 7</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri<span class="op">=</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Adı&quot;</span>: <span class="st">&quot;Ekrem&quot;</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Soyadı&quot;</span>: <span class="st">&quot;Yıldırır&quot;</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Yaşı&quot;</span>: <span class="dv">40</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri.popitem()</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;Adı&#39;</span>: <span class="st">&#39;Ekrem&#39;</span>, <span class="st">&#39;Soyadı&#39;</span>: <span class="st">&#39;Yıldırır&#39;</span>, <span class="st">&#39;Yaşı&#39;</span>: <span class="dv">40</span>}</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;Adı&#39;</span>: <span class="st">&#39;Ekrem&#39;</span>, <span class="st">&#39;Soyadı&#39;</span>: <span class="st">&#39;Yıldırır&#39;</span>}</span></code></pre></div>
+<p><strong>del (parametre)</strong> anahtar sözcüğü, belirtilen anahtar adına sahip öğeyi kaldırmak için kullanılmaktadır. Örnek 8’de del komutu ile Yaşı adlı anahtar değere ait 40 değeri silinmiştir.</p>
+<p><strong>Örnek 8</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri<span class="op">=</span> {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Adı&quot;</span>: <span class="st">&quot;Ekrem&quot;</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Soyadı&quot;</span>: <span class="st">&quot;Yıldırır&quot;</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Yaşı&quot;</span>: <span class="dv">40</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> kisi_bilgileri[<span class="st">&quot;Yaşı&quot;</span>]</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;Adı&#39;</span>: <span class="st">&#39;Ekrem&#39;</span>, <span class="st">&#39;Soyadı&#39;</span>: <span class="st">&#39;Yıldırır&#39;</span>}</span></code></pre></div>
+<p><strong>clear(  )</strong> anahtar sözcüğü sözlüğü boşaltırken, <strong>del</strong> anahtar sözcüğü ise ayrıca sözlüğü tamamen silmektedir. Aşağıdaki örnekte clear(  ) anahtar sözcüğü kullanılmış ve sözlüğün içi boşaltılarak ekrana yazdırılmıştır.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sozluk <span class="op">=</span>{<span class="st">&quot;black&quot;</span>:<span class="st">&quot;siyah&quot;</span>, <span class="st">&quot;green&quot;</span>:<span class="st">&quot;yeşil&quot;</span>, <span class="st">&quot;white&quot;</span>:<span class="st">&quot;beyaz&quot;</span>,}</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>sozluk.clear()</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;black&#39;</span>: <span class="st">&#39;siyah&#39;</span>, <span class="st">&#39;green&#39;</span>: <span class="st">&#39;yeşil&#39;</span>, <span class="st">&#39;white&#39;</span>: <span class="st">&#39;beyaz&#39;</span>}</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {}</span></code></pre></div>
+<p><strong>Örnek 9</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri<span class="op">=</span> {<span class="st">&quot;Adı&quot;</span>: <span class="st">&quot;Ekrem&quot;</span>,<span class="st">&quot;Soyadı&quot;</span>: <span class="st">&quot;Yıldırır&quot;</span>,<span class="st">&quot;Yaşı&quot;</span>: <span class="dv">40</span>}</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>kisi_bilgileri.clear()</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> kisi_bilgileri</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {}</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">NameError</span> Traceback (most recent call last)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>  HYPERLINK <span class="st">&quot;https://localhost:8080/&quot;</span> <span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">9</span><span class="op">-</span>c04608b44e6f<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>  <span class="dv">3</span> <span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>  <span class="dv">4</span> <span class="kw">del</span> kisi_bilgileri</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">----&gt;</span> <span class="dv">5</span> <span class="bu">print</span>(kisi_bilgileri)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">NameError</span>: name <span class="st">&#39;kisi_bilgileri&#39;</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code></pre></div>
+<p>Örnek 9’da kisi_bilgileri sözlüğünde clear(  ) metodu ile içi boşaltılmış. Daha sonra del(  ) metodu ile kisi_bilgileri sözlüğü silinmiştir. Ekrana listele işlemi yapıldığında kisi_bilgileri adlı sözlük olmadığı için hata mesajı ile karşılaşılmıştır.</p>
+<h3 id="sözlüğe-eleman-ekleme-işlemleri">9.3.3. Sözlüğe Eleman Ekleme İşlemleri</h3>
+<p>Sözlüklere veri ekleme işlemi yapılabilmektedir. Yöntem sözlükadı[“anahtar”]=“deger” şeklinde olmaktadır. Örnek 10’da sözlükte önce tek öğesi bulunmaktadır. İkinci ve üçüncü öge eklenerek listeleme işlemi yapılmıştır.</p>
+<p><strong>Örnek 10</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sozluk<span class="op">=</span>{<span class="st">&quot;adi&quot;</span>:<span class="st">&quot;sami&quot;</span>, }</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>sozluk[<span class="st">&#39;soyadi&#39;</span>]<span class="op">=</span><span class="st">&#39;yılmaz&#39;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>sozluk[<span class="st">&#39;yasi&#39;</span>]<span class="op">=</span><span class="dv">40</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (sozluk)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;adi&#39;</span>: <span class="st">&#39;sami&#39;</span>}</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;adi&#39;</span>: <span class="st">&#39;sami&#39;</span>, <span class="st">&#39;soyadi&#39;</span>: <span class="st">&#39;yılmaz&#39;</span>}</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;adi&#39;</span>: <span class="st">&#39;sami&#39;</span>, <span class="st">&#39;soyadi&#39;</span>: <span class="st">&#39;yılmaz&#39;</span>, <span class="st">&#39;yasi&#39;</span>: <span class="dv">40</span>}</span></code></pre></div>
+<h3 id="sözlükte-eleman-değiştirme-işlemleri">9.3.4. Sözlükte Eleman Değiştirme İşlemleri</h3>
+<p>Sözlükte eleman değiştirmek için anahtarı kullanarak güncelleme işlemi yapılmıştır. <strong>Kullanımı:</strong> sözlük adı[‘anahtar adı’]=yeni değer şeklinde yapılmıştır.</p>
+<p><strong>Örnek 11</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>sozluk <span class="op">=</span> {<span class="st">&#39;isim&#39;</span>:<span class="st">&#39;ahmet&#39;</span>,<span class="st">&#39;yas&#39;</span>:<span class="dv">40</span>}</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># deger değiştirme</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>sozluk[<span class="st">&#39;yas&#39;</span>] <span class="op">=</span> <span class="dv">45</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk[<span class="st">&#39;yas&#39;</span>])</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">45</span></span></code></pre></div>
+<p>Örnek 11’de olduğu gibi sözlüğün yas adlı anahtarının değeri 40 iken 45 olarak değiştirilmiştir</p>
+<h2 id="sözlükler-üzerinde-gezinme">9.4. Sözlükler Üzerinde Gezinme</h2>
+<p>Python’da sözlükler öğelerine erişmek için anahtarlarını (KEY) kullanırlar ve değerler bu indexler üzerinden gösterilir. Anahtarlar köşeli parantez içerisinde ya da get(  ) fonksiyonu ile kullanılır. get(  ) fonksiyonunda anahtar bulunamazsa KeyError yerine “None” döndürür.</p>
+<p><strong>Örnek 12</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sozluk <span class="op">=</span> {<span class="st">&#39;ad&#39;</span>: <span class="st">&#39;ali&#39;</span>, <span class="dv">1</span>: [<span class="dv">5</span>, <span class="dv">4</span>]}</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk[<span class="st">&#39;ad&#39;</span>])</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk.get(<span class="dv">1</span>))</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ali</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">5</span>, <span class="dv">4</span>]</span></code></pre></div>
+<p>Örnek 12’de sozluk adlı sözlükte ad ve 1 adında anahtarlar ve bu anahtarlara bağlı ali ve 5,4 değerleri bulunmaktadır. Ad ve 1 anahtarlarını kullanılarak değerleri ekranda listelenmiştir. Örnek 13’te sozluk1 adında sözlük oluşturulmuş ve bir ve iki anahtarları kullanarak değerlerine erişilmiştir.</p>
+<p><strong>Örnek 13</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>sozluk1 <span class="op">=</span> {<span class="st">&quot;sıfır&quot;</span>:<span class="dv">0</span>,<span class="st">&quot;bir&quot;</span>:<span class="dv">1</span>,<span class="st">&quot;iki&quot;</span>:<span class="dv">2</span>,<span class="st">&quot;üç&quot;</span>:<span class="dv">3</span>}</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk1)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;bir&quot; anahtarına karşılık gelen değeri buluyoruz.</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk1 [<span class="st">&quot;bir&quot;</span>])</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;iki&quot; anahtarına karşılık gelen değeri buluyoruz.</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sozluk1[<span class="st">&quot;iki&quot;</span>])</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">&#39;sıfır&#39;</span>: <span class="dv">0</span>, <span class="st">&#39;bir&#39;</span>: <span class="dv">1</span>, <span class="st">&#39;iki&#39;</span>: <span class="dv">2</span>, <span class="st">&#39;üç&#39;</span>: <span class="dv">3</span>}</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span></code></pre></div>
+<p><strong>Örnek 14</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>deneme <span class="op">=</span> {<span class="st">&quot;sıfır&quot;</span>:<span class="dv">0</span>,<span class="st">&quot;bir&quot;</span>:<span class="dv">1</span>,<span class="st">&quot;iki&quot;</span>:<span class="dv">2</span>,<span class="st">&quot;üç&quot;</span>:<span class="dv">3</span>}</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(deneme[<span class="st">&quot;on&quot;</span>])</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Traceback (most recent call last):</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> File <span class="st">&quot;&lt;ipython-input-22-e25f3b4387f3&gt;&quot;</span>, line <span class="dv">2</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(deneme[<span class="st">&quot;on&quot;</span>])</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">KeyError</span>: <span class="st">&#39;on&#39;</span></span></code></pre></div>
+<p>Örnek 14’te sözlükte olmayan bir anahtar girildiğinde ekrana KeyError:’on’ diye key hatası mesajı verecektir.</p>
+<h2 id="demet-tuple-oluşturma-ve-eleman-işlemleri">9.5. Demet (tuple) Oluşturma ve Eleman İşlemleri</h2>
+<p>Demetler veri ekleme ve çıkarmanın yapılamadığı veri yapılarıdır. Bu değiştirilemez özellikleri dışında listelere benzemektedirler. Demetler ekleme çıkarma gibi işlemlerle uğraşmadığı için daha hızlı çalışır. Eklenen verilerin program boyunca değiştirilmesinin istenmediği durumlarda kullanılmaktadır.</p>
+<p><strong>Boş bir demet oluşturma:</strong></p>
+<p><strong>Örnek 15</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>demet<span class="op">=</span>()</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ()</span></code></pre></div>
+<p>Örnek 15’te boş bir demet oluşturularak, ekrana listelenmiştir.</p>
+<p><strong>İndis içeren demet oluşturma:</strong></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>demet <span class="op">=</span> (<span class="st">&quot;Python&quot;</span>,<span class="st">&quot;Java&quot;</span>,<span class="dv">2020</span>,<span class="st">&quot;JavaScript&quot;</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="st">&#39;Python&#39;</span>, <span class="st">&#39;Java&#39;</span>, <span class="dv">2020</span>, <span class="st">&#39;JavaScript&#39;</span>)</span></code></pre></div>
+<p>Örnek 16’da 4 ögesi bulunan bir demet oluşturularak ekrana yazdırılmıştır</p>
+<p><strong>Tek elemanlı demet oluşturma:</strong></p>
+<p>Tek nesneli bir demet oluşturmak için nesneden sonra virgül konulması gerekmektedir. Örnek 17’de buna yönelik bir uygulamadır.</p>
+<p><strong>Örnek 17</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>meyveler <span class="op">=</span>(<span class="st">&quot;erik&quot;</span>,)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(meyveler)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="st">&#39;erik&#39;</span>,)</span></code></pre></div>
+<p><strong>Not</strong></p>
+<pre><code>Eğer virgül koymazsanız bu değişken tipi demet değil string olarak sistemde yer alacaktır.</code></pre>
+<p>Demetler de sözlükler gibi indis olarak sıfırdan başlar. Örnek 18’de 6 elemanlı bir demet oluşturulmuştur. 1. İndise ulaşmak için demetin indis numarası kapalı parantez arasında girilerek ekrana yazdırılmıştır. print(demet[-1]) ise demet’in en son elemanı bize vermektedir. print(demet[2:])’da 2 numaralı indis dâhil iki numaradan sonraki tüm indislere ait elemanları listelemek için kullanılır.</p>
+<p><strong>Örnek 18</strong></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>demet <span class="op">=</span> (<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">15</span>,<span class="dv">20</span>,<span class="dv">25</span>,<span class="dv">30</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. indise ulaşma</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet[<span class="dv">0</span>])</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. indise ulaşma</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet[<span class="dv">2</span>])</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet[<span class="dv">2</span>:])</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">15</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">30</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">30</span>)</span></code></pre></div>
+<p>Aynı zamanda bir demet tuple(  ) fonksiyonu ile de oluşturulabilir ve constructor yöntemiyle başlangıçta elemanları ayarlanabilir. Örnek 19’da tuple fonksiyonu ile demet oluşturulmuş ve öğeleri ekrana yazdırılmıştır.</p>
+<p><strong>Örnek 19</strong></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>demet <span class="op">=</span> <span class="bu">tuple</span>((<span class="st">&quot;Ankara&quot;</span>,<span class="st">&quot;İstanbul&quot;</span>,<span class="st">&quot;Kayseri&quot;</span>))</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="st">&#39;Ankara&#39;</span>, <span class="st">&#39;İstanbul&#39;</span>, <span class="st">&#39;Kayseri&#39;</span>)</span></code></pre></div>
+<p>Örnek 20’de sayılar ve harfler diye iki adet demet tanımlanarak elemanları girilmiştir. Sayılar ve harfler demetleri toplanarak yeni_demet adlı demete aktarılmıştır. Elemanları ekrana yazdırıldı. Bu şekilde iki demet birleştirilmiştir.</p>
+<p><strong>Örnek 20</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>sayılar <span class="op">=</span> (<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,) <span class="co">#bir demet tanımladım</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>harfler <span class="op">=</span> (<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>,<span class="st">&quot;e&quot;</span>) <span class="co">#ikinci bir demet tanımladım</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>yeni_demet <span class="op">=</span> sayılar <span class="op">+</span> harfler <span class="co">#tanımladığım demetleri topladım</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(yeni_demet) <span class="co">#yeni demeti ekrana yazdırdım</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>, <span class="st">&#39;e&#39;</span>)</span></code></pre></div>
+<p>Örnek 21’de olduğu gibi if koşul yapısı ile demetlerin içerisinde aranılan elemanların olup olmadığını kontrol edilmiştir. Gelen mantıksal cevabı ise ekrana true ya da false olarak yazdırılmıştır. “a” harfi harfler adlı demette olduğu için ekrana true olarak mesaj yazdırılmıştır.</p>
+<p><strong>Örnek 21</strong></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>harfler <span class="op">=</span> (<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;c&quot;</span>,<span class="st">&quot;d&quot;</span>,<span class="st">&quot;e&quot;</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">&quot;a&quot;</span> <span class="kw">in</span> harfler: <span class="co">#True çıktısı verir</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">True</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="va">False</span>)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span></code></pre></div>
+<p>Demet veri yapılarında elemanlar iki parantez arasına yazılır lakin bu parantez zorunlu değildir. Yine aynı şekilde liste veri yapılarında olduğu gibi demetlerde de dilimleme <strong>(sliceable)</strong> ve iç içe geçirilme <strong>(nestable)</strong> yapılabilir. Örnek 22’de iç içe demetlere ait uygulama olup listeleme işlemi yapılmıştır. d adında demet oluşturulmuş ve iç içe demet yapısı olarak 2. indis numarasındaki ait 0. indis elemanına ve 3. indis numarasındaki 1. indis numarasına ait elemana ulaşılmıştır.</p>
+<p><strong>Örnek 22</strong></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>d<span class="op">=</span>((<span class="dv">1</span>,<span class="dv">2</span>),(<span class="dv">3</span>,<span class="dv">4</span>),(<span class="dv">5</span>,<span class="dv">6</span>),(<span class="dv">7</span>,<span class="dv">8</span>))</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d[<span class="dv">2</span>][<span class="dv">0</span>])</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d[<span class="dv">3</span>][<span class="dv">1</span>])</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">8</span></span></code></pre></div>
+<h2 id="demetlerin-temel-metotları">9.6. Demetlerin Temel Metotları</h2>
+<p><strong>index metodu</strong> demette yer alan ögenin sırasını bulmaya yardımcı olur. Örnek 23’te demet adında demet oluşturulmuştur. 4 ögeden oluşan demette index metodu kullanılarak zambak adlı ögenin 2. sırada olduğunu görülmüştür</p>
+<p><strong>Örnek 23</strong></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Demet oluşturalım.</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>demet <span class="op">=</span> (<span class="st">&quot;lale&quot;</span>,<span class="st">&quot;kardelen&quot;</span>,<span class="st">&quot;zambak&quot;</span>,<span class="st">&quot;papatya&quot;</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># &quot;zambak&quot; elemanının indeksini buluyoruz.</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet.index(<span class="st">&quot;zambak&quot;</span>))</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span></code></pre></div>
+<p><strong>Count</strong> metodu tuple içinde aynı elemandan kaç adet olduğunu bulunmasına yardımcı olur. Java adlı ögenin Örnek 24’te 3 adet olduğu görülmektedir.</p>
+<p><strong>Örnek 24</strong></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>demet <span class="op">=</span> (<span class="st">&quot;Python&quot;</span>,<span class="st">&quot;Java&quot;</span>,<span class="st">&quot;C#&quot;</span>,<span class="st">&quot;Delphi&quot;</span>,<span class="st">&quot;C++&quot;</span>,<span class="st">&quot;Java&quot;</span>,<span class="st">&quot;Java&quot;</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet.count(<span class="st">&quot;Java&quot;</span>))</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span></span></code></pre></div>
+<p>Liste tipindeki veriyi tuple’a dönüştürmeyi değişkene aktarıp yapılabilir. Örnek 25’te aylar adlı liste demet adlı değişkene aktarılarak, demet dönüşümü yapılarak, ekrana yazdırılmıştır.</p>
+<p><strong>Örnek 25</strong></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>aylar <span class="op">=</span>[<span class="st">&quot;ocak&quot;</span>,<span class="st">&quot;şubat&quot;</span>,<span class="st">&quot;mart&quot;</span>,<span class="st">&quot;nisan&quot;</span>,<span class="st">&quot;mayıs&quot;</span>,<span class="st">&quot;haziran&quot;</span>]</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>demet <span class="op">=</span> <span class="bu">tuple</span>(aylar)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(demet)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="st">&#39;ocak&#39;</span>, <span class="st">&#39;şubat&#39;</span>, <span class="st">&#39;mart&#39;</span>, <span class="st">&#39;nisan&#39;</span>, <span class="st">&#39;mayıs&#39;</span>, <span class="st">&#39;haziran&#39;</span>)</span></code></pre></div>
+<h2 id="demetler-üzerinde-gezinme">9.7. Demetler Üzerinde Gezinme</h2>
+<p>Demetler üzerinde gezinme işlemleri için for döngüsü kullanılır. Bu şekilde tüm öğeleri aynı anda listelenebilir. Örnek 26’da deneme adlı demet tanımlanarak içine 7 adet öge girilmiştir. Bu ögeler ise for döngüsü ile ekrana ögeleri alt alta yazdırılmıştır.</p>
+<p><strong>Örnek 26</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>deneme<span class="op">=</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> eleman <span class="kw">in</span> deneme:</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span>(eleman)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">4</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">5</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">6</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">7</span></span></code></pre></div>
+<p>Örnek 27’de demette sorted(  ) metodu ile ögeleri harflere göre sıralama yapılmıştır.</p>
+<p><strong>Örnek 27</strong></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>demet <span class="op">=</span>(<span class="st">&quot;lale&quot;</span>,<span class="st">&quot;kardelen&quot;</span>,<span class="st">&quot;zambak&quot;</span>,<span class="st">&quot;papatya&quot;</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">sorted</span>(demet))</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;kardelen&#39;</span>, <span class="st">&#39;lale&#39;</span>, <span class="st">&#39;papatya&#39;</span>, <span class="st">&#39;zambak&#39;</span>]</span></code></pre></div>
+
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bolum5</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; } /* Alert */
+    code span.an { color: #008000; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #0000ff; } /* ControlFlow */
+    code span.ch { color: #008080; } /* Char */
+    code span.cn { } /* Constant */
+    code span.co { color: #008000; } /* Comment */
+    code span.cv { color: #008000; } /* CommentVar */
+    code span.do { color: #008000; } /* Documentation */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.im { } /* Import */
+    code span.in { color: #008000; } /* Information */
+    code span.kw { color: #0000ff; } /* Keyword */
+    code span.op { } /* Operator */
+    code span.ot { color: #ff4000; } /* Other */
+    code span.pp { color: #ff4000; } /* Preprocessor */
+    code span.sc { color: #008080; } /* SpecialChar */
+    code span.ss { color: #008080; } /* SpecialString */
+    code span.st { color: #008080; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #008080; } /* VerbatimString */
+    code span.wa { color: #008000; font-weight: bold; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="data:text/css,%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0Awidth%3A%20728px%3B%0Amax%2Dwidth%3A%2099%25%3B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%2030px%2030px%208rem%2030px%3B%0Amargin%2Dleft%3A%20auto%3B%0Amargin%2Dright%3A%20auto%3B%0A%7D%0Abody%20a%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Abody%20a%3Aactive%2C%0Abody%20a%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Abody%20img%20%7B%0Aborder%3A%200%3B%0A%7D%0Abody%20hr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Abody%20pre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Abody%20code%2C%0Abody%20kbd%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20input%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20html%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Abody%20input%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Abody%20input%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20table%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Abody%20td%2C%0Abody%20th%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Abody%20input%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Abody%20a%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20a%3Ahover%2C%0Abody%20a%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20hr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Abody%20hr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%20hr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Abody%20blockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Abody%20ul%2C%0Abody%20ol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Abody%20ul%20ul%20ol%2C%0Abody%20ul%20ol%20ol%2C%0Abody%20ol%20ul%20ol%2C%0Abody%20ol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Abody%20dd%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Abody%20code%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20pre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0Abody%20%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0Abody%20%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0Abody%20%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0Abody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0Abody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Abody%20a%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0Abody%20%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Abody%20h1%20%2Eocticon%2Dlink%2C%0Abody%20h2%20%2Eocticon%2Dlink%2C%0Abody%20h3%20%2Eocticon%2Dlink%2C%0Abody%20h4%20%2Eocticon%2Dlink%2C%0Abody%20h5%20%2Eocticon%2Dlink%2C%0Abody%20h6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%2C%0Abody%20h2%3Ahover%20%2Eanchor%2C%0Abody%20h3%3Ahover%20%2Eanchor%2C%0Abody%20h4%3Ahover%20%2Eanchor%2C%0Abody%20h5%3Ahover%20%2Eanchor%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Abody%20h1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Abody%20h2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E225%3B%0A%7D%0Abody%20h2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Abody%20h3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Abody%20h6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20p%2C%0Abody%20blockquote%2C%0Abody%20ul%2C%0Abody%20ol%2C%0Abody%20dl%2C%0Abody%20table%2C%0Abody%20pre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20hr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Abody%20ul%2C%0Abody%20ol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Abody%20ul%20ul%2C%0Abody%20ul%20ol%2C%0Abody%20ol%20ol%2C%0Abody%20ol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20li%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Abody%20dl%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20dl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20blockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Abody%20blockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20table%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Abody%20table%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20table%20th%2C%0Abody%20table%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Abody%20table%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Abody%20table%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Abody%20img%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Abody%20code%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%3B%0Apadding%2Dbottom%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Abody%20code%3Abefore%2C%0Abody%20code%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Abody%20pre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Abody%20%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20%2Ehighlight%20pre%2C%0Abody%20pre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2EsourceCode%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Abody%20%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20pre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20pre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Abody%20pre%20code%3Abefore%2C%0Abody%20pre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Abody%20kbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0Abody%20%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0Abody%20%2Epl%2Dc1%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0Abody%20%2Epl%2De%2C%0Abody%20%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0Abody%20%2Epl%2Ds%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0Abody%20%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0Abody%20%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0Abody%20%2Epl%2Dpds%2C%0Abody%20%2Epl%2Ds%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsr%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsra%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0Abody%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0Abody%20%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0Abody%20%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0Abody%20%2Epl%2Dmh%2C%0Abody%20%2Epl%2Dmh%20%2Epl%2Den%2C%0Abody%20%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0Abody%20%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%20%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0Abody%20%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0Abody%20%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Abody%20kbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="modül-5">Modül 5</h1>
+<h1 id="listeler-ve-özellikleri">LİSTELER VE ÖZELLİKLERİ</h1>
+<p>Programlamada bir değişken üzerinde sadece bir değer tutulabilmektedir. Listeler ise bir değişkenin altında birden fazla değer tutulabilmesine yarar. Listeler, içinde farklı türlerden verileri barındırabilen taşıyıcılar olarak adlandırılmaktadır. Listeler Python’daki veri tiplerinden biridir. Listeler sıralı olarak kaydedilebilen veri yapılardır. Verilere döngü gibi yapılarla sıralı olarak erişmek istenildiğinde bize büyük avantaj sağlayıp, iki köşeli parantez arasında tanımlanırlar. Listelerde sözlüklerden farklı olarak dilimlenebilir ve elemanları sonradan değiştirilebilir. Aşağıda görüldüğü üzere boş liste ve int, string ve float verilerini bulunduran listeler tanımlanmıştır.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span> [] <span class="co">#boş list</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span><span class="bu">list</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>liste1<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>liste2<span class="op">=</span>[<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>liste3<span class="op">=</span>[<span class="fl">0.5</span>,<span class="fl">1.7</span>,<span class="fl">67.89</span>,<span class="fl">3.14</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>liste4<span class="op">=</span>[<span class="st">&#39;ali&#39;</span>,<span class="st">&#39;veli&#39;</span>,<span class="st">&#39;yılmaz&#39;</span>,<span class="st">&#39;hayri&#39;</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>liste5 <span class="op">=</span> <span class="bu">list</span>(ifade <span class="cf">for</span> degisken <span class="kw">in</span> sequence) <span class="co"># Hesaplanan bir liste</span></span></code></pre></div>
+<h2 id="liste-veri-tipleri">5.1. Liste Veri Tipleri</h2>
+<p>Bir listede her veri tipinden eleman saklanabilir. Bu anlamda sıralı bir diziye benzemektedir.</p>
+<p><strong>Örnek 1</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="st">&#39;ali&#39;</span>,<span class="fl">0.25</span>]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">&#39;ali&#39;</span>, <span class="fl">0.25</span>]</span></code></pre></div>
+<p>Örnek 1’de int, string ve float gibi farklı veri tiplerini içerisinde barındıran 4 elemanlı bir listedir. Karakter dizilerin indis değerleri değiştirilmek istendiğinde aşağıdaki gibi hata mesajı alınır.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>meyve<span class="op">=</span><span class="st">&quot;erik&quot;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>meyve <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span>meyve[<span class="dv">0</span>:]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(meyve)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Traceback (most recent call last):</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> File <span class="st">&quot;&lt;ipython-input-9-e4575713155c&gt;&quot;</span>, line <span class="dv">2</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> meyve <span class="op">=</span> <span class="dv">5</span> <span class="op">+</span>meyve[<span class="dv">0</span>:]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">TypeError</span>: unsupported operand <span class="bu">type</span>(s) <span class="cf">for</span> <span class="op">+</span>: <span class="st">&#39;int&#39;</span> <span class="kw">and</span> <span class="st">&#39;str&#39;</span></span></code></pre></div>
+<p><strong>Örnek 2</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Örnek <span class="dv">2</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>meyve <span class="op">=</span><span class="st">&quot;erik&quot;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>meyve <span class="op">=</span> <span class="st">&quot;ayva-&quot;</span> <span class="op">+</span>meyve[<span class="dv">0</span>:]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(meyve)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span>[<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>]</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>liste[<span class="dv">1</span>]<span class="op">=</span><span class="dv">2</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> ayva<span class="op">-</span>erik</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;a&#39;</span>, <span class="dv">2</span>]</span></code></pre></div>
+<p>Örnek 2’de karakter dizisi ile liste kullanımı beraber verilmiştir. Karakter dizisi string ama liste 1.indis numarasındaki öge ‘b’ iken sonra int veri tipinde 2 olarak değiştirilmiştir. Listeyi oluşturmak için önce bir değişken adı verilir, daha sonra bu değişkene çeşitli değerler atanır. Atamalar yapılarak liste oluşturulur. Bir liste oluşturulup bir değişkene atandığı zaman aslında tüm atamalarda olduğu gibi liste nesnesinin adresi değişkene atanmaktadır. Örnek 3’te oluşturulan liste içine herhangi bir eleman eklenmediği için bu liste içi boş bir listedir. Çıktı olarak boş liste vermektedir.</p>
+<p><strong>Örnek 3</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span>[ ] <span class="co">#veya liste=list()</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [ ]</span></code></pre></div>
+<h2 id="liste-kavramı-ve-indis-değerleri">5.2. Liste Kavramı ve İndis Değerleri</h2>
+<p>Öncelikle liste üzerinden veri okuyabilmek için hangi indis elemanının okunmak istendiği doğru bir şekilde belirtilmelidir. Örneğin Harfler isminde bir liste olduğunu düşünün. Listelerde ilk eleman her zaman 0. indistir. Listenin ilk elemanına erişmek veya yazmak istendiğinde Harfler[0] yazılması gerekmektedir. Diğer elemanları için de sırasıyla Harfler[1], Harfler[2] şeklinde yazılması gerekmektedir. Buradaki bir diğer önemli nokta da listenin ilk elemanı 0. indisten başladığı için son elemanı da liste uzunluğun bir eksiğidir.</p>
+<p>Tablo 1. Listelerde indis numarasına göre veri sıralaması</p>
+<table>
+<thead>
+<tr class="header">
+<th>Başlangıç</th>
+<th></th>
+<th></th>
+<th>Bitiş(Uzunluk-1)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Harfler[0]</td>
+<td>Harfler[1]</td>
+<td>Harfler[2]</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Örnek 4</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>renkler <span class="op">=</span> [<span class="st">&#39;Red&#39;</span>, <span class="st">&#39;Orange&#39;</span>, <span class="st">&#39;Yellow&#39;</span>, <span class="st">&#39;Green&#39;</span>, <span class="st">&#39;Blue&#39;</span>, <span class="st">&#39;Indigo&#39;</span>, <span class="st">&#39;Violet&#39;</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;listeyi ekrana yazdırıyoruz&#39;</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(renkler)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> listeyi ekrana yazdırıyoruz</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;black&#39;</span>, <span class="st">&#39;Orange&#39;</span>, <span class="st">&#39;Yellow&#39;</span>, <span class="st">&#39;Green&#39;</span>, <span class="st">&#39;Blue&#39;</span>, <span class="st">&#39;Indigo&#39;</span>, <span class="st">&#39;Violet&#39;</span>]</span></code></pre></div>
+<p>Örnek 4’te görüldüğü üzere renkler listesindeki tüm ögeleri listelenmiştir. Python’da listeler üzerinde değişik türden veriler bir arada tutulabilir. Python’ı güçlü kılan özelliklerden biri olan listelerde, her bir eleman bir indis (indis) numarasına sahiptir. Bir listenin başlangıç indisi 0 (sıfır)’dır.</p>
+<p>Tablo 2. İndis numarasına göre liste örneği</p>
+<table>
+<thead>
+<tr class="header">
+<th>İndis numarası</th>
+<th>Liste[0]</th>
+<th>Liste[1]</th>
+<th>Liste[2]</th>
+<th>Liste[3]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Öge sıralaması</td>
+<td>Birinci öge</td>
+<td>İkinci öge</td>
+<td>Üçüncü öge</td>
+<td>Dördüncü öge</td>
+</tr>
+<tr class="even">
+<td>Liste =</td>
+<td>‘ali’,</td>
+<td>5,</td>
+<td>3.14,</td>
+<td>‘ayşe’</td>
+</tr>
+</tbody>
+</table>
+<p>Başlangıç elemanları belli olan bir listenin tanımlanması ve yazdırılması:</p>
+<p><strong>Örnek 5</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#liste1 adında bir liste tanımladık. İçine verileri girdik</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#bu verileri ekrana yazdırdık</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>liste1 <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>,<span class="st">&#39;d&#39;</span>,<span class="st">&#39;e&#39;</span>,<span class="st">&#39;f&#39;</span>]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste1)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>, <span class="st">&#39;d&#39;</span>, <span class="st">&#39;e&#39;</span>, <span class="st">&#39;f&#39;</span>]</span></code></pre></div>
+<p>Örnek 5’te liste1 adında liste tanımlandı ve char(karakter) olarak ögeleri bulunmaktadır. İndis numarasına bakıldığı zaman; aşağıdaki şekilde ögeler vardır.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>liste1[<span class="dv">0</span>] <span class="op">=</span><span class="st">&#39;a&#39;</span> liste1[<span class="dv">1</span>] <span class="op">=</span><span class="st">&#39;b&#39;</span> liste1[<span class="dv">2</span>] <span class="op">=</span><span class="st">&#39;c&#39;</span> liste[<span class="dv">3</span>] <span class="op">=</span><span class="st">&#39;d&#39;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>liste1[<span class="dv">4</span>] <span class="op">=</span><span class="st">&#39;e&#39;</span> liste1[<span class="dv">5</span>] <span class="op">=</span><span class="st">&#39;f&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Listeler hem string hem de sayı türünde veriler barındırabilir. Örnek <span class="dv">6</span> incelendiğinde <span class="dv">7</span> elemanlı bir liste</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>tanımlıdır. <span class="dv">6</span> ve <span class="fl">7.</span> elamanları sayı diğerleri metin olan bir listedir.</span></code></pre></div>
+<p><strong>Örnek 6</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>liste2<span class="op">=</span>[<span class="st">&#39;python&#39;</span>,<span class="st">&#39;geleceği&#39;</span>,<span class="st">&#39;olan&#39;</span>,<span class="st">&#39;bir&#39;</span>,<span class="st">&#39;dil&#39;</span>,<span class="dv">500</span>,<span class="fl">0.567</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste2)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;python&#39;</span>, <span class="st">&#39;geleceği&#39;</span>, <span class="st">&#39;olan&#39;</span>, <span class="st">&#39;bir&#39;</span>, <span class="st">&#39;dil&#39;</span>, <span class="dv">500</span>,<span class="fl">0.567</span>]</span></code></pre></div>
+<p>Örnek 6’da sayı, float ve string ögelerine sahip liste ekrana yazdırılmıştır.</p>
+<h2 id="liste-elemanlarına-erişim">5.3. Liste Elemanlarına Erişim</h2>
+<p>Listedeki ögelere ulaşmak için bir değer, listenin indis numarasına göre atanıp çağrılabilir. Liste oluştururken içine herhangi bir değer girilmeden de oluşturulup, sonradan değer ataması yapılabilir ya da herhangi bir indis numarasından başlanıp belirlenen indis numarasına kadar olan ögelere ulaşılır. Aşağıdaki örneklerde görüldüğü gibi hem indis numarasından hem de başlangıcı ve bitişi belli olan indis numarası aralıklarına kadar ifadelere erişilmiştir. Listenin belirli aralıktaki öğelerini alma işlemine dilimleme denir. Liste dilimlerken adımlama da başlangıç indisi alır ama bitiş indisi almaz.</p>
+<p><strong>Kullanımı:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>eleman <span class="op">=</span> liste[indis]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dilim <span class="op">=</span> liste[baslangic:bitis]</span></code></pre></div>
+<p>Liste, elemanlarına erişim için tamamını veya indis numarasına göre çağırmaktadır.</p>
+<p><strong>Örnek 7</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span>[<span class="st">&quot;birinici veri&quot;</span>,<span class="st">&quot;ikinci veri&quot;</span>,<span class="st">&quot;üçüncü veri &quot;</span>,<span class="st">&quot;dördüncü veri&quot;</span>,<span class="st">&quot;beşinci veri&quot;</span>]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#beş elemenlı listenin ilk verisi</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">0</span>])</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#beş elemenlı listenin son verisi</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">4</span>])</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> birinici veri</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> beşinci veri</span></code></pre></div>
+<p>Örnek 7’de listenin indis numaraları yazılarak, başlangıç ve bitiş ögelerine ulaşılmıştır.</p>
+<p><strong>Örnek 8</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span>[<span class="st">&quot;ayva&quot;</span>,<span class="st">&quot;armut&quot;</span>,<span class="st">&quot;kiraz&quot;</span>,<span class="st">&quot;vişne&quot;</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">1</span>])</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;ayva&#39;</span>, <span class="st">&#39;armut&#39;</span>, <span class="st">&#39;kiraz&#39;</span>, <span class="st">&#39;vişne&#39;</span>]</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> armut</span></code></pre></div>
+<p>Örnek 8’de ise listenin tüm ögeleri ve 1. indis numarasındaki öge olan “armut” değeri listelenmiştir. Liste içindeki ögeleri kontrol edilebilir. Eşya adında bir liste var. Liste tanımlanır, daha sonra if karar yapısı ile içindeki ögeler de “perde” olup olmadığı kontrol edilir.</p>
+<p><strong>Örnek 9</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>esya <span class="op">=</span> [<span class="st">&quot;ayna&quot;</span>, <span class="st">&quot;televizyon&quot;</span>, <span class="st">&quot;perde&quot;</span>]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;perde&quot;</span> <span class="kw">in</span> esya):</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span>(<span class="st">&quot;Bu değer listede var.&quot;</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span>(<span class="st">&quot;Bu değer listede yok&quot;</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Bu değer listede var.</span></code></pre></div>
+<p>Aşağıdaki örnekte 5 elemanlı bir liste tanımlanmıştır. İndis numaralarını kullanarak, listenin 1. indisten başlayarak, 3. indise kadar öge listesine aktarıp listeleme işlemi yapılmıştır.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>öge <span class="op">=</span> listem[<span class="dv">1</span>:<span class="dv">3</span>]</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(öge)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">2</span>,<span class="dv">3</span>]</span></code></pre></div>
+<p><strong>Örnek 10</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>listem<span class="op">=</span>[<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>]</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>eleman <span class="op">=</span> listem[<span class="dv">3</span>]</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(eleman)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">40</span></span></code></pre></div>
+<p>Örnek 10’da listem adında bir liste tanımlanarak 5 elemanlı ifade girilmiştir. Listem adlı liste için 3. indis numarasına ait ifade eleman adlı değişkene atama işlemi yapılmıştır. Eleman adlı değişken de ekrana yazdırılarak 40 sonucu elde edilmiştir. <strong>Örnek 11</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>listem <span class="op">=</span> [<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>eleman <span class="op">=</span> listem[<span class="dv">1</span>:<span class="dv">3</span>]</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(eleman)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">20</span>, <span class="dv">30</span>]</span></code></pre></div>
+<p>Örnek 11’de listem adlı listede eleman adlı değişkene sadece 1 ve 2. indis numaralarının dâhil edildiği 3. indis numarasının dâhil edilmediği atama işlemi yapılmıştır. Eleman adlı değişken de ekrana yazdırılarak 20 ve 30 değerleri listelenmiştir.</p>
+<p><strong>Örnek 12</strong></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">10</span>]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. eleman</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">0</span>])</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. eleman</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">5</span>])</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Baştan 5. indekse kadar (dahil değil)</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[:<span class="dv">5</span>])</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.indisten 5.indise kadar</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">1</span>:<span class="dv">7</span>])</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[<span class="dv">5</span>:])</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[::<span class="dv">2</span>])</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">7</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>]</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>]</span></code></pre></div>
+<p>Örnek 12’de, 10 elemanlı bir liste tanımlanmış ve indis numaraları kullanılarak ekrana listeleme işlemi yapılmıştır. Listelerde <strong>negatif indisler</strong> de kullanılabilir. Negatif indis numarası listenin sonuncu elemanından başlayarak sayıldığında (sondan başa) sıra numarasını verir. Örnek 13’te listenin sonuncu elemanına liste[-1] olarak, sondan ikinciye ise [-2] olarak ulaşılır. Güle güle elemanı liste de -1.indis olarak görülmektedir. Merhaba ise geriye doğru sayıldığında -4. indis’tir.</p>
+<p><strong>Örnek 13</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> [ <span class="st">&quot;merhaba&quot;</span>, <span class="st">&quot;dünya&quot;</span>, <span class="st">&quot;merhaba&quot;</span>, <span class="st">&quot;güle güle&quot;</span> ]</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (liste [<span class="op">-</span> <span class="dv">1</span> ]) <span class="co">#son ögeyi listeler</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( liste [<span class="op">-</span> <span class="dv">3</span> ]) <span class="co">#sondan üçüncü ögeyi listeler</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste [<span class="op">-</span> <span class="dv">4</span> ]) <span class="co">#sondan dördüncü ögeyi listeler</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste[::<span class="op">-</span><span class="dv">1</span>]) <span class="co">#sondan başa doğru listeleme yapmak için kullanılır</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> güle güle</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> dünya</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> merhaba</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;güle güle&#39;</span>, <span class="st">&#39;merhaba&#39;</span>, <span class="st">&#39;dünya&#39;</span>, <span class="st">&#39;merhaba&#39;</span>]</span></code></pre></div>
+<h2 id="temel-liste-metotları">5.4. Temel Liste Metotları</h2>
+<p>Metotlar listelerin işlevlerine erişilmesini sağlar. Listenin metotları için dir(  ) fonksiyonunu kullanarak tüm metotlar görülebilir. Bu metotlar yardımıyla listeler ekleme, çıkarma, arama, sıralama vb. birçok işlemin kolaylıkla yapabilmesini sağlamaktadır.</p>
+<p><strong>Tablo 3.</strong> Temel liste metotları</p>
+<table>
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 5%" />
+<col style="width: 89%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sıra No</th>
+<th>Metot Adı</th>
+<th>Görevi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>‘append’</td>
+<td>Listeye yeni eleman ekleme işlemini yapar. Bu metot ile listeye sadece bir eleman eklenebilir ve eklenen eleman listenin sonunda yer alır.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>‘clear’</td>
+<td>Listeyi değil içindeki tüm ifadeleri silmeye yarar.</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>‘copy’</td>
+<td>Listeden listeye kopyalama işlevine yaramaktadır</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>‘count’</td>
+<td>Listenin içinde sorgulanan elemandan kaç adet olduğunu bulmamızı sağlar.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>‘extend’</td>
+<td>Listeler arası genişletme işlevini görür.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>‘indis’</td>
+<td>Listedeki elemanları almamızı sağlar</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>‘insert’</td>
+<td>Listenin istenilen indis numarasına eleman eklenebilir</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>‘pop’</td>
+<td>Listedeki elemanın indisi ile silme işlem yapar. indis belirtmediğinizde ise varsayılan olarak listenin son elemanını siler. Ayrıca bu metot silinen elemanı ekrana yazmaktadır.</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>‘remove’</td>
+<td>Listede istenilen elemanın değerini yazarak silme işlemi yarar</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>‘sort’</td>
+<td>Listenin elemanlarını alfabetik olarak sıralar</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>‘reverse’</td>
+<td>Bu metot sort metodunun aksine listedeki elemanları ters alfabetik olarak sıralar.</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>‘del’</td>
+<td>Liste içerisinden bir elemanı silmek için kullanılır. Silme işlemi indis numarasına göre yapılmaktadır.****</td>
+</tr>
+</tbody>
+</table>
+<h3 id="append-kullanımı">5.4.1. ‘append’ kullanımı</h3>
+<p><strong>Örnek 14</strong></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>takimlar<span class="op">=</span>[<span class="st">&quot;gs&quot;</span>,<span class="st">&quot;fb&quot;</span>,<span class="st">&quot;bjk&quot;</span>]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>takimlar.append(<span class="st">&quot;ts&quot;</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(takimlar)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;gs&#39;</span>, <span class="st">&#39;fb&#39;</span>, <span class="st">&#39;bjk&#39;</span>, <span class="st">&#39;ts&#39;</span>]</span></code></pre></div>
+<p>Örnek 14’te takimlar listesine “ts” ögesi eklenmiş ve son indis numarasında yer almıştır.</p>
+<h3 id="insert-kullanımı">5.4.2. ‘insert’ kullanımı</h3>
+<p><strong>Örnek 15</strong></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sebzeler <span class="op">=</span>[<span class="st">&quot;lahana&quot;</span>,<span class="st">&quot;marul&quot;</span>,<span class="st">&quot;pırasa&quot;</span>,<span class="st">&quot;ıspanak&quot;</span>,<span class="st">&quot;fasulye&quot;</span>]</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>sebzeler.insert(<span class="dv">2</span>,<span class="st">&quot;patlıcan&quot;</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sebzeler)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;lahana&#39;</span>, <span class="st">&#39;marul&#39;</span>, <span class="st">&#39;patlıcan&#39;</span>, <span class="st">&#39;pırasa&#39;</span>, <span class="st">&#39;ıspanak&#39;</span>, <span class="st">&#39;fasulye&#39;</span>]</span></code></pre></div>
+<p>Örnek 15’te insert metodu kullanılarak 2. indis numarasına “patlıcan” ögesi eklenerek, listeleme işlemi yapılmıştır.</p>
+<h3 id="copy-kullanımı">5.4.3. ‘copy’ kullanımı</h3>
+<p><strong>Örnek 16</strong></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>iller1 <span class="op">=</span>[<span class="st">&quot;konya&quot;</span>,<span class="st">&quot;karaman&quot;</span>,<span class="st">&quot;kocaeli&quot;</span>,<span class="st">&quot;kayseri&quot;</span>,<span class="st">&quot;kahramanmaraş&quot;</span>]</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>iller2<span class="op">=</span>[]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>iller2 <span class="op">=</span> iller1.copy()</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(iller2)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;konya&#39;</span>, <span class="st">&#39;karaman&#39;</span>, <span class="st">&#39;kocaeli&#39;</span>, <span class="st">&#39;kayseri&#39;</span>, <span class="st">&#39;kahramanmaraş&#39;</span>]</span></code></pre></div>
+<p>Örnek 16’da iller1 listesi copy metodu ile iller2 listesine aktarılmıştır.</p>
+<h3 id="count-kullanımı">5.4.4. ‘count’ kullanımı</h3>
+<p><strong>Örnek 17</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>takimlar <span class="op">=</span> [<span class="st">&#39;GS&#39;</span>,<span class="st">&#39;FB&#39;</span>,<span class="st">&#39;BJK&#39;</span>,<span class="st">&#39;TS&#39;</span>]</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(takimlar.count(<span class="st">&#39;FB&#39;</span>))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span></span></code></pre></div>
+<p>Örnek 17’de takimlar listesinde ‘FB’ ögesinin kaç adet olduğu count metodu bulunmuştur.</p>
+<h3 id="extend-kullanımı">5.4.5. ‘extend’ kullanımı</h3>
+<p><strong>Örnek 18</strong></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>kus1<span class="op">=</span>[<span class="st">&quot;bıldırcın&quot;</span>,<span class="st">&quot;papağan&quot;</span>,<span class="st">&quot;kartal&quot;</span>,<span class="st">&quot;akbaba&quot;</span>,<span class="st">&quot;şahin&quot;</span>]</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>kus2<span class="op">=</span>[<span class="st">&quot;baykuş&quot;</span>,<span class="st">&quot;muhabbet&quot;</span>]</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>kus1.extend(kus2)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kus1)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;bıldırcın&#39;</span>, <span class="st">&#39;papağan&#39;</span>, <span class="st">&#39;kartal&#39;</span>, <span class="st">&#39;akbaba&#39;</span>, <span class="st">&#39;şahin&#39;</span>, <span class="st">&#39;baykuş&#39;</span>, <span class="st">&#39;muhabbet&#39;</span>]</span></code></pre></div>
+<p>Örnek 18’de extend komutu listelerdeki ögelerin kendi elemanlarını koruyarak genişletme işlemi yapılmıştır. ### 5.4.6. ‘indis’ kullanımı</p>
+<p><strong>Örnek 19</strong></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sebzeler <span class="op">=</span>[<span class="st">&quot;lahana&quot;</span>,<span class="st">&quot;marul&quot;</span>,<span class="st">&quot;pırasa&quot;</span>,<span class="st">&quot;ıspanak&quot;</span>,<span class="st">&quot;fasulye&quot;</span>]</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sebzeler.index(<span class="st">&quot;ıspanak&quot;</span>))</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span></span></code></pre></div>
+<p>İndis metodu yardımıyla Örnek 19’da görüldüğü gibi verilen bir ögenin indis numarasını vermektedir.</p>
+<h3 id="clear-kullanımı">5.4.7. ‘clear’ kullanımı</h3>
+<p><strong>Örnek 20</strong></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span>[<span class="st">&quot;ayva&quot;</span>,<span class="st">&quot;nar&quot;</span>,<span class="st">&quot;kiraz&quot;</span>,<span class="st">&quot;kayısı&quot;</span>,<span class="st">&quot;Üzüm&quot;</span>]</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>liste.clear()</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> []</span></code></pre></div>
+<p>clear(  ) metodu kullanılarak örnek 20’deki listenin tüm ögeleri silinmiştir.</p>
+<h3 id="pop-kullanımı">5.4.8. ‘pop’ kullanımı</h3>
+<p><strong>Örnek 21</strong></p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sebzeler <span class="op">=</span>[<span class="st">&quot;lahana&quot;</span>,<span class="st">&quot;marul&quot;</span>,<span class="st">&quot;pırasa&quot;</span>,<span class="st">&quot;ıspanak&quot;</span>,<span class="st">&quot;fasulye&quot;</span>]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>sebzeler.pop(<span class="dv">2</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sebzeler)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;lahana&#39;</span>, <span class="st">&#39;marul&#39;</span>, <span class="st">&#39;ıspanak&#39;</span>, <span class="st">&#39;fasulye&#39;</span>]</span></code></pre></div>
+<p>Örnek 21’de pop metodu ile sebzeler listesinden 2.indis numarasına ait olan “pırasa” adlı öge silinmiştir.</p>
+<h3 id="remove-kullanımı">5.4.9. ‘remove’ kullanımı</h3>
+<p><strong>Örnek 22</strong></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>sehirler <span class="op">=</span>[<span class="st">&quot;adana&quot;</span>,<span class="st">&quot;ağrı&quot;</span>,<span class="st">&quot;bursa&quot;</span>,<span class="st">&quot;konya&quot;</span>,<span class="st">&quot;ankara&quot;</span>]</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>sehirler.remove(<span class="st">&quot;konya&quot;</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sehirler)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;adana&#39;</span>, <span class="st">&#39;ağrı&#39;</span>, <span class="st">&#39;bursa&#39;</span>, <span class="st">&#39;ankara&#39;</span>]</span></code></pre></div>
+<p>Örnek 22’de öge adına göre silme işlemi yapılmıştır ve “konya” adlı öge sehirler listesinden silinmiştir</p>
+<h3 id="reverse-kullanımı">5.4.10. ‘reverse’ kullanımı</h3>
+<p><strong>Örnek 23</strong></p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>sayilar<span class="op">=</span>[<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>]</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>sayilar.reverse()</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sayilar)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">70</span>, <span class="dv">60</span>, <span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">30</span>, <span class="dv">20</span>, <span class="dv">10</span>]</span></code></pre></div>
+<p>Örnek 23’te reverse metodu ile liste öge elemanları tersten sıralanmıştır. ### 5.4.11. ‘sort’ kullanımı</p>
+<p><strong>Örnek 24</strong></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>isimler<span class="op">=</span>[<span class="st">&quot;elif&quot;</span>,<span class="st">&quot;ayşe&quot;</span>,<span class="st">&quot;kemal&quot;</span>,<span class="st">&quot;kaan&quot;</span>,<span class="st">&quot;hafsa&quot;</span>]</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>isimler.sort()</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(isimler)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;ayşe&#39;</span>, <span class="st">&#39;elif&#39;</span>, <span class="st">&#39;hafsa&#39;</span>, <span class="st">&#39;kaan&#39;</span>, <span class="st">&#39;kemal&#39;</span>]</span></code></pre></div>
+<p>Sort metodu ile Örnek 24’te isimler listesi ögeleri alfabetik olarak sıralanmıştır. ### 5.4.12. ‘del’ kullanımı</p>
+<p><strong>Örnek 25</strong></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>takimlar <span class="op">=</span> [<span class="st">&#39;GS&#39;</span>,<span class="st">&#39;FB&#39;</span>,<span class="st">&#39;BJK&#39;</span>,<span class="st">&#39;TS&#39;</span>]</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> takimlar[<span class="dv">2</span>]</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(takimlar)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;GS&#39;</span>, <span class="st">&#39;FB&#39;</span>, <span class="st">&#39;TS&#39;</span>]</span></code></pre></div>
+<p>Örnek 25’te del metodu ile takimlar listesine ait ‘BJK’ ögesi indis numarasına göre silinmiştir.</p>
+<p>Yukarıdaki örneklerde temel liste metotlarının her birine yönelik örnek ve çıktıları verilmiştir. Ayrıca <strong>xxx</strong> şeklinde özel metotlar da bulunmaktadır. Bu metotlarda dir(list) şeklinde komut satırına yazıldığında aşağıdaki şekilde çıktı alınır.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">&#39;__add__&#39;</span>, <span class="st">&#39;__class__&#39;</span>, <span class="st">&#39;__contains__&#39;</span>, <span class="st">&#39;__delattr__&#39;</span>, <span class="st">&#39;__delitem__&#39;</span>, <span class="st">&#39;__dir__&#39;</span>,</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;__doc__&#39;</span>, <span class="st">&#39;__eq__&#39;</span>, <span class="st">&#39;__format__&#39;</span>, <span class="st">&#39;__ge__&#39;</span>, <span class="st">&#39;__getattribute__&#39;</span>, <span class="st">&#39;__getitem__&#39;</span>,</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;__gt__&#39;</span>, <span class="st">&#39;__hash__&#39;</span>, <span class="st">&#39;__iadd__&#39;</span>, <span class="st">&#39;__imul__&#39;</span>, <span class="st">&#39;__init__&#39;</span>, <span class="st">&#39;__init_subclass__&#39;</span>,</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;__iter__&#39;</span>, <span class="st">&#39;__le__&#39;</span>, <span class="st">&#39;__len__&#39;</span>, <span class="st">&#39;__lt__&#39;</span>, <span class="st">&#39;__mul__&#39;</span>, <span class="st">&#39;__ne__&#39;</span>, <span class="st">&#39;__new__&#39;</span>,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;__reduce__&#39;</span>, <span class="st">&#39;__reduce_ex__&#39;</span>, <span class="st">&#39;__repr__&#39;</span>, <span class="st">&#39;__reversed__&#39;</span>, <span class="st">&#39;__rmul__&#39;</span>, <span class="st">&#39;__setattr__&#39;</span>,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;__setitem__&#39;</span>, <span class="st">&#39;__sizeof__&#39;</span>, <span class="st">&#39;__str__&#39;</span>, <span class="st">&#39;__subclasshook__&#39;</span>, <span class="st">&#39;append&#39;</span>, <span class="st">&#39;clear&#39;</span>, <span class="st">&#39;copy&#39;</span>,</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;count&#39;</span>, <span class="st">&#39;extend&#39;</span>, <span class="st">&#39;indis&#39;</span>, <span class="st">&#39;insert&#39;</span>, <span class="st">&#39;pop&#39;</span>, <span class="st">&#39;remove&#39;</span>, <span class="st">&#39;reverse&#39;</span>, <span class="st">&#39;sort&#39;</span>]</span></code></pre></div>
+<h2 id="len-fonksiyonu-ile-uzunluk-bilgisi">5.5. Len() Fonksiyonu ile Uzunluk Bilgisi</h2>
+<p>len(  ) fonksiyonu, İngilizce length’in (uzunluk) kısaltılmış hâlidir. String ifadesinin uzunluğunu yani karakter sayısını verir. Örnek 14’te a adlı string değişkene değer atadığımızda değişkendeki karakterlerin sayısını vermektedir.</p>
+<p><strong>Örnek 26</strong></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span><span class="st">&quot;Galatasaray&quot;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(a))</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">11</span></span></code></pre></div>
+<p>Örnek 26’da “len(  )” kullanımına bakıldığında, takimlar adında bir liste tanımlanmış. Bu listeye veri girişi yapılmıştır. Len(  ) komutu ile listenin adı yazılarak, kaç elemanlı olduğu ekrana yazdırılmıştır. Örnek 27’de len(  ) fonksiyonu ile takimlar listesinin eleman listesi 4 olarak verilmiştir.</p>
+<p><strong>Örnek 27</strong></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>takimlar <span class="op">=</span> [<span class="st">&#39;GS&#39;</span>,<span class="st">&#39;FB&#39;</span>,<span class="st">&#39;BJK&#39;</span>,<span class="st">&#39;TS&#39;</span>]</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="bu">len</span>(takimlar))</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">4</span></span></code></pre></div>
+<p>Örnek 28’de 2 adet liste1 ve liste2 adında liste tanımlanmıştır. Bu listelere elemanlar girilerek, len() komutu ile kaç elemanlı olduğu bulunmuştur.</p>
+<p><strong>Örnek 28</strong></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>liste1, liste2 <span class="op">=</span> [<span class="st">&#39;abc&#39;</span>,<span class="dv">56</span>,<span class="dv">74</span> ,<span class="st">&#39;python&#39;</span>], [<span class="dv">12</span>, <span class="st">&#39;opencv&#39;</span>,<span class="st">&#39;a&#39;</span>]</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&quot;İlk liste uzunlugu : &quot;</span>, <span class="bu">len</span>(liste1))</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">&quot;İkinci listenin uzunluğu : &quot;</span>, <span class="bu">len</span>(liste2))</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> İlk liste uzunlugu : <span class="dv">4</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> İkinci listenin uzunluğu : <span class="dv">3</span></span></code></pre></div>
+<h2 id="iç-içe-listeler">5.6. İç İçe Listeler</h2>
+<p>Bir liste herhangi bir sıralama nesnesi içerebilir, hatta başka bir liste (alt liste) içerebilir, alt listeler de alt listeler içerebilir ve bu şekilde devam eder. Bu yuvalanmış liste olarak bilinir. Hiyerarşik yapılara veri düzenlemek için bunlar kullanılabilir.</p>
+<p><strong>Örnek 29</strong></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>liste1 <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>liste2 <span class="op">=</span> [<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>liste3 <span class="op">=</span> [<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>yeniliste <span class="op">=</span> [liste1,liste2,liste3]</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(yeniliste)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]]</span></code></pre></div>
+<p>Örnek 29’da 3 adet liste oluşturuldu. Bu listelerin her biri ayrı öge olacak şekilde birleştirilerek iç içe liste oluşturuldu ve ekrana yazdırıldı. Örnek 30’da sebzeler adında boş şekilde liste oluşturuldu.</p>
+<p><strong>Örnek 30</strong></p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>sebzeler<span class="op">=</span>[]</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>sebzeler.append([<span class="st">&#39;yeşil&#39;</span>,<span class="st">&#39;ıspanak&#39;</span>])</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>sebzeler.append([<span class="st">&#39;beyaz&#39;</span>,<span class="st">&#39;lahana&#39;</span>])</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>sebzeler.append([<span class="st">&#39;turuncu&#39;</span>,<span class="st">&#39;havuç&#39;</span>])</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>sebzeler.append([<span class="st">&#39;siyah&#39;</span>,<span class="st">&#39;turp&#39;</span>])</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>sebzeler.append([<span class="st">&#39;kırmızı&#39;</span>,<span class="st">&#39;domates&#39;</span>])</span></code></pre></div>
+<p>Append(  ) metodunu kullanarak sebzeler adlı listeye 5 adet eleman girildi. Girilen verilerin listelenmesi:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sebzeler)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [[<span class="st">&#39;yeşil&#39;</span>, <span class="st">&#39;ıspanak&#39;</span>], [<span class="st">&#39;beyaz&#39;</span>, <span class="st">&#39;lahana&#39;</span>], [<span class="st">&#39;turuncu&#39;</span>, <span class="st">&#39;havuç&#39;</span>], [<span class="st">&#39;siyah&#39;</span>, <span class="st">&#39;turp&#39;</span>],</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;kırmızı&#39;</span>, <span class="st">&#39;domates&#39;</span>]]</span></code></pre></div>
+<p>Sebzeler adında listede 4 adet eleman bulunmaktadır. Bunları teker teker sıralanırsa:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sebzeler[<span class="dv">0</span>])</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;yeşil&#39;</span>, <span class="st">&#39;ıspanak&#39;</span>]</span></code></pre></div>
+<p><strong>Tablo 4.</strong> Sebzeler listesi elemanları</p>
+<table>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 16%" />
+<col style="width: 17%" />
+<col style="width: 15%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Liste adı</th>
+<th style="text-align: center;">sebzeler</th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Eleman değeri</td>
+<td style="text-align: center;">‘yeşil’, ‘ıspanak’</td>
+<td style="text-align: center;">‘beyaz’, ‘lahana’</td>
+<td style="text-align: center;">‘turuncu’, ‘havuç’</td>
+<td style="text-align: center;">‘siyah’, ‘turp’</td>
+<td style="text-align: center;">‘kırmızı’, ‘domates’</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">İndis numarası</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Örnek 31</strong></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>sebzeler<span class="op">=</span>[[<span class="st">&#39;yeşil&#39;</span>,<span class="st">&#39;ıspanak&#39;</span>],[<span class="st">&#39;beyaz&#39;</span>,<span class="st">&#39;lahana&#39;</span>],[<span class="st">&#39;turuncu&#39;</span>,<span class="st">&#39;havuç&#39;</span>]]</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>sebze<span class="op">=</span>sebzeler[<span class="dv">1</span>]</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sebze)</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;beyaz&#39;</span>, <span class="st">&#39;lahana&#39;</span>]</span></code></pre></div>
+<p>Örnek 31’e bakıldığı zaman, sebze değişkenine sadece sebzeler [1] matrisindeki değer atanmıştır. Tablo 4’te sebzeler listesinde sadece havuç değeri listelenmek isteniyorsa indis numarasından faydalanılır.</p>
+<p><strong>Örnek 32</strong></p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>sebzeler<span class="op">=</span>[[<span class="st">&#39;yeşil&#39;</span>,<span class="st">&#39;ıspanak&#39;</span>],[<span class="st">&#39;beyaz&#39;</span>,<span class="st">&#39;lahana&#39;</span>],[<span class="st">&#39;turuncu&#39;</span>,<span class="st">&#39;havuç&#39;</span>]]</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sebzeler[<span class="dv">2</span>][<span class="dv">1</span>])</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> havuç</span></code></pre></div>
+<p>Örnek 33’te 4 adet liste oluşturulmuştur. İlk üç listenin tüm ögeleri son_liste adında listeye aktarılarak, ekrana yazdırılmıştır.</p>
+<p><strong>Örnek 33</strong></p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 Adet liste oluşturalım.</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>birinci_liste <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>ikinci_liste <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>]</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>ucuncu_liste<span class="op">=</span> [<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>]</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>son_liste<span class="op">=</span> [birinci_liste,ikinci_liste,ucuncu_liste]</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(son_liste)</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="st">&#39;a&#39;</span>, <span class="st">&#39;b&#39;</span>, <span class="st">&#39;c&#39;</span>], [<span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>]]</span></code></pre></div>
+<p>Örnek 34’te 3 adet liste oluşturulmuştur. Bunlara birinci_liste, ikinci_liste, ucuncu_liste isimleri verilmiştir. Son_liste adında liste oluşturularak diğer üç listenin elemanları bu listeye kaydedilmiştir. Ekrana sadece a ve 50 değerlerini yan yana listelemek için aşağıdaki kodlar kullanılır.</p>
+<p><strong>Örnek 34</strong></p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 Adet liste oluşturalım.</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>birinci_liste <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>ikinci_liste <span class="op">=</span> [<span class="st">&#39;a&#39;</span>,<span class="st">&#39;b&#39;</span>,<span class="st">&#39;c&#39;</span>]</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>ucuncu_liste<span class="op">=</span> [<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>]</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>son_liste<span class="op">=</span> [birinci_liste,ikinci_liste,ucuncu_liste]</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(son_liste[<span class="dv">1</span>][<span class="dv">0</span>],son_liste[<span class="dv">2</span>][<span class="dv">1</span>])</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> a <span class="dv">50</span></span></code></pre></div>
+<h2 id="veri-tipi-dönüşümleri">5.7. Veri Tipi Dönüşümleri</h2>
+<p>Listelerde veri tipi dönüşümleri için, elemanlara yeni değer ataması yapıldığında string, int, float vb. veri tipleri arasında değer alabilir.</p>
+<p><strong>Örnek 35</strong></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="st">&#39;ankara&#39;</span>]</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>liste[<span class="dv">0</span>]<span class="op">=</span><span class="bu">str</span>(<span class="st">&quot;kocaeli&quot;</span>)</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>liste[<span class="dv">2</span>]<span class="op">=</span><span class="bu">float</span>(<span class="fl">1.5</span>)</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>liste[<span class="dv">5</span>]<span class="op">=</span><span class="bu">int</span>(<span class="dv">20</span>)</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="st">&#39;ankara&#39;</span>]</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;kocaeli&#39;</span>, <span class="dv">2</span>, <span class="fl">1.5</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">20</span>]</span></code></pre></div>
+<p>Örnek 35’te liste adında bir liste örneği tanımlanmıştır. İçindeki elemanları 1,2,3,4,5,’ankara’ ‘dır. İndis numarasına göre liste [0] değeri önce 1 iken veri tipi dönüşümünden dolayı ‘kocaeli’ olmuştur. Liste [2]’in değeri ise ilk başta 3’tür. Daha sonra float veri tipinde 1.5 değerini almıştır. Son olarak liste[5]’in değeri ’ankara’dır. Liste[5]’e int veri tipinde bir değer kaydedilerek 20 olmuştur. Herhangi bir string türünde veriyi parçalayarak da liste oluşturulabilir. Örnek 36’da string veri türünde adı meyve olan bir değişken olarak tanımlanmış ve veri olarak elmayı atanmıştır. Meyve adlı değişken liste yardımıyla parçalanmıştır.</p>
+<p><strong>Örnek 36</strong></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>meyve<span class="op">=</span><span class="st">&quot;elma&quot;</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span><span class="bu">list</span>(meyve)</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (liste)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;e&#39;</span>, <span class="st">&#39;l&#39;</span>, <span class="st">&#39;m&#39;</span>, <span class="st">&#39;a&#39;</span>]</span></code></pre></div>
+<p>Örnek 37’de 1 ile 15 arasındaki sayılardan oluşan liste oluşturulmuştur. Listenin ögeleri ekrana listelenmiştir. Ekrana listeleme işleminde sort(  ) metodu ile ögeler küçükten büyüğe, reverse ile büyükten küçüğe doğru sıralanmıştır.</p>
+<p><strong>Örnek 37</strong></p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">15</span>,<span class="dv">2</span>))</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>liste.sort()</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>liste.reverse()</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>]</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">9</span>, <span class="dv">11</span>, <span class="dv">13</span>]</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="dv">13</span>, <span class="dv">11</span>, <span class="dv">9</span>, <span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">1</span>]</span></code></pre></div>
+<p>split(  ) metodu, listeyi belirtilen ayıracı kullanarak yeniden döndürmeye yarar. Yani split(  ) karakter dizilerini istenen şekilde böler. -ayırıcı diye tanımladığımız ilk parametre, karakter dizisinin nereden bölüneceğini seçer. Eğer ayırıcı tanımlanmazsa karakter dizisi her boşluk gördüğünde ayırır. Örnek 38’de bilgiler girildikçe listeye kaydedecektir. Listeye 4 adet öge girilmiş ve listeleme işlemi yapılmıştır.</p>
+<p><strong>Örnek 38</strong></p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>bilgi<span class="op">=</span><span class="bu">input</span>(<span class="st">&quot;bilgilerinizi araya virgül koyarak yazınız: &quot;</span>)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>liste<span class="op">=</span>bilgi.split(<span class="st">&quot;,&quot;</span>)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(liste)</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> bilgilerinizi araya virgül koyarak yazınız: Hafsa,Meva,Konya,<span class="dv">1</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> [<span class="st">&#39;Hafsa&#39;</span>, <span class="st">&#39;Meva&#39;</span>, <span class="st">&#39;Konya&#39;</span>, <span class="st">&#39;1&#39;</span>]</span></code></pre></div>
+<p>Örnek 39’da ise cümle değişkenindeki kelimeler split metodu ile kelimeler listesine aktarılmıştır. Len(  ) metodu ile de kaç adet öge olduğu ekrana listelenmiştir.</p>
+<p><strong>Örnek 39</strong></p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>cumle<span class="op">=</span><span class="st">&quot;23 nisan herkese mutlu olsun&quot;</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>kelimeler<span class="op">=</span>cumle.split(<span class="st">&quot; &quot;</span>)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;cümlenizde &quot;</span>,<span class="bu">len</span>(kelimeler),<span class="st">&quot;adet kelime vardır&quot;</span>)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> cümlenizde <span class="dv">5</span> adet kelime vardır</span></code></pre></div>
+</body>
+</html>

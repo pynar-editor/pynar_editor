@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial;
+  font-size: 13px;
+  
+ 
+}
+.accordion {
+  background-color: #00acea;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid white;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #6b899f; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<img align="left" style="margin:50px 50px" src="data:image/png;base64,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">
+<h1 style="font-size: 55px; color: #db1708;  text-shadow: 1px 1px 2px black, 0 0 25px #add23c, 0 0 5px darkblue;">PyNar Kod Editörü</h1>
+<p style="text-shadow: 1px 1px 2px black;"> PyNar, Türkiye’nin ilk Tamamen Türkçe arayüze sahip Python kod editörüdür.</p>
+<p style="text-shadow: 1px 1px 2px black;"> PyNar Editörü TÜBİTAK Açık Kaynak Yazılımlar Çağrı Programı “1003 Türkçe Arayüz ve Destek Sistemleri” çağrısı kapsamında geliştirilmektedir.</p>
+<p style="text-shadow: 1px 1px 2px black;">
+PyNar Kod Editörü Genel Kamu Lisansı (GPL v3) altında açık kaynak kodlu olarak dağıtılmaktadır.
+</p>
+<p style="text-shadow: 1px 1px 2px blue;">https://github.com/pynar-editor</p>
+
+
+<button class="accordion">Kullanılan Açık Kaynak Kütüphaneler</button>
+<div class="panel" style="line-height: 1.6;">
+	<ul>
+	<li><span style="color: #ff0000;">PyQt5</span> k&uuml;t&uuml;phanesi GPL v3 lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/PyQt5/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">QScintilla</span> k&uuml;t&uuml;phanesi GPL v3 lisansı ile dağıtılmaktadır.<br />
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/QScintilla/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">pyright</span> Static Code Checker yazılımı MIT Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://github.com/microsoft/pyright</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">vulture</span> k&uuml;t&uuml;phanesi MIT Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://github.com/jendrikseipp/vulture</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">pycodestyle</span> k&uuml;t&uuml;phanesi MIT Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/pycodestyle/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">Jinja2</span> k&uuml;t&uuml;phanesi BSD Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/Jinja2/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">PyQtWebEngine</span> k&uuml;t&uuml;phanesi LGPL v3 Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/PyQtWebEngine-Qt5/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">natsort</span> k&uuml;t&uuml;phanesi MIT Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/natsort/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">requests</span> k&uuml;t&uuml;phanesi Apache Licence 2.0 ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://docs.python-requests.org/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">unidecode</span> k&uuml;t&uuml;phanesi GPL v2 Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/Unidecode/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">emoji</span> k&uuml;t&uuml;phanesi BSD Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/emoji/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">playsound</span> k&uuml;t&uuml;phanesi MIT Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/playsound/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">TurkishStemmer</span> k&uuml;t&uuml;phanesi Apache Licence 2.0 ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/TurkishStemmer/</span></li>
+	</ul>
+	</li>
+	<li><span style="color: #ff0000;">trnlp</span> k&uuml;t&uuml;phanesi GPL v3 Lisansı ile dağıtılmaktadır.
+	<ul>
+	<li><span style="color: #3366ff;">https://pypi.org/project/trnlp/</span></li>
+	</ul>
+	</li>
+	</ul>
+</div>
+
+
+
+
+
+<button class="accordion">GPLv3 Lisansı</button>
+<div class="panel">
+<!-- Pynar Lisans Başla -->
+<header class="entry-header">
+<h1 class="entry-title">Genel Kamu Lisansı (GPL v3)</h1>
+</header>
+<div class="entry-content">
+<div class="wprt-container"><center>
+<p><strong>S&uuml;r&uuml;m 3, 29 Haziran 2007</strong></p>
+</center><center>
+<p>Copyright &copy; 2007 &Ouml;zg&uuml;r Yazılım Vakfı&rsquo;na aittir. <span class="plainlinks">&lt;<a class="external free" href="http://fsf.org/" rel="nofollow">http://fsf.org/</a>&gt;</span></p>
+</center>
+<p>Bu lisans belgesinin tam kopyasının herkes tarafından koplayalanması ve dağıtımı serbest olup, değiştirilmesi yasaktır.</p>
+<h1><span id="Giri.C5.9F" class="mw-headline">Giriş</span></h1>
+<p>GNU Genel Kamu Lisansı, yazılım ve diğer &uuml;r&uuml;nler i&ccedil;in kamu malı haline getirilmiş, &ouml;zg&uuml;r bir lisanstır.</p>
+<p>Pek &ccedil;ok yazılım ve diğer &uuml;r&uuml;nlerin lisanları, bu &uuml;r&uuml;nlerin paylaşımını ve &uuml;r&uuml;nleri değiştirme &ouml;zg&uuml;rl&uuml;ğ&uuml;n&uuml; &ouml;nleyecek şekilde tasarlanmıştır. Buna karşın, GNU Genel Kamu Lisansı bir programın t&uuml;m s&uuml;r&uuml;mlerini paylaşma ve değiştirme &ouml;zg&uuml;rl&uuml;ğ&uuml;n&uuml; g&uuml;vence altına alır; b&ouml;ylece t&uuml;m kullanıcıları i&ccedil;in &ouml;zg&uuml;r yazılım (free software*) &ouml;zelliğini koruduğunu garanti altına alır. Biz, &Ouml;zg&uuml;r Yazılım Vakfı olarak, GNU Genel Kamu Lisansı&rsquo;nı yazılımlarımızın bir&ccedil;oğu i&ccedil;in kullanmaktayız; bu aynı zamanda yazılımın yaratıcısının bu şekilde piyasaya s&uuml;r&uuml;len diğer &ccedil;alışmalarına da uygulanmaktadır. Siz de kendi programlarınızda bu lisansı kullanabilirsiniz.</p>
+<p>&Ouml;zg&uuml;r yazılım kavramında vurgulanmak istenen bedava olması değil, &ouml;zg&uuml;rce kullanılabiliyor olmasıdır. Genel Kamu Lisanslarımız, &ouml;zg&uuml;r yazılımın kopyalarını dağıtma (ve isterseniz &uuml;cretlendirme) &ouml;zg&uuml;rl&uuml;ğ&uuml;n&uuml;z&uuml;; bu yazılımların kaynak kodlarına erişiminizi ya da isterseniz size sunulmasını, yazılımı değiştirebilmenizi ya da par&ccedil;alarını yeni &ouml;zg&uuml;r yazılımlarda kullanmanızı, ve bu eylemleri ger&ccedil;ekleştirebileceğinizden haberdar olmanızı garanti altına almak i&ccedil;in tasarlanmıştır.</p>
+<p>Haklarınızı korumak i&ccedil;in, diğerlerinin sizi bu haklardan mahrum etmesini ve bu haklardan vazge&ccedil;menizi istemelerini engellemek durumundayız. Bu nedenle, yazılımın kopyalarını dağıttığınız ya da yazılımı değiştirdiğinizde bazı sorumluluklar &uuml;stlenirsiniz: Diğerlerinin &ouml;zg&uuml;rl&uuml;ğ&uuml;ne saygı g&ouml;stermekle y&uuml;k&uuml;ml&uuml;s&uuml;n&uuml;z.</p>
+<p>&Ouml;rneğin, b&ouml;yle bir programın kopyalarını &uuml;cretli ya da &uuml;cretsiz dağıttığınızda, devraldığınız &ouml;zg&uuml;rl&uuml;kleri bir sonraki alıcılara da devretmek zorundasınız. Onların da bu yazılımların kaynak kodlarına erişimini ya da isterlerse kaynak kodların onlara sunulmasını taahh&uuml;t etmek durumundasınız. Ayrıca bu şartları haklarını bilmeleri a&ccedil;ısından onlara g&ouml;stermelisiniz.</p>
+<p>GNU Genel Kamu Lisansı&rsquo;nı (GKL) kullanan geliştiriciler, haklarını iki adımda korumuş olurlar: (1) yazılım &uuml;zerindeki telif haklarını kanıtlarlar, (2) size bu lisansı sunarak yazılımı &ccedil;oğaltmanız, dağıtımını yapmanız ve/veya değiştirmeniz i&ccedil;in yasal hak tanırlar.</p>
+<p>Gelişitiricilerin ve yaratıcıların korunması i&ccedil;in GKL, &ouml;zg&uuml;r yazılımın teminatı olmadığını a&ccedil;ık&ccedil;a belirtir. Hem yaratıcının hem de kullanıcının yararına GKL, değiştirilen s&uuml;r&uuml;mlerin değiştiğine dair işaretlenmesini talep eder; b&ouml;ylece yeni s&uuml;r&uuml;mlerdeki sorunlar yanlışlıkla bir &ouml;nceki s&uuml;r&uuml;mlerin yaratıcılarına mal edilmemiş olur.</p>
+<p>Bazı cihazlar, &uuml;reticilerin yapabilmesine rağmen, kullanıcıların cihaz i&ccedil;indeki yazılımın değiştirilmiş s&uuml;r&uuml;mlerinin y&uuml;klemesini ya da &ccedil;alıştırmasını engelleyecek şekilde tasarlanmıştır. Bu durum &ouml;z&uuml;nde kullanıcının yazılımı değiştirme &ouml;zg&uuml;rl&uuml;ğ&uuml;n&uuml; koruma amacıyla bağdaşmaz. Bu t&uuml;r suistimaller bireysel kullanım &uuml;r&uuml;nleri i&ccedil;in g&ouml;r&uuml;l&uuml;r, bu da kesinlikle en kabul edilemez alandır. Bu y&uuml;zden, GKL&rsquo;nin bu s&uuml;r&uuml;m&uuml;n&uuml; bahsedilen t&uuml;r cihazların bu uygulamalarını engellemek i&ccedil;in d&uuml;zenledik. Bu gibi sorunların diğer alanlarda da b&uuml;y&uuml;k oranda &ccedil;ıkması durumunda, kullanıcının &ouml;zg&uuml;rl&uuml;ğ&uuml;n&uuml; koruma gereğinden dolayı, GKL&rsquo;nin gelecek s&uuml;r&uuml;mlerinde bahsedilen alanlarda bu h&uuml;km&uuml; genişletmeye hazırız.</p>
+<p>Son olarak, her program s&uuml;rekli olarak yazılım patentlerinin tehdidi altındadır. Devletler patentlerin genel kullanım ama&ccedil;lı bilgisayarların yazılımlarının geliştirilmesini ve kullanımını kısıtlamaya izin vermemelidir. Devletlerin buna izin vermesi durumunda, &ouml;zg&uuml;r programlara uygulanan patentlerin bu programları etkin bir şekilde m&uuml;lkiyete ait hale getireceği tehdidinden ka&ccedil;ınmasını temenni ediyoruz. Bu durumdan ka&ccedil;ınmak i&ccedil;in GKL, patentlerin programların bu &ouml;zg&uuml;rl&uuml;ğ&uuml;n&uuml; elinden almak i&ccedil;in kullanılamayacağını garanti eder.</p>
+<p>&Ccedil;oğaltma, dağıtma ve değiştirme durumları i&ccedil;in kesin h&uuml;k&uuml;mler ve koşullar aşağıda belirtilmiştir.</p>
+<h2><span id="H.C3.9CK.C3.9CMLER_VE_KO.C5.9EULLAR" class="mw-headline">H&Uuml;K&Uuml;MLER VE KOŞULLAR</span></h2>
+<h3><span id="0._Tan.C4.B1mlar" class="mw-headline">0. Tanımlar</span></h3>
+<p>&ldquo;Bu lisans&rdquo; ibaresi GNU Genel Kamu Lisansı&rsquo;nın &uuml;&ccedil;&uuml;nc&uuml; s&uuml;r&uuml;m&uuml;n&uuml; ifade eder.</p>
+<p>&ldquo;Telif Hakkı&rdquo; kavramı aynı zamanda yarı ge&ccedil;irgen maskeler gibi diğer t&uuml;rdeki işlere uygulanan telif benzeri kanunları da kasteder.</p>
+<p>&ldquo;Program&rdquo; kavramı &ldquo;işbu lisans&rdquo; ile patentlenen telif hakkı alınabilir her t&uuml;rl&uuml; işi kasteder. Her bir lisans sahibine &ldquo;siz&rdquo; diye hitap edilmiş olup; &ldquo;lisans sahipleri&rdquo; ve &ldquo;alıcılar&rdquo; bireyler ya da kuruluşlar olabilir.</p>
+<p>Bir &uuml;r&uuml;n&uuml; &ldquo;değiştirmek&rdquo;, &uuml;r&uuml;n&uuml;n tamamını ya da bir kısmını, birebir kopyalamanın dışında, telif hakkı izni gerektirecek şekilde kopyalamayı ya da uyarlamayı kasteder. Ortaya &ccedil;ıkan &uuml;r&uuml;ne bir &ouml;nceki &uuml;r&uuml;n&uuml;n ya da bir &ouml;nceki &uuml;r&uuml;ne dayanan bir &uuml;r&uuml;n&uuml;n &ldquo;değiştirilmiş s&uuml;r&uuml;m&uuml;&rdquo; adı verilir.</p>
+<p>&ldquo;Korunmuş &ccedil;alışma&rdquo; kavramı değiştirilmemiş programı ya da programa dayanan &uuml;r&uuml;n&uuml; kasteder.</p>
+<p>Bir &uuml;r&uuml;n&uuml; &ldquo;yaymak&rdquo; (propagate), o &uuml;r&uuml;nle izinsiz olarak yapacağınız her t&uuml;rl&uuml; faaliyetin, sizi y&uuml;r&uuml;rl&uuml;kteki bir telif yasasını ihlal etmekten doğrudan ya da ikinci derecede sorumlu kılacağı anlamında olup, bahsi ge&ccedil;en &uuml;r&uuml;n&uuml; bir bilgisayarda &ccedil;alıştırmak ya da &ouml;zel bir kopyasını değiştirmek bu kapsamda sayılmaz. Yaymak eylemi &ccedil;oğaltmayı, dağıtımı (değiştirerek ya da değiştirmeksizin), kamuya sunmayı ve bazı &uuml;lkelerde başka eylemleri de kapsamaktadır.</p>
+<p>Bir &uuml;r&uuml;n&uuml; &ldquo;taşımak&rdquo;, diğer tarafların kopyaları alması ya da oluşturmasına olanak tanıyacak her t&uuml;rl&uuml; yayma eylemini kasteder. Bir bilgisayar ağından bir kullanıcıyla herhangi bir kopya transferi olmaksızın sadece iletişime ge&ccedil;mek, taşıma kapsamına girmez.</p>
+<p>Etkileşimli bir kullanıcı aray&uuml;z&uuml;; (1) uygun bir telif uyarısı g&ouml;stermek ve (2) kullanıcıya (teminat sağlandığı durumlar haricinde) &ccedil;alışmanın bir teminatı olmadığını bildirmek, lisans sahiplerinin bu Lisans&rsquo;a sahip &ccedil;alışmaları taşıyabileceğini belirtmek ve bu Lisans&rsquo;ın bir kopyasını nasıl g&ouml;r&uuml;nt&uuml;leyebileceklerini s&ouml;ylemek gibi uygun ve bariz g&ouml;r&uuml;lebilir bir &ouml;zellik olarak &ldquo;İlgili Yasal Uyarı&rdquo;yı g&ouml;sterir. Eğer aray&uuml;z, kullanıcıya men&uuml; gibi bir komut ya da se&ccedil;enekler listesi sunuyorsa, g&ouml;ze &ccedil;arpan bir liste &ouml;ğesi bu kriterlere uyar.</p>
+<h3><span id="1._Kaynak_Kod." class="mw-headline">1. Kaynak Kod.</span></h3>
+<p>Bir &ccedil;alışmanın&ldquo;kaynak kodu&rdquo;, o &ccedil;alışmanın &uuml;zerinde değişiklik yapmak i&ccedil;in tercih edilen bi&ccedil;imdir. &ldquo;Nesne Kodu&rdquo; &ccedil;alışmanın kaynak kod haricindeki her t&uuml;rl&uuml; bi&ccedil;imidir.</p>
+<p>Bir &ldquo;Standart Aray&uuml;z&rdquo;, tanınmış bir standartlar birliği tarafından belirlenmiş resmi bir standarttır; ya da, belli bir programlama dili i&ccedil;in belirlenmiş aray&uuml;zler varsa, bunlar arasında o dili kullanan geliştiriciler tarafından en yaygın kullanılandır.</p>
+<p>&Ccedil;alıştırılabilir &uuml;r&uuml;n&uuml;n &ldquo;Sistem K&uuml;t&uuml;phaneleri&rdquo;, &uuml;r&uuml;n&uuml;n tamamı dışında, (a) bir Temel Bileşenin par&ccedil;ası olmayan ama o bileşenin normal paketlenmesinde yer alan ve (b) bahsi ge&ccedil;en Temel Bileşenin kullanılmasını sağlayan ya da Standart Arabirim i&ccedil;in mevcut, kaynak kod bi&ccedil;iminde kamuya sunulmuş ger&ccedil;eklenmiş bir arabirimi yeniden ger&ccedil;eklemeyi sağlayan her şeyi i&ccedil;erir. Bu bağlamda &ldquo;Temel Bileşen&rdquo;; programın (eğer varsa) &uuml;zerinde &ccedil;alıştığı işletim sisteminin (&ccedil;ekirdek, pencere sistemi ve benzeri) temel gerekli bileşenleri, ya da işi &uuml;retmek i&ccedil;in kullanılan derleyici ya da &ccedil;alıştırmak i&ccedil;in kullanılan nesne kod yorumlayıcıdır.</p>
+<p>Nesne kodu bi&ccedil;imindeki bir &uuml;r&uuml;n i&ccedil;in &ldquo;İlgili Kaynak&rdquo;; nesne kodunun &uuml;retilmesi, kurulması, ve (&ccedil;alıştırılabilir bir &uuml;r&uuml;n i&ccedil;in) nesne kodunun &ccedil;alıştırması ve &uuml;r&uuml;n&uuml; değiştirmek i&ccedil;in gerekli t&uuml;m kaynak kod ve ayrıca bu eylemleri kontrol eden betikler anlamına gelir. Ancak, &uuml;r&uuml;n&uuml;n Sistem K&uuml;t&uuml;phanelerini, ya da genel ama&ccedil;lı ara&ccedil;ları, ya da &uuml;r&uuml;n&uuml;n bir par&ccedil;ası olmayan ama bahsi ge&ccedil;en eylemleri ger&ccedil;ekleştirirken değiştirilmeden kullanılan, istisnalar dışında erişilebilen &ouml;zg&uuml;r programları i&ccedil;ermez. &Ouml;rneğin İlgili Kaynak, &uuml;r&uuml;n&uuml;n kaynak dosyalarıyla ilişkili aray&uuml;z tanımlama dosyalarını, ve programın &ouml;zellikle ihtiya&ccedil; duyacağı şekilde tasarlandığı paylaşılan k&uuml;t&uuml;phaneler ile dinamik bağlantılı alt programları i&ccedil;erir; &ouml;rneğin bu alt programlarla &uuml;r&uuml;n&uuml;n diğer par&ccedil;aları arasındaki &ouml;zel veri iletişimi ya da kontrol akışı gibi.</p>
+<p>İlgili Kaynak, kullanıcıların İlgili Kaynağın diğer par&ccedil;alarından kendiliğinden yeniden &uuml;retebildiği hi&ccedil;bir şeyi i&ccedil;ermek zorunda değildir.</p>
+<p>Bir &uuml;r&uuml;n i&ccedil;in kaynak kod bi&ccedil;imindeki İlgili Kaynak, &uuml;r&uuml;n&uuml;n kendisidir.</p>
+<h3><span id="2._Temel_Yetkiler" class="mw-headline">2. Temel Yetkiler</span></h3>
+<p>Bu lisansla verilen t&uuml;m haklar programdaki telif hakkı adına verilmiş olup, başlangı&ccedil;ta belirtilen şartların karşılanması kaydıyla değiştirilemezler. Bu lisans, değiştirilmemiş programı &ccedil;alıştırmanız i&ccedil;in sınırsız izne sahip olduğunuzu a&ccedil;ık&ccedil;a teyit eder. Bir korunmuş &ccedil;alışmayı &ccedil;alıştırdığınızda alınan &ccedil;ıktı, bu &ccedil;ıktının i&ccedil;eriği dikkate alındığında, bir korunmuş &ccedil;alışma meydana getirdiği takdirde bu lisansla teminat altına alınır. İşbu lisans, telif yasasında da belirtildiği &uuml;zere doğru kullanım ya da diğer eşdeğer haklarınızı onaylar.</p>
+<p>Lisansınızın başka t&uuml;rl&uuml; y&uuml;r&uuml;rl&uuml;kte olmadığı şartlarda, taşımadığınız bir korunmuş &ccedil;alışmayı oluşturabilir, &ccedil;alıştırabilir ve yayabilirsiniz. Ancak telif hakkını d&uuml;zenleyemediğiniz t&uuml;m gere&ccedil;lerin taşınmasında bu lisansın koşullarını yerine getirdiğiniz takdirde; korunmuş bir &uuml;r&uuml;n&uuml; sadece sizin i&ccedil;in değişiklikler yapmaları amacıyla, ya da bahsedilen &uuml;r&uuml;nleri &ccedil;alıştırmak i&ccedil;in hizmetler sağlamaları amacıyla başkalarına taşıyabilirsiniz. Sizinle ilişkileri dışında telif hakkını aldığınız &uuml;r&uuml;n&uuml;n&uuml;z&uuml; &ccedil;oğaltmalarını yasaklamak şartıyla, sizin y&ouml;nlendirmeniz ve denetiminiz altında, korunmuş işleri sizin i&ccedil;in yapacak ya da &ccedil;alıştıracakların bunu sadece sizin adınıza yapıyor olmaları gerekir.</p>
+<p>Diğer şartlar altında taşıma eylemini ger&ccedil;ekleştirmek, sadece yukarıda belirtilen durumlar &ccedil;er&ccedil;evesinde serbesttir. Alt lisans yapmak yasaktır; 10&prime;uncu kısım bunu l&uuml;zumsuz kılmıştır.</p>
+<h3><span id="3._Kullan.C4.B1c.C4.B1n.C4.B1n_Yasal_Haklar.C4.B1n.C4.B1_Sahtekarl.C4.B1k_Kar.C5.9F.C4.B1t.C4.B1_Kanunlara_Kar.C5.9F.C4.B1_Korumak" class="mw-headline">3. Kullanıcının Yasal Haklarını Sahtekarlık Karşıtı Kanunlara Karşı Korumak</span></h3>
+<p>Korunmuş hi&ccedil;bir &uuml;r&uuml;n, 20 Aralık 1996&prime;da kabul edilen D&uuml;nya Fikri M&uuml;lkiyet &Ouml;rg&uuml;t&uuml; (WIPO) Telif Hakkı Anlaşması&rsquo;nın 11&prime;inci maddesinde belirtilen zorunlulukları yerine getiren y&uuml;r&uuml;rl&uuml;kteki bir yasa gereğince ge&ccedil;erli teknolojik &ouml;nlemlerin bir par&ccedil;ası sayılamaz.</p>
+<p>Korunmuş bir &uuml;r&uuml;n&uuml; taşıdığınızda, teknolojik &ouml;nlemlerin sahtekarlığını yasaklama yasal g&uuml;c&uuml;nden, b&ouml;yle bir sahtekarlığın bu lisans gereğince korunmuş &uuml;r&uuml;n bakımından haklarının korunduğu &ouml;l&ccedil;&uuml;de vazge&ccedil;miş olursunuz; ve sizin ya da &uuml;&ccedil;&uuml;nc&uuml; tarafların teknolojik &ouml;nlemlerin sahtekarlığını &ouml;nleme yasal hakkını &uuml;r&uuml;n&uuml;n kullanıcılarına karşı dayatmak yoluyla &uuml;r&uuml;n&uuml;n kullanımını ya da değiştirilmesini kısıtlamaya y&ouml;nelik her t&uuml;rl&uuml; kasıttan feragat edersiniz.</p>
+<h3><span id="4._Birebir_Kopyalar.C4.B1_Ta.C5.9F.C4.B1mak." class="mw-headline">4. Birebir Kopyaları Taşımak.</span></h3>
+<p>Her kopyayı uygun telif hakkı bildirimiyle bariz ve uygun bir bi&ccedil;imde yayımlamanız; bu lisansın ve b&ouml;l&uuml;m 7&prime;ye uygun olarak eklenen her t&uuml;rl&uuml; izin verilmeyen koşulun koda uygulandığını belirten t&uuml;m uyarıları aynen korumanız; bir teminat bulunmadığına dair t&uuml;m uyarıları aynen korumanız; ve t&uuml;m alıcılara programla birlikte bu lisansın bir kopyasını verdiğiniz s&uuml;rece; programın kaynak kodunun birebir kopyalarını devraldığınız haliyle her ortama taşıyabilirsiniz.</p>
+<p>Taşıdığınız kopyalara &uuml;cretlendirme uygulayabilir ya da bu kopyaları &uuml;cretsiz dağıtabilirsiniz; &uuml;cret karşılığında destek ve teminat g&uuml;vencesi sunabilirsiniz.</p>
+<h3><span id="5._De.C4.9Fi.C5.9Ftirilmi.C5.9F_Kaynak_S.C3.BCr.C3.BCmlerini_Ta.C5.9F.C4.B1mak." class="mw-headline">5. Değiştirilmiş Kaynak S&uuml;r&uuml;mlerini Taşımak.</span></h3>
+<p>Program baz alınarak oluşturulmuş &uuml;r&uuml;nleri, ya da programdan &uuml;retmek i&ccedil;in kullanılan değişiklikleri, b&ouml;l&uuml;m 4&prime;teki h&uuml;k&uuml;mlere bağlı olarak kaynak kod bi&ccedil;iminde, aşağıdaki koşulları yerine getirdiğiniz takdirde taşıyabilirsiniz:</p>
+<dl>
+<dd><strong>a)</strong>&nbsp;&Uuml;r&uuml;n, sizin onu değiştirdiğinize ve değiştirdiğiniz tarihe dair belirgin bir uyarı i&ccedil;ermeli.</dd>
+</dl>
+<dl>
+<dd><strong>b)</strong>&nbsp;&Uuml;r&uuml;n, bu lisansla ve 7&prime;inci b&ouml;l&uuml;m kapsamında eklenen koşullarla piyasaya s&uuml;r&uuml;ld&uuml;ğ&uuml;ne dair belirgin bir uyarı i&ccedil;ermeli. Bu gereklilik, b&ouml;l&uuml;m 4&prime;te belirtilen &ldquo;t&uuml;m uyarıları aynen korumanız&rdquo; gerekliliğini d&uuml;zenler.</dd>
+</dl>
+<dl>
+<dd><strong>c)</strong>&nbsp;&Uuml;r&uuml;n&uuml;n tamamını, kopyaya sahip olacak herkes i&ccedil;in işbu lisansla lisanslamalısınız. Buna bağlı olarak işbu lisans, b&ouml;l&uuml;m 7&prime;deki y&uuml;r&uuml;rl&uuml;kte bulunan ek koşullarla birlikte, &uuml;r&uuml;n&uuml;n tamamına ve t&uuml;m kısımlarına nasıl paketlendiklerine bakılmaksızın uygulanacaktır. Bu lisans, &uuml;r&uuml;n&uuml;n başka bir yoldan lisanslanmasına izin vermez; ancak &uuml;r&uuml;n&uuml; bağımsız olarak elde ettiyseniz b&ouml;yle bir izni h&uuml;k&uuml;ms&uuml;z kılmaz.</dd>
+</dl>
+<dl>
+<dd><strong>d)</strong>&nbsp;Eğer &uuml;r&uuml;n etkileşimli aray&uuml;zlere sahipse, her biri İlgili Yasal Uyarıları g&ouml;stermelidir; ancak, eğer programınızda İlgili Yasal Uyarıları g&ouml;stermeyen bir etkileşimli aray&uuml;z mevcutsa, &uuml;r&uuml;n&uuml;n&uuml;z bunu ger&ccedil;ekleştirmeyi sağlamalıdır.</dd>
+</dl>
+<p>Bir korunmuş &uuml;r&uuml;n&uuml;n doğal birer uzantısı olmayan, ve daha kapsamlı bir program oluşturmak gibi bir ama&ccedil;la &uuml;r&uuml;nle birleştirilmemiş diğer ayrı ve bağımsız &uuml;r&uuml;nlerle derlemesine; eğer derleme ya da derleme sonucunda oluşan telif hakkı, bireysel &ccedil;alışmanın izin verdiğinin &ouml;tesinde derleme kullanıcılarının yasal haklarına ya da erişimine kısıtlama koymak i&ccedil;in kullanılmıyorsa, depolama ya da dağıtım birimi ortamında &ldquo;k&uuml;me&rdquo; adı verilir. Korunmuş &uuml;r&uuml;n&uuml;n bir k&uuml;meye dahil edilmesi, bu lisansın k&uuml;menin diğer kısımlarına uygulanmasına neden olmaz.</p>
+<h3><span id="6._Kaynak_Kod_D.C4.B1.C5.9F.C4.B1ndaki_Bi.C3.A7imlerin_Ta.C5.9F.C4.B1nmas.C4.B1." class="mw-headline">6. Kaynak Kod Dışındaki Bi&ccedil;imlerin Taşınması.</span></h3>
+<p>Korunmuş bir &uuml;r&uuml;n b&ouml;l&uuml;m 4 ve 5&prime;teki h&uuml;k&uuml;mlere bağlı olarak nesne kodu bi&ccedil;iminde; bu lisanstaki koşullar uyarınca İlgili Kaynak makine dilinde okunabilir olarak da taşındığı takdirde, aşağıdaki yollarla taşınabilir:</p>
+<dl>
+<dd><strong>a)</strong>&nbsp;Nesne kodu ya da nesne kodunun d&uuml;zenlenmiş hali, somut bir &uuml;r&uuml;ne (somut bir dağıtım ortamı da dahil olmak &uuml;zere), yazılım aktarmak i&ccedil;in kullanılan kalıcı bir fiziksel ortama sabitlenmiş bir İlgili Kaynak eşliğinde taşınır.</dd>
+</dl>
+<dl>
+<dd><strong>b)</strong>&nbsp;En az &uuml;&ccedil; sene ge&ccedil;erli olan ve siz yedek par&ccedil;alarını ya da m&uuml;şteri desteğini &uuml;r&uuml;n modelinde sunduğunuz s&uuml;rece ge&ccedil;erli olacak bir yazılı teklifle birlikte; nesne koduna sahip herkese (1) yazılım aktarmak i&ccedil;in kullanılan kalıcı bir fiziksel ortamda, bu kaynağı fiziksel olarak taşımak i&ccedil;in gereken makul maliyeti aşmayacak şekilde &uuml;cretlendirerek &uuml;r&uuml;nde bu lisans tarafından korunan t&uuml;m yazılımlar i&ccedil;in İlgili Kaynağın bir kopyasını vermek amacıyla, ya da (2) İlgili Kaynağın bir kopyasına bir ağ sunucusu &uuml;zerinden &uuml;cretsiz olarak erişim sağlamak amacıyla; nesne kodu ya da nesne kodunun d&uuml;zenlenmiş hali, fiziksel bir &uuml;r&uuml;ne (fiziksel bir dağıtım ortamı da dahil olmak &uuml;zere) taşınır.</dd>
+</dl>
+<dl>
+<dd><strong>c)</strong>&nbsp;Nesne kodunun bireysel kopyaları, İlgili Kaynağı sağlamak i&ccedil;in yazılı belgenin bir kopyasıyla taşınır. Bu se&ccedil;enek, sadece nadiren ve ticari olmayan durumlarda, ve sadece nesne kodunu b&ouml;yle bir teklifle aldığınız durumlarda, 6b alt b&ouml;l&uuml;m&uuml;ne uygun olarak yapıldığında ge&ccedil;erlidir.</dd>
+</dl>
+<dl>
+<dd><strong>d)</strong>&nbsp;Nesne kodu, belirlenen bir yerden erişim sağlanarak (&uuml;cretsiz ya da bir &uuml;cret karşılığında) taşınır, ve aynı yerden aynı şekilde fazladan bir &uuml;cret talep etmeden İlgili Kaynak i&ccedil;in de erişim teklif edilir. Nesne koduyla birlikte İlgili Kaynağın bir kopyasını alıcılara iletmek zorunda değilsiniz. Eğer nesne kodunun kopyalanacağı yer bir ağ sunucusu ise, İlgili Kaynak; aynı kopyalama &ouml;zelliklerini barındıran, İlgili Kaynağın nereden bulunacağını s&ouml;yleyerek nesne kodunun yanında y&ouml;nlendirmelerde bulunan (sizin tarafınızdan ya da &uuml;&ccedil;&uuml;nc&uuml; taraflarca y&ouml;netilen) başka bir sunucuda olabilir. İlgili Kaynağı hangi sunucunun tuttuğundan bağımsız olarak, bu gereklilikleri karşılama ihtiyacı bulunduğu s&uuml;rece kullanıma hazır bulunmasını sağlamak zorundasınız.</dd>
+</dl>
+<dl>
+<dd><strong>e)</strong>&nbsp;Nesne kodu; &uuml;r&uuml;n&uuml;n nesne kodunun ve İlgili Kaynağın, 6d alt b&ouml;l&uuml;m&uuml; uyarınca genel kamuya &uuml;cret talep edilmeden nerede sunulduğunu diğer eşlere bildirmeniz kaydıyla, eşbirimler arası aktarım kullanarak taşınır.</dd>
+</dl>
+<p>Nesne kodunun, kaynak kodu İlgili Kaynak&rsquo;tan bir Sistem K&uuml;t&uuml;phanesi olarak ayrılabilir bir par&ccedil;ası, nesne kodu &uuml;r&uuml;n&uuml;n taşınması s&uuml;recine dahil edilmek zorunda değildir.</p>
+<p>Bir &ldquo;Kullanıcı &Uuml;r&uuml;n&uuml;&rdquo; (1) normalde kişisel, ailevi ya da evle ilgili bir ama&ccedil;la kullanılan somut bir kişisel eşyayı, ya da (2) evde kullanım i&ccedil;in ticari ama&ccedil;la tasarlanan ya da satılan her şeyi kapsar. Bir &uuml;r&uuml;n&uuml;n t&uuml;ketici &uuml;r&uuml;n&uuml; olup olmadığını belirlerken, belirsiz durumlar teminat adına giderilmelidir. Belli kullanıcılar tarafından alınan bazı &uuml;r&uuml;nler i&ccedil;in &ldquo;normal kullanım&rdquo; terimi; kullanıcının durumuna ya da &uuml;r&uuml;n&uuml; nasıl kullandığına, &uuml;r&uuml;nden ne beklediğine ya da &uuml;r&uuml;n&uuml; ne şekilde kullanmasının beklendiğine bakılmaksızın, o sınıftaki &uuml;r&uuml;n&uuml;n standart ya da genel kullanımını kasteder. Bir &uuml;r&uuml;n; o &uuml;r&uuml;n&uuml;n &ouml;nemli ticari, sınai veya doğrudan kullanıcı dışındaki kullanımları olup olmadığına bakılmaksızın, bu t&uuml;r kullanımlar &uuml;r&uuml;n&uuml;n sadece belirli bi&ccedil;imlerde kullanımını g&ouml;stermediği s&uuml;rece, t&uuml;ketici &uuml;r&uuml;n&uuml;d&uuml;r.</p>
+<p>Bir kullanıcı &uuml;r&uuml;n&uuml; i&ccedil;in &ldquo;Kurulum Bilgisi&rdquo;; korunmuş işin değiştirilmiş s&uuml;r&uuml;mlerini, İlgili Kaynağın değiştirilmiş s&uuml;r&uuml;m&uuml;nden elde edilen Kullanıcı &Uuml;r&uuml;n&uuml;nde kurmak ve &ccedil;alıştırmak i&ccedil;in gereken her t&uuml;rl&uuml; metod, y&ouml;ntem, yetkilendirme anahtarı, ya da diğer bilgilerin t&uuml;m&uuml;d&uuml;r. Bu bilgilendirme, sırf değişiklik yapılmış olması nedeniyle, değiştirilmiş nesne kodunun s&uuml;rmekte olan işleyişinin hi&ccedil;bir durumda &ouml;nlenmiş ya da m&uuml;dahale edilmiş olmadığından emin olmaya yetmelidir.</p>
+<p>Eğer bir nesne kodunu bu b&ouml;l&uuml;m uyarınca bir Kullanıcı &Uuml;r&uuml;n&uuml;nde, Kullanıcı &Uuml;r&uuml;n&uuml;yle ya da &ouml;zellikle o &uuml;r&uuml;nle kullanılmak &uuml;zere taşıyorsanız; ve taşıma işlemi, sahiplik hakkı ile kullanıcı &uuml;r&uuml;n&uuml;n&uuml;n kullanım hakkının daimi ya da belirli bir vade i&ccedil;in alıcıya iletildiği (iletimin nasıl nitelendirildiğine bakılmaksızın) bir işlemin par&ccedil;ası olarak ger&ccedil;ekleşiyorsa, bu b&ouml;l&uuml;m kapsamında yapılacak İlgili Kaynak taşıma işlemi, Kurulum Bilgisi eşliğinde ger&ccedil;ekleştirilmelidir. Fakat hem siz hem de &uuml;&ccedil;&uuml;nc&uuml; taraflar Kullanıcı &Uuml;r&uuml;n&uuml;ne değiştirilmiş nesne kodunu kurma yetisini elinizde bulundurmuyorsanız (&ouml;rneğin &uuml;r&uuml;n bir ROM i&ccedil;ine kurulduysa), bu gereklilik uygulanmaz.</p>
+<p>Kurulum Bilgisi sunma gerekliliği; destek hizmeti, g&uuml;vence ya da alıcı tarafından değiştirilen veya kurulan bir &uuml;r&uuml;n yahut bir Kullanıcı &Uuml;r&uuml;n&uuml; i&ccedil;in, g&uuml;ncelleme sağlamayı devam ettirme gerekliliğini beraberinde getirmez. Değişikliğin kendisi maddi ve olumsuz olarak ağın işleyişini etkilediğinde ya da ağ &uuml;zerindeki iletişimin kural ve protokollerini ihlal ettiğinde, bu ağa erişim engellenebilir.</p>
+<p>Bu b&ouml;l&uuml;m uyarınca taşınan İlgili Kaynak ve sağlanan Kurulum Bilgisi, kamuoyuna a&ccedil;ık olarak belgelendirilmiş bir bi&ccedil;imde (ve kaynak kod bi&ccedil;iminde kamu kullanımına sunulmuş olarak) olup; paketin a&ccedil;ılması, okunması ya da kopyalanması i&ccedil;in herhangi bir &ouml;zel parola ya da anahtar gerektirmemelidir.</p>
+<h3><span id="7._Ek_Ko.C5.9Fullar." class="mw-headline">7. Ek Koşullar.</span></h3>
+<p>&ldquo;Ek izinler&rdquo;, bir ya da birden fazla durumda istisna yaratarak bu lisansın h&uuml;k&uuml;mlerini desteklemek i&ccedil;in konulan koşullardır. Programın t&uuml;m&uuml;ne uygulanabilen ek izinler, y&uuml;r&uuml;rl&uuml;kteki kanuna g&ouml;re ge&ccedil;erli oldukları s&uuml;rece bu lisansın i&ccedil;inde yer alıyor konumda g&ouml;r&uuml;l&uuml;r. Eğer ek izinler programın sadece bir kısmına uygulanıyorsa, bu kısım bu izinlere bağlı olarak ayrıca kullanılabilir; fakat ek izinlere bakılmaksızın programın tamamı bu lisans tarafından y&ouml;netilmeye devam eder.</p>
+<p>Korunmuş bir &uuml;r&uuml;n&uuml; taşıdığınızda, bu kopyadan ya da bir kısmından, ek izinlerden herhangi birini kaldırma se&ccedil;eneğiniz mevcuttur. (Ek izinler &uuml;r&uuml;n&uuml; değiştirdiğiniz bazı durumlarda kendini ortadan kaldırmak i&ccedil;in de yazılabilirler.) Korunmuş işe tarafınızdan eklenen, ilgili telif iznine sahip olduğunuz ya da izni verebileceğiniz materyalin &uuml;st&uuml;ne ek izinler yerleştirebilirsiniz.</p>
+<p>İşbu lisansın diğer h&uuml;k&uuml;mlerine bakılmaksızın, korunmuş &uuml;r&uuml;ne yerleştirdiğiniz gere&ccedil; i&ccedil;in, siz (eğer bu materyalin telif sahiplerinden biri olarak yetkilendirildiyseniz) işbu lisansın şu koşullarını ilave edersiniz:</p>
+<dl>
+<dd><strong>a)</strong>&nbsp;İşbu lisansın b&ouml;l&uuml;m 15 ve 16&prime;da yer alan koşullardan farklı koşullarla teminatı reddetmek ya da mesuliyeti kısıtlamak; veya</dd>
+</dl>
+<dl>
+<dd><strong>b)</strong>&nbsp;Belirtilen kabul edilebilir yasal uyarıların ya da yaratıcının; bahsedilen gere&ccedil;te, ya da gerecin dahil olduğu iş tarafından g&ouml;sterilen İlgili Yasal Uyarılarda bulunan &ouml;z niteliklerinin korunmasını sağlamak; veya</dd>
+</dl>
+<dl>
+<dd><strong>c)</strong>&nbsp;Bahsi ge&ccedil;en materyalin &ouml;zg&uuml;n halinin yanlış yorumlanmasını yasaklamak, ya da bu t&uuml;r materyallerin değiştirilen s&uuml;r&uuml;mlerinin &ouml;zg&uuml;n halinden farklı olarak uygun yollarla işaretlenmesini sağlamak; veya</dd>
+</dl>
+<dl>
+<dd><strong>d)</strong>&nbsp;Materyalin lisans sahiplerinin ya da yaratıcılarının isimlerinin reklam ama&ccedil;lı kullanılmasını kısıtlayarak; veya</dd>
+</dl>
+<dl>
+<dd><strong>e)</strong>&nbsp;Bazı ticari &uuml;nvanların, markaların ya da hizmet markalarının kullanımına marka kanunu uyarınca hak tanımayı reddetmek; veya</dd>
+</dl>
+<dl>
+<dd><strong>f)</strong>&nbsp;s&ouml;zleşmeden doğan bu varsayımların doğrudan lisans sahiplerine ve yazarlara dayatılan herhangi bir y&uuml;k&uuml;ml&uuml;l&uuml;ğe karşı; gereci (ya da değiştirilmiş halini) s&ouml;zleşmeye dayalı y&uuml;k&uuml;ml&uuml;l&uuml;klerle alıcıya taşıyan herhangi biri tarafından, işbu materyalin lisans sahipleri ve yaratıcılarını g&uuml;vence altına almak; veya</dd>
+</dl>
+<p>Diğer t&uuml;m isteğe bağlı olmayan ek koşullar, b&ouml;l&uuml;m 10 i&ccedil;eriği uyarınca &ldquo;ek kısıtlamalar&rdquo; olarak nitelendirilir. Eğer elinize ulaşan program, ya da bu programın bir par&ccedil;ası, bir ek kısıtlama koşuluyla birlikte bu lisans tarafından y&ouml;netildiğine dair bir uyarı i&ccedil;eriyorsa, bu h&uuml;km&uuml; ortadan kaldırabilirsiniz. Eğer bir lisans belgesi ek kısıtlamalar i&ccedil;eriyor fakat yeniden lisanslamaya ya da taşımaya bu lisans gereğince izin veriyorsa; ek kısıtlamaların b&ouml;yle bir yeniden lisanslama veya taşımada ge&ccedil;erliliğini kaybetmesi koşuluyla bu lisans belgesi h&uuml;k&uuml;mleri kapsamındaki bir korunmuş &uuml;r&uuml;n gerecine ek kısıtlamalar ekleyebilirsiniz.</p>
+<p>Bu b&ouml;l&uuml;m kapsamında bir korunmuş &uuml;r&uuml;ne koşullar eklerseniz; ilgili kaynak dosyalarına, bu dosyalara uygulanan ek koşulların olduğunu bildiren, ya da y&uuml;r&uuml;rl&uuml;kteki koşulların nerede bulunabileceğini g&ouml;steren bir uyarı yerleştirmek zorundasınız.</p>
+<p>Uyulması zorunlu olan ya da olmayan ek koşullar, ayrı bir yazılı lisans bi&ccedil;iminde ya da &ouml;zel durumlar şeklinde belirtilebilir; her durumda yukarıda belirtilen gereklilikler uygulanır.</p>
+<h3><span id="8._.C4.B0ptal." class="mw-headline">8. İptal.</span></h3>
+<p>Bir korunmuş işi işbu lisansta &ouml;zellikle belirtilmediği s&uuml;rece yayamaz ya da değiştiremezsiniz. Aksine bir yayma ya da değiştirme girişimi lisansı feshetmek olup, bu lisans kapsamındaki t&uuml;m haklarınızı (11&prime;inci b&ouml;l&uuml;m&uuml;n &uuml;&ccedil;&uuml;nc&uuml; paragrafı uyarınca verilen patent lisansları da dahil olmak &uuml;zere) kendiliğinden sonlandıracaktır.</p>
+<p>Bununla birlikte, işbu lisansın ihlalini durdurursanız; belli bir telif hakkı sahibi tarafından verilen lisansınız (a) telif hakkı sahibi, a&ccedil;ık&ccedil;a ve tamamen lisansınızı sonlandırmadıysa ge&ccedil;ici olarak, ya da (b) telif hakkı sahibi, durdurmadan itibaren 60 g&uuml;n i&ccedil;inde uygun yollardan ihlali bildirmediyse kalıcı olarak yeniden sağlanır.</p>
+<p>Buna ek olarak, eğer telif hakkı sahibi uygun yollardan size ihlali bildirirse bellli bir telif sahibinden gelen lisansınız kalıcı olarak yeniden sağlanır; işbu lisansın (herhangi bir iş i&ccedil;in) ihlalinden dolayı bahsi ge&ccedil;en telif sahibi tarafından aldığınız bu ilk uyarı olup, uyarı almanızdan itibaren 30 g&uuml;n i&ccedil;inde ihlali giderirsiniz.</p>
+<p>Bu b&ouml;l&uuml;m uyarınca haklarınızın iptali işbu lisans altında kopyaları ya da hakları alan tarafların lisanslarını sonlandırmaz. Eğer haklarınız sonlandırılırsa ve kalıcı olarak tekrar size verilmezse, b&ouml;l&uuml;m 10 uyarınca aynı gere&ccedil; i&ccedil;in yeni lisanslar alma yetkisine sahip olmazsınız.</p>
+<h3><span id="9._Kopya_Almak_.C4.B0.C3.A7in_Onay_Gerektirmeyen_Durumlar." class="mw-headline">9. Kopya Almak İ&ccedil;in Onay Gerektirmeyen Durumlar.</span></h3>
+<p>Bir programın kopyasını almak ya da &ccedil;alıştırmak i&ccedil;in işbu lisansı kabul etmek zorunda değilsiniz. Sadece bir kopyayı almak i&ccedil;in eşbirimler arası aktarımın bir sonucu olarak meydana gelen bir korunmuş &uuml;r&uuml;n&uuml;n ikincil yollardan yayılması aynı şekilde onay gerektirmeyen bir durumdur. Yine de, sadece işbu lisans herhangi bir korunmuş &uuml;r&uuml;n&uuml; değiştirme ya da yayma izni verir. Dolayısıyla bir korunmuş &uuml;r&uuml;n&uuml; değiştirerek ya da yayarak işbu lisansın bu yetkisini kabul ettiğinizi beyan etmiş olursunuz.</p>
+<h3><span id="10._.C4.B0ndiren_Al.C4.B1c.C4.B1lar.C4.B1n_Kendili.C4.9Finden_Lisanslanmas.C4.B1." class="mw-headline">10. İndiren Alıcıların Kendiliğinden Lisanslanması.</span></h3>
+<p>Korunmuş bir &uuml;r&uuml;n&uuml; her taşıdığınızda, işbu lisans altındaki bir &uuml;r&uuml;n&uuml; &ccedil;alıştırma, değiştirme ve yayma izni &ouml;zg&uuml;n telif sahiplerinden alıcılara kendiliğinden aktarılmış olur. İşbu lisans uyarınca uyumluluğun &uuml;&ccedil;&uuml;nc&uuml; taraflarca dayatılmasından y&uuml;k&uuml;ml&uuml; değilsiniz.</p>
+<p>Bir &ldquo;varlık aktarımı&rdquo;, bir kuruluşun denetiminin, ya da t&uuml;m varlıklarının b&uuml;y&uuml;k &ouml;l&ccedil;&uuml;de aktarımıdır; ya da bir kuruluşu alt b&ouml;l&uuml;mlere ayırmak, yahut kuruluşları birleştirmektir. Eğer bir korunmuş işin yayılması varlık aktarımının bir sonucu olarak ger&ccedil;ekleşiyorsa, bu aktarımda &uuml;r&uuml;n&uuml;n bir kopyasını elde eden t&uuml;m taraflar; bahsi ge&ccedil;en bir &ouml;nceki taraf kuruluşun ilgili sorumluları &uuml;r&uuml;nle birlikte hangi lisansları vermiş ya da verebilirse, &uuml;stteki paragraf uyarınca bu lisansları alır; ve bunun yanında bahsi ge&ccedil;en bir &ouml;nceki sorumludan, eğer bahsi ge&ccedil;en sorumlunun sahipliğindeyse ya da uygun &ccedil;abalar sonucu bu sorumlu İlgili Kaynağı elde etmişse, &uuml;r&uuml;n&uuml;n İlgili Kaynağına sahip olma hakkını devralır.</p>
+<p>İşbu lisansla verilen ya da kabul edilen hakların ge&ccedil;erliliğine ek kısıtlamalar getiremezsiniz. &Ouml;rneğin, işbu lisans ile atanan hakların uygulanmasına y&ouml;nelik bir ruhsat &uuml;creti, telif &uuml;creti ya da başka bir &uuml;cretlendirme uygulayamazsınız; herhangi bir patent hakkı iddiasının, programı ya da herhangi bir b&ouml;l&uuml;m&uuml;n&uuml; yaratmak, kullanmak, satmak, satmayı teklif etmek, ya da i&ccedil;e aktarmak yoluyla ihlal edildiğini &ouml;ne s&uuml;rerek (dava s&uuml;resince karşı talepte bulunmak ya da karşı dava a&ccedil;mak da dahil olmak &uuml;zere) dava a&ccedil;ma girişiminde bulunamazsınız.</p>
+<h3><span id="11._Patentler" class="mw-headline">11. Patentler</span></h3>
+<p>Bir &ldquo;katkıda bulunan&rdquo;, işbu lisans altında programa ya da programa bağlı bir &uuml;r&uuml;n&uuml;n kullanımına izin veren telif hakkı sahibidir. Dolayısıyla lisanslanan &uuml;r&uuml;ne, &ldquo;katkıda bulunanın s&uuml;r&uuml;m&uuml;&rdquo; adı verilir.</p>
+<p>Bir katkı sağlayıcının &ldquo;temel patent istemleri&rdquo;; bahsi ge&ccedil;en katkı sağlayıcı tarafından sahip olunan ya da y&ouml;netilen, elde edilmiş ya da edilecek, bu lisanla izin verilen yaratma, kullanma ya da satma yollarıyla ihlal edilmesi muhtemel patent istemlerinin t&uuml;m&uuml;d&uuml;r; fakat katkı sağlayıcının s&uuml;r&uuml;m&uuml;n&uuml;n yalnızca ileride değiştirilmesi sonucu oluşabilecek patent hakkı taleplerini i&ccedil;ermez. İşbu tanımın ama&ccedil;ları i&ccedil;in, &ldquo;y&ouml;netmek&rdquo;, işbu lisansın gerekliliklerine uygun olarak alt lisansları patentleme hakkını vermeyi de kapsar.</p>
+<p>Her katkı sağlayıcı; temel patent istemleri altında, katkı sağlayanın s&uuml;r&uuml;m&uuml;n&uuml;n i&ccedil;eriğini yaratma, kullanma, satma, satmayı teklif etme, i&ccedil;e aktarma ya da ayrıca değiştirme ve yayma lisansını; tam yetki vermeyen, d&uuml;nya &ccedil;apında, telifsiz patent lisansı şeklinde verir.</p>
+<p>Bunu takip eden &uuml;&ccedil; paragrafta, bir &ldquo;patent lisansı&rdquo; herhangi a&ccedil;ık anlaşma ya da taahh&uuml;t olarak adlandırılsa da, bir patenti dayatmak (&ouml;rneğin bir patenti uygulamak i&ccedil;in a&ccedil;ık izin ya da patent ihlali talebiyle mahkemeye vermemek i&ccedil;in s&ouml;zleşmek gibi) ama&ccedil;lı değildir. B&ouml;yle bir patent lisansını bir tarafa &ldquo;vermek&rdquo;, bahsi ge&ccedil;en tarafa karşı patenti dayatmayacağını taahh&uuml;t etmek ya da buna dair bir anlaşmaya varmak anlamına gelir.</p>
+<p>Eğer bir patent lisansına dayandığını bilerek korunmuş bir &uuml;r&uuml;n&uuml; taşırsanız, ve &uuml;r&uuml;n&uuml;n İlgili Kaynağı kimsenin kopyalamasına a&ccedil;ık değilse, &uuml;cretsizse ve bu lisansın h&uuml;k&uuml;mleri altındaysa, kamuya a&ccedil;ık bir ağ sunucusu ya da rahatlıkla ulaşılabilir yerlerde mevcutsa; b&ouml;yle bir durumda (1) İlgili Kaynağın erişilebilir olmasını sağlamalısınız, ya da (2) bahsi ge&ccedil;en bu &uuml;r&uuml;n i&ccedil;in patent lisansının faydalarından yoksun kalmaya hazırlıklı olmalısınız, ya da (3) işbu lisansın y&uuml;k&uuml;ml&uuml;l&uuml;kleriyle uyumlu bir yoldan patent lisansını, indiren alıcılara ulaştırmaya hazırlanmalısınız. Yukarıda ge&ccedil;en &ldquo;Dayandığını bilerek&rdquo; kullanımı; patent lisansı ile korunmuş bir işi bir &uuml;lkede taşıma eyleminizin ya da alıcınızın korunmuş &uuml;r&uuml;n&uuml; bir &uuml;lkede kullanmasının, o &uuml;lkede ge&ccedil;erli olduğunu d&uuml;ş&uuml;nd&uuml;ğ&uuml;n&uuml;z bir ya da daha fazla patentin ihlaline sebep olduğunu bilmek demektir.</p>
+<p>Eğer, tekil bir işlem ya da d&uuml;zenlemeyle uyumlu veya bağlantılı olarak, bir korunmuş işi taşır, ya da taşınmasını sağlayarak yayarsanız, ve korunmuş işin alıcısı taraflara işin bir kopyasını kullanma, yayma, değiştirme ya da taşıma yetkisi veren bir lisans verirseniz; sağladığınız patent lisansı kendiliğinden korunmuş işin ve buna bağlı &uuml;r&uuml;nlerin alıcılarına kadar ulaşır.</p>
+<p>Bir patent lisansı, eğer kapsamı &ccedil;er&ccedil;evesinde işbu lisansla verilen hakların bir ya da daha fazlasının kullanılmasını engelliyor ya da kullanılmaması koşuluna bağlanıyorsa, ayrımcıdır. Eğer yazılım dağıtan bir sekt&ouml;rdeki bir &uuml;&ccedil;&uuml;nc&uuml; tarafla yapılan; &uuml;r&uuml;n&uuml; taşıma eyleminizin derecesine bağlı olarak; &uuml;&ccedil;&uuml;nc&uuml; taraflara &ouml;deme yaptığınız, ve korunmuş &uuml;r&uuml;n&uuml; sizden alan taraflardan herhangi birine (a) tarafınızdan taşınan korunmuş işin kopyalarına (ya da bu kopyalardan &uuml;retilen kopyalara) bağlı olarak, ya da (b)bir anlaşma yapmadıysanız ya da 28 Mart 2007&prime;den &ouml;nce patent lisansı verilmişse, korunmuş işi kapsayan belirli &uuml;r&uuml;n ya da derlemeler i&ccedil;in ve onlarla bağlantılı olarak, ayrımcı patent lisansını veren &uuml;&ccedil;&uuml;nc&uuml; tarafların bulunduğu anlaşmada tarafsanız, korunmuş &uuml;r&uuml;n&uuml; taşıyamazsınız.</p>
+<p>İşbu lisanstaki hi&ccedil;bir şey, uygulanabilir patent yasası uyarınca sizin i&ccedil;in ge&ccedil;erli olabilecek ihlallerin savunması olarak ya da herhangi bir dolaylı lisansı hari&ccedil; tutmak ya da kısıtlamak olarak yorumlanamaz.</p>
+<h3><span id="12._Di.C4.9Ferlerinin_Haklar.C4.B1ndan_Vazge.C3.A7memek." class="mw-headline">12. Diğerlerinin Haklarından Vazge&ccedil;memek.</span></h3>
+<p>Eğer size (mahkeme kararıyla, s&ouml;zleşmeyle ya da başka bir yolla) kabul ettirilen şartlar işbu lisansın şartlarıyla &ccedil;elişiyorsa, sizi işbu lisansın şartlarından muaf tutmaz. Eğer bu lisansla gelen zorunlulukları ve ge&ccedil;erli diğer zorunlulukları aynı zamanda yerine getirmek amacıyla korunmuş bir işi taşıyamıyorsanız, bunun bir sonucu olarak hi&ccedil;bir zaman taşıyamazsınız. &Ouml;rneğin, programı taşıdığınız kişilerden daha fazla taşıma yapmak i&ccedil;in telif &uuml;creti toplamak zorunda bırakan koşulları kabul ederseniz, bahsi ge&ccedil;en şartları ve işbu lisansın şartlarını yerine getirmek i&ccedil;in tek yol programı taşımaktan tamamen ka&ccedil;ınmaktır.</p>
+<h3><span id="13._GNU_Affero_Genel_Kamu_Lisans.C4.B1_ile_Kullan.C4.B1m." class="mw-headline">13. GNU Affero Genel Kamu Lisansı ile Kullanım.</span></h3>
+<p>İşbu lisansın diğer h&uuml;k&uuml;mlerine bakılmaksızın, herhangi bir korunmuş &uuml;r&uuml;n&uuml;, GNU Affero Genel Kamu Lisansı s&uuml;r&uuml;m 3 ile lisanslanan diğer korunmuş &uuml;r&uuml;nlerle bağlantılandırma ya da tek bir korunmuş &uuml;r&uuml;nde birleştirme, ve ortaya &ccedil;ıkan &uuml;r&uuml;n&uuml; taşıma iznine sahipsiniz. İşbu lisansın h&uuml;k&uuml;mleri korunmuş &uuml;r&uuml;n&uuml;n olduğu kısım i&ccedil;in uygulanmaya devam eder; ancak GNU Affero Genel Kamu Lisansı&rsquo;nın 13&prime;&uuml;nc&uuml; b&ouml;l&uuml;m&uuml;nde bir ağ yoluyla ger&ccedil;ekleşen ilgili etkileşim, bunun gibi birleştirmelere uygulanacaktır.</p>
+<h3><span id="14._Lisans.C4.B1n_De.C4.9Fi.C5.9Ftirilmi.C5.9F_s.C3.BCr.C3.BCmleri." class="mw-headline">14. Lisansın Değiştirilmiş s&uuml;r&uuml;mleri.</span></h3>
+<p>&Ouml;zg&uuml;r Yazılım Vakfı, GNU Genel Kamu Lisansı&rsquo;nın değiştirilmiş ve/veya yeni s&uuml;r&uuml;mlerini zaman zaman yayımlayabilir. Bu gibi yeni s&uuml;r&uuml;mler, halihazırdaki s&uuml;r&uuml;mle aynı ruhu taşımakta olup, yeni sorun ve endişeler konusunda ayrıntılandırılması bakımından farklılık g&ouml;sterebilir.</p>
+<p>Her s&uuml;r&uuml;me ayırt edici bir s&uuml;r&uuml;m numarası verilir. Eğer program GNU Genel Kamu Lisansı&rsquo;nın bazı numaralı s&uuml;r&uuml;mlerinin ya da &ldquo;daha sonraki herhangi bir s&uuml;r&uuml;m&uuml;n&rdquo; ona uygulandığını belirtiyorsa, bahsi ge&ccedil;en numaralı s&uuml;r&uuml;m&uuml;n ya da &Ouml;zg&uuml;r Yazılım Vakfı tarafından yayınlanan daha sonraki bir s&uuml;r&uuml;m&uuml;n h&uuml;k&uuml;mlerini ve koşullarını kabul etme se&ccedil;eneğiniz mevcuttur. Eğer program GNU Genel Kamu Lisansı&rsquo;nın bir s&uuml;r&uuml;m numarası belirtmiyorsa, &Ouml;zg&uuml;r Yazılım Vakfı tarafından yayınlanan s&uuml;r&uuml;mlerden herhangi birini se&ccedil;ebilirsiniz.</p>
+<p>Eğer program ileride hangi GNU Genel Kamu Lisansının kullanılacağını bir vekilin belirleyebileceğini belirtiyorsa, bu vekilin bir s&uuml;r&uuml;m&uuml; kabul ettiğinin resmi beyanatı, sizi program i&ccedil;in o s&uuml;r&uuml;m&uuml; se&ccedil;meye kalıcı şekilde yetkilendirir.</p>
+<p>Daha sonraki lisans s&uuml;r&uuml;mleri, size ek ya da farklı izinler sunabilir. Ancak, hi&ccedil;bir ek y&uuml;k&uuml;ml&uuml;l&uuml;k daha sonraki bir s&uuml;r&uuml;m&uuml; takip etmenizin bir sonucu olarak hi&ccedil;bir yaratıcı ya da telif hakkı sahibine dayatılamaz.</p>
+<h3><span id="15._Teminattan_Vazge.C3.A7mek." class="mw-headline">15. Teminattan Vazge&ccedil;mek.</span></h3>
+<p>Y&Uuml;R&Uuml;RL&Uuml;KTEKİ YASALARLA ONAYLANDIĞI &Ouml;L&Ccedil;&Uuml;DE PROGRAMIN BİR TEMİNATI YOKTUR. YAZILI OLARAK AKSİ BELİRTİLMEDİĞİ S&Uuml;RECE TELİF HAKKI SAHİPLERİ VE/VEYA DİĞER TARAFLAR, DOĞRUDAN YA DA DOLAYLI OLARAK, TİCARETİNİN YAPILABİLİRLİĞİNE VE &Ouml;ZEL BİR AMA&Ccedil; İ&Ccedil;İN UYGUNLUĞUNA TEMİNAT VERMEK DE DAHİL, ANCAK BUNUNLA KISITLI KALMAYARAK, Hİ&Ccedil;BİR TEMİNAT SUNMADAN PROGRAMI &ldquo;OLDUĞU GİBİ&rdquo; TEDARİK EDERLER. PROGRAMIN KALİTESİ VE PERFORMANSIYLA İLGİLİ T&Uuml;M RİSK SİZE AİTTİR. PROGRAMIN HATALI OLDUĞU ORTAYA &Ccedil;IKARSA, T&Uuml;M GEREKLİ HİZMET, ONARIM VE D&Uuml;ZELTME &Uuml;CRETİ SİZİN TARAFINIZDAN &Uuml;STLENİLİR.</p>
+<h3><span id="16._Y.C3.BCk.C3.BCml.C3.BCl.C3.BC.C4.9F.C3.BCn_K.C4.B1s.C4.B1tlanmas.C4.B1." class="mw-headline">16. Y&uuml;k&uuml;ml&uuml;l&uuml;ğ&uuml;n Kısıtlanması.</span></h3>
+<p>Y&Uuml;R&Uuml;RL&Uuml;KTEKİ YASALARLA ZORUNLU TUTULMADIĞI YA DA YAZILI OLARAK KARARLAŞTIRILMADIĞI S&Uuml;RECE Hİ&Ccedil;BİR DURUMDA, Hİ&Ccedil;BİR TELİF HAKKI SAHİBİ YA DA YUKARIDA BELİRTİLDİĞİ GİBİ PROGRAMDA DEĞİŞİKLİK YAPAN VE/VEYA PROGRAMI TAŞIYAN BAŞKA BİR TARAF; HERHANGİ BİR GENEL, &Ouml;ZEL, KAZARA YA DA DOLAYLI OLARAK, PROGRAMIN KULLANIMINDAN VEYA YETERSİZLİĞİNDEN DOĞAN (VERİ KAYBI, VEYA HATALI BULUNAN VERİ, VEYA TARAFINIZDAN YAHUT &Uuml;&Ccedil;&Uuml;NC&Uuml; TARAFLARCA ZARARA UĞRATILMA, VEYA PROGRAMIN DİĞER PROGRAMLARLA &Ccedil;ALIŞMAKTA BAŞARISIZ OLMASI DA DAHİL OLMAK &Uuml;ZERE VE BUNLARLA KISITLI OLMADAN) ZARARLAR DAHİL OLMAK &Uuml;ZERE, B&Ouml;YLE BİR TELİF SAHİBİ YA DA DİĞER TARAFIN BU GİBİ ZARARLARDAN HABERDAR EDİLDİĞİ KOŞULLARDA BİLE, HASARLAR KONUSUNDA SİZE KARŞI SORUMLU DEĞİLDİR.</p>
+<h3><span id="17._15_ve_16.E2.80.B2nc.C4.B1_b.C3.B6l.C3.BCmlerin_yorumlanmas.C4.B1." class="mw-headline">17. 15 ve 16&prime;ncı b&ouml;l&uuml;mlerin yorumlanması.</span></h3>
+<p>Eğer yukarıda belirtilen &ldquo;teminattan vazge&ccedil;mek&rdquo; ve &ldquo;g&uuml;venilirliğin kısıtlanması&rdquo; maddelerinin h&uuml;k&uuml;mlerine g&ouml;re yerel bir hukuki neticeye varılamıyorsa, inceleyen mahkemeler; g&uuml;venilirliğin bir g&uuml;vence ya da taahh&uuml;t&uuml; &uuml;cret karşılığında programın kopyasına eşlik etmiyorsa, programla bağıntılı t&uuml;m hukuki sorumluluktan tamamen feragat etmeye en yakın yerel yasanın uygulanmasını sağlar.</p>
+<p>H&Uuml;K&Uuml;MLER VE KOŞULLARIN SONU.</p>
+<h2><span id="Bu_H.C3.BCk.C3.BCmler_Yeni_Programlar.C4.B1n.C4.B1za_Nas.C4.B1l_Uygulan.C4.B1r.3F" class="mw-headline">Bu H&uuml;k&uuml;mler Yeni Programlarınıza Nasıl Uygulanır?</span></h2>
+<p>Yeni bir program geliştirdiyseniz ve programı en fazla yararlanılabilecek bi&ccedil;imde kamunun genel kullanımına a&ccedil;mak istiyorsanız, bunu başarmanın en iyi yolu, &uuml;r&uuml;n&uuml;n&uuml;z&uuml; herkesin yeniden dağıtabildiği ve bu koşullar altında değiştirebildiği &ouml;zg&uuml;r yazılım yapmaktır.</p>
+<p>Bunu yapmak i&ccedil;in, aşağıdaki uyarıları programınıza iliştirin. Bunun en g&uuml;venli yolu her bir kaynak kodun başına teminattan vazge&ccedil;ildiğini en etkili olarak g&ouml;steren bi&ccedil;imde yerleştirmektir; ve her bir dosya en azından &ldquo;telif hakkı&rdquo; satırını ve uyarının tamamının bulunduğu yeri g&ouml;steren bir belirte&ccedil; i&ccedil;ermelidir.</p>
+<dl>
+<dd>
+<dl>
+<dd>
+<div class="table-responsive wprt_style_display">
+<table class="table" border="1">
+<tbody>
+<tr>
+<td>&lt;program adını yazmak i&ccedil;in bir satır ve ne işe yaradığına dair kısa bir bilgi.&gt;
+<p>&nbsp;</p>
+<p>Copyright (C) &lt;yıl&gt; &lt;yazarın adı&gt;</p>
+<p>Bu program &ouml;zg&uuml;r yazılımdır: &Ouml;zg&uuml;r Yazılım Vakfı tarafından yayımlanan GNU Genel Kamu Lisansı&rsquo;nın s&uuml;r&uuml;m 3 ya da (isteğinize bağlı olarak) daha sonraki s&uuml;r&uuml;mlerinin h&uuml;k&uuml;mleri altında yeniden dağıtabilir ve/veya değiştirebilirsiniz.</p>
+<p>Bu program, yararlı olması umuduyla dağıtılmış olup, programın BİR TEMİNATI YOKTUR; TİCARETİNİN YAPILABİLİRLİĞİNE VE &Ouml;ZEL BİR AMA&Ccedil; İ&Ccedil;İN UYGUNLUĞUNA dair bir teminat da vermez. Ayrıntılar i&ccedil;in GNU Genel Kamu Lisansı&rsquo;na g&ouml;z atınız.</p>
+<p>Bu programla birlikte GNU Genel Kamu Lisansı&rsquo;nın bir kopyasını elde etmiş olmanız gerekir. Eğer elinize ulaşmadıysa&nbsp;<span class="plainlinks">&lt;<a class="external free" href="http://www.gnu.org/licenses/" rel="nofollow">http://www.gnu.org/licenses/</a>&gt;</span>&nbsp;adresine bakınız.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Ayrıca elektronik ya da normal posta yoluyla sizinle nasıl iletişime ge&ccedil;ilebileceği hakkında da bilgi veriniz.</p>
+<p>Eğer programın terminal etkileşimi varsa, etkileşimli modda başlatıldığında programın ş&ouml;yle bir kısa uyarı g&ouml;stermesini sağlayın:</p>
+<dl>
+<dd>
+<dl>
+<dd>
+<div class="table-responsive wprt_style_display">
+<table class="table" border="1">
+<tbody>
+<tr>
+<td>&lt;program&gt; Copyright (C) &lt;yıl&gt; &lt;yazarın adı&gt;
+<p>&nbsp;</p>
+<p>Bu programın KESİNLİKLE Hİ&Ccedil;BİR TEMİNATI YOKTUR; ayrıntılar i&ccedil;in &lsquo;g&ouml;ster t&rsquo; yazın.</p>
+<p>Bu bir &ouml;zg&uuml;r yazılımdır, ve bazı koşullar altında yeniden dağıtmakta serbestsiniz; ayrıntılar i&ccedil;in &lsquo;g&ouml;ster k&rsquo; yazın.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Varsayımsal &lsquo;g&ouml;ster t&rsquo; ve &lsquo;g&ouml;ster k&rsquo; komutları Genel Kamu Lisansı&rsquo;nın ilgili b&ouml;l&uuml;mlerini g&ouml;stermelidir. Elbette sizin programınızın komutları farklı olabilir; Grafiksel Kullanıcı Aray&uuml;z&uuml; i&ccedil;in, bir &ldquo;hakkında kutucuğu&rdquo; kullanmalısınız.</p>
+<p>Ayrıca (bir programcı olarak &ccedil;alışıyorsanız) işvereninize ya da varsa okula, gerekirse bir &ldquo;telif hakkı feragatnamesi&rdquo; imzalatmalısınız. Bununla ilgili daha fazla bilgiye, ve GNU GKL&rsquo;nin nasıl uygulanacağı ve izleneceğine dair bilgiye&nbsp;<span class="plainlinks">&lt;<a class="external free" href="http://www.gnu.org/licenses/" rel="nofollow">http://www.gnu.org/licenses/</a>&gt;</span>&nbsp;adresinden ulaşabilirsiniz.</p>
+<p>GNU Genel Kamu Lisansı programınızın tescilli bir programla birleşip t&uuml;zel kişilik kazanmasına izin vermez. Eğer programınız bir altprogram k&uuml;t&uuml;phanesiyse, tescilli uygulamaların bu k&uuml;t&uuml;phaneyle bağlanmasına izin vermeyi daha kullanışlı g&ouml;rebilirsiniz. Eğer b&ouml;yle olmasını istiyorsanız, bu lisans yerine GNU Kısıtlı Genel Kamu Lisansı&rsquo;nı kullanınız. Fakat &ouml;ncelikle şunu okuyunuz:&nbsp;<span class="plainlinks">&lt;<a class="external free" href="http://www.gnu.org/philosophy/why-not-lgpl.html" rel="nofollow">http://www.gnu.org/philosophy/why-not-lgpl.html</a>&gt;</span>.</p>
+</div>
+</div>
+<!-- Pynar Lisans Sonu -->
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>

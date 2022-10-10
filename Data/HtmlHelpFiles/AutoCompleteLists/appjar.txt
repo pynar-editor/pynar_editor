@@ -1,0 +1,4 @@
+setSize(int,int) Pencere eni ve boyu tamsayı olarak ayarlar
+go() pencereyi başlat
+setTitle(str) Pencerenin başlığını karakter dizisi ile değiştir
+setBg(str) Pencerenin arka plan rengini değiştir

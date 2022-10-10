@@ -1,0 +1,807 @@
+print("_STR_")
+print(_STR_)
+
+
+print("_STR_",_STR_)
+print("_STR_",_STR_,_STR_)
+print("_STR_","_STR_")
+
+print(len(_STR_))
+print("_STR_",len(_STR_))
+print("_STR_",len(_STR_),"_STR_")
+
+print(type(_STR_))
+print(type(_STR_),"_STR_")
+
+print(hex(_NUM_))
+print(bin(_NUM_))
+print(round(_NUM_))
+print(_STR_.capitalize())
+print(_STR_.replace('_STR_', '_STR22_'))
+
+print("_STR_:{}".format(_STR_))
+
+print(int(_NUM_))
+print(str("_STR_"))
+print(_NUM_/_NUM_)
+print(_STR_=='_STR_' and _STR_==True)
+_NUM_=_NUM_/float(_STR_)
+
+
+return _STR_
+return "_STR_"
+return _NUM_+_NUM_
+
+for _VAR_ in range(_NUM_):      
+for _VAR_ in range(len(_STR_)): 
+
+while (_STR_==_NUM_):
+while (_STR_<=_NUM_):
+while (_STR_>=_NUM_):
+while (_STR_==_NUM_):
+while (_STR_>_NUM_):
+while (_STR_<_NUM_):
+    
+while _STR_==_NUM_:
+while _STR_<=_NUM_:
+while _STR_>=_NUM_:
+while _STR_==_NUM_:
+while _STR_>_NUM_:
+while _STR_<_NUM_:    
+
+if (_STR_ != _NUM_):
+if (_STR_ <= _NUM_):
+if (_STR_ >= _NUM_):
+if (_STR_ == _NUM_):
+if (_STR_ > _NUM_):
+if (_STR_ < _NUM_):
+if(_STR_==_NUM_):
+    
+if (i%_NUM_==_NUM_):
+if (i%_NUM_!=_NUM_):
+if (i%_NUM_>_NUM_):
+if (i%_NUM_<_NUM_):
+if (i%_NUM_>=_NUM_):
+if (i%_NUM_<=_NUM_):
+   
+if _STR_ == _NUM_ or _STR_ == _NUM_:
+if _STR_ == _NUM_ or _STR_ >= _NUM_:    
+if _STR_ == _NUM_ or _STR_ <= _NUM_:  
+if _STR_ == _NUM_ or _STR_ != _NUM_: 
+             
+if _STR_ >= _NUM_ or _STR_ == _NUM_:    
+if _STR_ >= _NUM_ or _STR_ <= _NUM_:
+if _STR_ >= _NUM_ or _STR_ >= _NUM_:
+if _STR_ >= _NUM_ or _STR_ != _NUM_:
+    
+if _STR_ <= _NUM_ or _STR_ == _NUM_:    
+if _STR_ <= _NUM_ or _STR_ <= _NUM_:
+if _STR_ <= _NUM_ or _STR_ >= _NUM_:
+if _STR_ <= _NUM_ or _STR_ != _NUM_:
+
+if _STR_ != _NUM_ or _STR_ == _NUM_:    
+if _STR_ != _NUM_ or _STR_ <= _NUM_:
+if _STR_ != _NUM_ or _STR_ >= _NUM_:
+if _STR_ != _NUM_ or _STR_ != _NUM_:
+
+
+if (_STR_ == _NUM_) or (_STR_ == _NUM_):
+if (_STR_ == _NUM_) or (_STR_ >= _NUM_):    
+if (_STR_ == _NUM_) or (_STR_ <= _NUM_):  
+if (_STR_ == _NUM_) or (_STR_ != _NUM_): 
+             
+if (_STR_ >= _NUM_) or (_STR_ == _NUM_):    
+if (_STR_ >= _NUM_) or (_STR_ <= _NUM_):
+if (_STR_ >= _NUM_) or (_STR_ >= _NUM_):
+if (_STR_ >= _NUM_) or (_STR_ != _NUM_):
+    
+if (_STR_ <= _NUM_) or (_STR_ == _NUM_):    
+if (_STR_ <= _NUM_) or (_STR_ <= _NUM_):
+if (_STR_ <= _NUM_) or (_STR_ >= _NUM_):
+if (_STR_ <= _NUM_) or (_STR_ != _NUM_):
+
+if (_STR_ != _NUM_) or (_STR_ == _NUM_):    
+if (_STR_ != _NUM_) or (_STR_ <= _NUM_):
+if (_STR_ != _NUM_) or (_STR_ >= _NUM_):
+if (_STR_ != _NUM_) or (_STR_ != _NUM_):
+   
+if _STR_ == _NUM_ and _STR_ == _NUM_:
+if _STR_ == _NUM_ and _STR_ >= _NUM_:    
+if _STR_ == _NUM_ and _STR_ <= _NUM_:  
+if _STR_ == _NUM_ and _STR_ != _NUM_: 
+             
+if _STR_ >= _NUM_ and _STR_ == _NUM_:    
+if _STR_ >= _NUM_ and _STR_ <= _NUM_:
+if _STR_ >= _NUM_ and _STR_ >= _NUM_:
+if _STR_ >= _NUM_ and _STR_ != _NUM_:
+    
+if _STR_ <= _NUM_ and _STR_ == _NUM_:    
+if _STR_ <= _NUM_ and _STR_ <= _NUM_:
+if _STR_ <= _NUM_ and _STR_ >= _NUM_:
+if _STR_ <= _NUM_ and _STR_ != _NUM_:
+
+if _STR_ != _NUM_ and _STR_ == _NUM_:    
+if _STR_ != _NUM_ and _STR_ <= _NUM_:
+if _STR_ != _NUM_ and _STR_ >= _NUM_:
+if _STR_ != _NUM_ and _STR_ != _NUM_:
+
+
+if (_STR_ == _NUM_) and (_STR_ == _NUM_):
+if (_STR_ == _NUM_) and (_STR_ >= _NUM_):    
+if (_STR_ == _NUM_) and (_STR_ <= _NUM_):  
+if (_STR_ == _NUM_) and (_STR_ != _NUM_): 
+             
+if (_STR_ >= _NUM_) and (_STR_ == _NUM_):    
+if (_STR_ >= _NUM_) and (_STR_ <= _NUM_):
+if (_STR_ >= _NUM_) and (_STR_ >= _NUM_):
+if (_STR_ >= _NUM_) and (_STR_ != _NUM_):
+    
+if (_STR_ <= _NUM_) and (_STR_ == _NUM_):    
+if (_STR_ <= _NUM_) and (_STR_ <= _NUM_):
+if (_STR_ <= _NUM_) and (_STR_ >= _NUM_):
+if (_STR_ <= _NUM_) and (_STR_ != _NUM_):
+
+if (_STR_ != _NUM_) and (_STR_ == _NUM_):    
+if (_STR_ != _NUM_) and (_STR_ <= _NUM_):
+if (_STR_ != _NUM_) and (_STR_ >= _NUM_):
+if (_STR_ != _NUM_) and (_STR_ != _NUM_):
+
+if _STR_ > _NUM_ and _STR_ < _NUM_:
+
+
+if (_STR_ == _NUM_) & (_STR_ == _NUM_):
+if (_STR_ == _NUM_) & (_STR_ >= _NUM_):    
+if (_STR_ == _NUM_) & (_STR_ <= _NUM_):  
+if (_STR_ == _NUM_) & (_STR_ != _NUM_): 
+             
+if (_STR_ >= _NUM_) & (_STR_ == _NUM_):    
+if (_STR_ >= _NUM_) & (_STR_ <= _NUM_):
+if (_STR_ >= _NUM_) & (_STR_ >= _NUM_):
+if (_STR_ >= _NUM_) & (_STR_ != _NUM_):
+    
+if (_STR_ <= _NUM_) & (_STR_ == _NUM_):    
+if (_STR_ <= _NUM_) & (_STR_ <= _NUM_):
+if (_STR_ <= _NUM_) & (_STR_ >= _NUM_):
+if (_STR_ <= _NUM_) & (_STR_ != _NUM_):
+
+if (_STR_ != _NUM_) & (_STR_ == _NUM_):    
+if (_STR_ != _NUM_) & (_STR_ <= _NUM_):
+if (_STR_ != _NUM_) & (_STR_ >= _NUM_):
+if (_STR_ != _NUM_) & (_STR_ != _NUM_):
+
+if (_STR_ == _NUM_) | (_STR_ == _NUM_):
+if (_STR_ == _NUM_) | (_STR_ >= _NUM_):    
+if (_STR_ == _NUM_) | (_STR_ <= _NUM_):  
+if (_STR_ == _NUM_) | (_STR_ != _NUM_): 
+             
+if (_STR_ >= _NUM_) | (_STR_ == _NUM_):    
+if (_STR_ >= _NUM_) | (_STR_ <= _NUM_):
+if (_STR_ >= _NUM_) | (_STR_ >= _NUM_):
+if (_STR_ >= _NUM_) | (_STR_ != _NUM_):
+    
+if (_STR_ <= _NUM_) | (_STR_ == _NUM_):    
+if (_STR_ <= _NUM_) | (_STR_ <= _NUM_):
+if (_STR_ <= _NUM_) | (_STR_ >= _NUM_):
+if (_STR_ <= _NUM_) | (_STR_ != _NUM_):
+
+if (_STR_ != _NUM_) | (_STR_ == _NUM_):    
+if (_STR_ != _NUM_) | (_STR_ <= _NUM_):
+if (_STR_ != _NUM_) | (_STR_ >= _NUM_):
+if (_STR_ != _NUM_) | (_STR_ != _NUM_):
+
+if _STR_ == _NUM_ & _STR_ == _NUM_:
+if _STR_ == _NUM_ & _STR_ >= _NUM_:    
+if _STR_ == _NUM_ & _STR_ <= _NUM_:  
+if _STR_ == _NUM_ & _STR_ != _NUM_: 
+             
+if _STR_ >= _NUM_ & _STR_ == _NUM_:    
+if _STR_ >= _NUM_ & _STR_ <= _NUM_:
+if _STR_ >= _NUM_ & _STR_ >= _NUM_:
+if _STR_ >= _NUM_ & _STR_ != _NUM_:
+    
+if _STR_ <= _NUM_ & _STR_ == _NUM_:    
+if _STR_ <= _NUM_ & _STR_ <= _NUM_:
+if _STR_ <= _NUM_ & _STR_ >= _NUM_:
+if _STR_ <= _NUM_ & _STR_ != _NUM_:
+
+if _STR_ != _NUM_ & _STR_ == _NUM_:    
+if _STR_ != _NUM_ & _STR_ <= _NUM_:
+if _STR_ != _NUM_ & _STR_ >= _NUM_:
+if _STR_ != _NUM_ & _STR_ != _NUM_:
+
+if _STR_ == _NUM_ | _STR_ == _NUM_:
+if _STR_ == _NUM_ | _STR_ >= _NUM_:    
+if _STR_ == _NUM_ | _STR_ <= _NUM_:  
+if _STR_ == _NUM_ | _STR_ != _NUM_: 
+             
+if _STR_ >= _NUM_ | _STR_ == _NUM_:    
+if _STR_ >= _NUM_ | _STR_ <= _NUM_:
+if _STR_ >= _NUM_ | _STR_ >= _NUM_:
+if _STR_ >= _NUM_ | _STR_ != _NUM_:
+    
+if _STR_ <= _NUM_ | _STR_ == _NUM_:    
+if _STR_ <= _NUM_ | _STR_ <= _NUM_:
+if _STR_ <= _NUM_ | _STR_ >= _NUM_:
+if _STR_ <= _NUM_ | _STR_ != _NUM_:
+
+if _STR_ != _NUM_ | _STR_ == _NUM_:    
+if _STR_ != _NUM_ | _STR_ <= _NUM_:
+if _STR_ != _NUM_ | _STR_ >= _NUM_:
+if _STR_ != _NUM_ | _STR_ != _NUM_:
+
+    
+elif (i%_NUM_ == _NUM_):
+elif (i%_NUM_ > _NUM_):
+elif (i%_NUM_ < _NUM_):
+elif (i%_NUM_ >= _NUM_):
+elif (i%_NUM_ <= _NUM_):
+
+elif (_STR_ == _NUM_):
+elif (_STR_ <= _NUM_):
+elif (_STR_ >= _NUM_):
+elif (_STR_ == _NUM_):
+elif (_STR_ > _NUM_):
+elif (_STR_ < _NUM_):
+
+elif _STR_ == _NUM_ or _STR_ == _NUM_:
+elif _STR_ == _NUM_ or _STR_ >= _NUM_:    
+elif _STR_ == _NUM_ or _STR_ <= _NUM_:  
+elif _STR_ == _NUM_ or _STR_ != _NUM_: 
+             
+elif _STR_ >= _NUM_ or _STR_ == _NUM_:    
+elif _STR_ >= _NUM_ or _STR_ <= _NUM_:
+elif _STR_ >= _NUM_ or _STR_ >= _NUM_:
+elif _STR_ >= _NUM_ or _STR_ != _NUM_:
+    
+elif _STR_ <= _NUM_ or _STR_ == _NUM_:    
+elif _STR_ <= _NUM_ or _STR_ <= _NUM_:
+elif _STR_ <= _NUM_ or _STR_ >= _NUM_:
+elif _STR_ <= _NUM_ or _STR_ != _NUM_:
+
+elif _STR_ != _NUM_ or _STR_ == _NUM_:    
+elif _STR_ != _NUM_ or _STR_ <= _NUM_:
+elif _STR_ != _NUM_ or _STR_ >= _NUM_:
+elif _STR_ != _NUM_ or _STR_ != _NUM_:
+
+
+elif (_STR_ == _NUM_) or (_STR_ == _NUM_):
+elif (_STR_ == _NUM_) or (_STR_ >= _NUM_):    
+elif (_STR_ == _NUM_) or (_STR_ <= _NUM_):  
+elif (_STR_ == _NUM_) or (_STR_ != _NUM_): 
+             
+elif (_STR_ >= _NUM_) or (_STR_ == _NUM_):    
+elif (_STR_ >= _NUM_) or (_STR_ <= _NUM_):
+elif (_STR_ >= _NUM_) or (_STR_ >= _NUM_):
+elif (_STR_ >= _NUM_) or (_STR_ != _NUM_):
+    
+elif (_STR_ <= _NUM_) or (_STR_ == _NUM_):    
+elif (_STR_ <= _NUM_) or (_STR_ <= _NUM_):
+elif (_STR_ <= _NUM_) or (_STR_ >= _NUM_):
+elif (_STR_ <= _NUM_) or (_STR_ != _NUM_):
+
+elif (_STR_ != _NUM_) or (_STR_ == _NUM_):    
+elif (_STR_ != _NUM_) or (_STR_ <= _NUM_):
+elif (_STR_ != _NUM_) or (_STR_ >= _NUM_):
+elif (_STR_ != _NUM_) or (_STR_ != _NUM_):
+   
+elif _STR_ == _NUM_ and _STR_ == _NUM_:
+elif _STR_ == _NUM_ and _STR_ >= _NUM_:    
+elif _STR_ == _NUM_ and _STR_ <= _NUM_:  
+elif _STR_ == _NUM_ and _STR_ != _NUM_: 
+             
+elif _STR_ >= _NUM_ and _STR_ == _NUM_:    
+elif _STR_ >= _NUM_ and _STR_ <= _NUM_:
+elif _STR_ >= _NUM_ and _STR_ >= _NUM_:
+elif _STR_ >= _NUM_ and _STR_ != _NUM_:
+    
+elif _STR_ <= _NUM_ and _STR_ == _NUM_:    
+elif _STR_ <= _NUM_ and _STR_ <= _NUM_:
+elif _STR_ <= _NUM_ and _STR_ >= _NUM_:
+elif _STR_ <= _NUM_ and _STR_ != _NUM_:
+
+elif _STR_ != _NUM_ and _STR_ == _NUM_:    
+elif _STR_ != _NUM_ and _STR_ <= _NUM_:
+elif _STR_ != _NUM_ and _STR_ >= _NUM_:
+elif _STR_ != _NUM_ and _STR_ != _NUM_:
+
+
+elif (_STR_ == _NUM_) and (_STR_ == _NUM_):
+elif (_STR_ == _NUM_) and (_STR_ >= _NUM_):    
+elif (_STR_ == _NUM_) and (_STR_ <= _NUM_):  
+elif (_STR_ == _NUM_) and (_STR_ != _NUM_): 
+             
+elif (_STR_ >= _NUM_) and (_STR_ == _NUM_):    
+elif (_STR_ >= _NUM_) and (_STR_ <= _NUM_):
+elif (_STR_ >= _NUM_) and (_STR_ >= _NUM_):
+elif (_STR_ >= _NUM_) and (_STR_ != _NUM_):
+    
+elif (_STR_ <= _NUM_) and (_STR_ == _NUM_):    
+elif (_STR_ <= _NUM_) and (_STR_ <= _NUM_):
+elif (_STR_ <= _NUM_) and (_STR_ >= _NUM_):
+elif (_STR_ <= _NUM_) and (_STR_ != _NUM_):
+
+elif (_STR_ != _NUM_) and (_STR_ == _NUM_):    
+elif (_STR_ != _NUM_) and (_STR_ <= _NUM_):
+elif (_STR_ != _NUM_) and (_STR_ >= _NUM_):
+elif (_STR_ != _NUM_) and (_STR_ != _NUM_):
+
+
+elif (_STR_ == _NUM_) & (_STR_ == _NUM_):
+elif (_STR_ == _NUM_) & (_STR_ >= _NUM_):    
+elif (_STR_ == _NUM_) & (_STR_ <= _NUM_):  
+elif (_STR_ == _NUM_) & (_STR_ != _NUM_): 
+             
+elif (_STR_ >= _NUM_) & (_STR_ == _NUM_):    
+elif (_STR_ >= _NUM_) & (_STR_ <= _NUM_):
+elif (_STR_ >= _NUM_) & (_STR_ >= _NUM_):
+elif (_STR_ >= _NUM_) & (_STR_ != _NUM_):
+    
+elif (_STR_ <= _NUM_) & (_STR_ == _NUM_):    
+elif (_STR_ <= _NUM_) & (_STR_ <= _NUM_):
+elif (_STR_ <= _NUM_) & (_STR_ >= _NUM_):
+elif (_STR_ <= _NUM_) & (_STR_ != _NUM_):
+
+elif (_STR_ != _NUM_) & (_STR_ == _NUM_):    
+elif (_STR_ != _NUM_) & (_STR_ <= _NUM_):
+elif (_STR_ != _NUM_) & (_STR_ >= _NUM_):
+elif (_STR_ != _NUM_) & (_STR_ != _NUM_):
+
+elif (_STR_ == _NUM_) | (_STR_ == _NUM_):
+elif (_STR_ == _NUM_) | (_STR_ >= _NUM_):    
+elif (_STR_ == _NUM_) | (_STR_ <= _NUM_):  
+elif (_STR_ == _NUM_) | (_STR_ != _NUM_): 
+             
+elif (_STR_ >= _NUM_) | (_STR_ == _NUM_):    
+elif (_STR_ >= _NUM_) | (_STR_ <= _NUM_):
+elif (_STR_ >= _NUM_) | (_STR_ >= _NUM_):
+elif (_STR_ >= _NUM_) | (_STR_ != _NUM_):
+    
+elif (_STR_ <= _NUM_) | (_STR_ == _NUM_):    
+elif (_STR_ <= _NUM_) | (_STR_ <= _NUM_):
+elif (_STR_ <= _NUM_) | (_STR_ >= _NUM_):
+elif (_STR_ <= _NUM_) | (_STR_ != _NUM_):
+
+elif (_STR_ != _NUM_) | (_STR_ == _NUM_):    
+elif (_STR_ != _NUM_) | (_STR_ <= _NUM_):
+elif (_STR_ != _NUM_) | (_STR_ >= _NUM_):
+elif (_STR_ != _NUM_) | (_STR_ != _NUM_):
+
+elif _STR_ == _NUM_ & _STR_ == _NUM_:
+elif _STR_ == _NUM_ & _STR_ >= _NUM_:    
+elif _STR_ == _NUM_ & _STR_ <= _NUM_:  
+elif _STR_ == _NUM_ & _STR_ != _NUM_: 
+             
+elif _STR_ >= _NUM_ & _STR_ == _NUM_:    
+elif _STR_ >= _NUM_ & _STR_ <= _NUM_:
+elif _STR_ >= _NUM_ & _STR_ >= _NUM_:
+elif _STR_ >= _NUM_ & _STR_ != _NUM_:
+    
+elif _STR_ <= _NUM_ & _STR_ == _NUM_:    
+elif _STR_ <= _NUM_ & _STR_ <= _NUM_:
+elif _STR_ <= _NUM_ & _STR_ >= _NUM_:
+elif _STR_ <= _NUM_ & _STR_ != _NUM_:
+
+elif _STR_ != _NUM_ & _STR_ == _NUM_:    
+elif _STR_ != _NUM_ & _STR_ <= _NUM_:
+elif _STR_ != _NUM_ & _STR_ >= _NUM_:
+elif _STR_ != _NUM_ & _STR_ != _NUM_:
+
+elif _STR_ == _NUM_ | _STR_ == _NUM_:
+elif _STR_ == _NUM_ | _STR_ >= _NUM_:    
+elif _STR_ == _NUM_ | _STR_ <= _NUM_:  
+elif _STR_ == _NUM_ | _STR_ != _NUM_: 
+             
+elif _STR_ >= _NUM_ | _STR_ == _NUM_:    
+elif _STR_ >= _NUM_ | _STR_ <= _NUM_:
+elif _STR_ >= _NUM_ | _STR_ >= _NUM_:
+elif _STR_ >= _NUM_ | _STR_ != _NUM_:
+    
+elif _STR_ <= _NUM_ | _STR_ == _NUM_:    
+elif _STR_ <= _NUM_ | _STR_ <= _NUM_:
+elif _STR_ <= _NUM_ | _STR_ >= _NUM_:
+elif _STR_ <= _NUM_ | _STR_ != _NUM_:
+
+elif _STR_ != _NUM_ | _STR_ == _NUM_:    
+elif _STR_ != _NUM_ | _STR_ <= _NUM_:
+elif _STR_ != _NUM_ | _STR_ >= _NUM_:
+elif _STR_ != _NUM_ | _STR_ != _NUM_:
+
+if _STR_ == _NUM_ or _STR_ > _NUM_:    
+if _STR_ == _NUM_ or _STR_ < _NUM_:  
+             
+if _STR_ > _NUM_ or _STR_ == _NUM_:    
+if _STR_ > _NUM_ or _STR_ < _NUM_:
+if _STR_ > _NUM_ or _STR_ > _NUM_:
+if _STR_ > _NUM_ or _STR_ != _NUM_:
+    
+if _STR_ < _NUM_ or _STR_ == _NUM_:    
+if _STR_ < _NUM_ or _STR_ < _NUM_:
+if _STR_ < _NUM_ or _STR_ > _NUM_:
+if _STR_ < _NUM_ or _STR_ != _NUM_:
+
+if _STR_ != _NUM_ or _STR_ < _NUM_:
+if _STR_ != _NUM_ or _STR_ > _NUM_:
+
+if (_STR_ == _NUM_) or (_STR_ > _NUM_):    
+if (_STR_ == _NUM_) or (_STR_ < _NUM_):  
+             
+if (_STR_ > _NUM_) or (_STR_ == _NUM_):    
+if (_STR_ > _NUM_) or (_STR_ < _NUM_):
+if (_STR_ > _NUM_) or (_STR_ > _NUM_):
+if (_STR_ > _NUM_) or (_STR_ != _NUM_):
+    
+if (_STR_ < _NUM_) or (_STR_ == _NUM_):    
+if (_STR_ < _NUM_) or (_STR_ < _NUM_):
+if (_STR_ < _NUM_) or (_STR_ > _NUM_):
+if (_STR_ < _NUM_) or (_STR_ != _NUM_):
+
+if (_STR_ != _NUM_) or (_STR_ < _NUM_):
+if (_STR_ != _NUM_) or (_STR_ > _NUM_):
+if (_STR_ != _NUM_) or (_STR_ != _NUM_):
+   
+if _STR_ == _NUM_ and _STR_ > _NUM_:    
+if _STR_ == _NUM_ and _STR_ < _NUM_:  
+             
+if _STR_ > _NUM_ and _STR_ < _NUM_:
+if _STR_ > _NUM_ and _STR_ > _NUM_:
+if _STR_ > _NUM_ and _STR_ != _NUM_:
+    
+if _STR_ < _NUM_ and _STR_ == _NUM_:    
+if _STR_ < _NUM_ and _STR_ < _NUM_:
+if _STR_ < _NUM_ and _STR_ > _NUM_:
+if _STR_ < _NUM_ and _STR_ != _NUM_:
+
+if _STR_ != _NUM_ and _STR_ < _NUM_:
+if _STR_ != _NUM_ and _STR_ > _NUM_:
+
+if (_STR_ == _NUM_) and (_STR_ > _NUM_):    
+if (_STR_ == _NUM_) and (_STR_ < _NUM_):  
+             
+if (_STR_ > _NUM_) and (_STR_ == _NUM_):    
+if (_STR_ > _NUM_) and (_STR_ < _NUM_):
+if (_STR_ > _NUM_) and (_STR_ > _NUM_):
+if (_STR_ > _NUM_) and (_STR_ != _NUM_):
+    
+if (_STR_ < _NUM_) and (_STR_ == _NUM_):    
+if (_STR_ < _NUM_) and (_STR_ < _NUM_):
+if (_STR_ < _NUM_) and (_STR_ > _NUM_):
+
+if (_STR_ != _NUM_) and (_STR_ < _NUM_):
+if (_STR_ != _NUM_) and (_STR_ > _NUM_):
+
+if (_STR_ == _NUM_) & (_STR_ == _NUM_):
+if (_STR_ == _NUM_) & (_STR_ > _NUM_):    
+if (_STR_ == _NUM_) & (_STR_ < _NUM_):  
+if (_STR_ == _NUM_) & (_STR_ != _NUM_): 
+             
+if (_STR_ > _NUM_) & (_STR_ == _NUM_):    
+if (_STR_ > _NUM_) & (_STR_ < _NUM_):
+if (_STR_ > _NUM_) & (_STR_ > _NUM_):
+if (_STR_ > _NUM_) & (_STR_ != _NUM_):
+    
+if (_STR_ < _NUM_) & (_STR_ == _NUM_):    
+if (_STR_ < _NUM_) & (_STR_ < _NUM_):
+if (_STR_ < _NUM_) & (_STR_ > _NUM_):
+if (_STR_ < _NUM_) & (_STR_ != _NUM_):
+
+if (_STR_ != _NUM_) & (_STR_ < _NUM_):
+if (_STR_ != _NUM_) & (_STR_ > _NUM_):
+
+if (_STR_ == _NUM_) | (_STR_ > _NUM_):    
+if (_STR_ == _NUM_) | (_STR_ < _NUM_):  
+             
+if (_STR_ > _NUM_) | (_STR_ == _NUM_):    
+if (_STR_ > _NUM_) | (_STR_ < _NUM_):
+if (_STR_ > _NUM_) | (_STR_ > _NUM_):
+if (_STR_ > _NUM_) | (_STR_ != _NUM_):
+    
+if (_STR_ < _NUM_) | (_STR_ == _NUM_):    
+if (_STR_ < _NUM_) | (_STR_ < _NUM_):
+if (_STR_ < _NUM_) | (_STR_ > _NUM_):
+if (_STR_ < _NUM_) | (_STR_ != _NUM_):
+
+if (_STR_ != _NUM_) | (_STR_ < _NUM_):
+if (_STR_ != _NUM_) | (_STR_ > _NUM_):
+
+
+if _STR_ == _NUM_ & _STR_ > _NUM_:    
+if _STR_ == _NUM_ & _STR_ < _NUM_:  
+
+             
+if _STR_ > _NUM_ & _STR_ == _NUM_:    
+if _STR_ > _NUM_ & _STR_ < _NUM_:
+if _STR_ > _NUM_ & _STR_ > _NUM_:
+if _STR_ > _NUM_ & _STR_ != _NUM_:
+    
+if _STR_ < _NUM_ & _STR_ == _NUM_:    
+if _STR_ < _NUM_ & _STR_ < _NUM_:
+if _STR_ < _NUM_ & _STR_ > _NUM_:
+if _STR_ < _NUM_ & _STR_ != _NUM_:
+
+if _STR_ != _NUM_ & _STR_ < _NUM_:
+if _STR_ != _NUM_ & _STR_ > _NUM_:
+
+if _STR_ == _NUM_ | _STR_ > _NUM_:    
+if _STR_ == _NUM_ | _STR_ < _NUM_:  
+             
+if _STR_ > _NUM_ | _STR_ == _NUM_:    
+if _STR_ > _NUM_ | _STR_ < _NUM_:
+if _STR_ > _NUM_ | _STR_ > _NUM_:
+if _STR_ > _NUM_ | _STR_ != _NUM_:
+    
+if _STR_ < _NUM_ | _STR_ == _NUM_:    
+if _STR_ < _NUM_ | _STR_ < _NUM_:
+if _STR_ < _NUM_ | _STR_ > _NUM_:
+if _STR_ < _NUM_ | _STR_ != _NUM_:
+
+if _STR_ != _NUM_ | _STR_ < _NUM_:
+if _STR_ != _NUM_ | _STR_ > _NUM_:
+
+elif (i%_NUM_ > _NUM_):
+elif (i%_NUM_ < _NUM_):
+elif (i%_NUM_ > _NUM_):
+elif (i%_NUM_ < _NUM_):
+
+elif (_STR_ < _NUM_):
+elif (_STR_ > _NUM_):
+elif (_STR_ > _NUM_):
+elif (_STR_ < _NUM_):
+
+elif _STR_ == _NUM_ or _STR_ > _NUM_:    
+elif _STR_ == _NUM_ or _STR_ < _NUM_:  
+             
+elif _STR_ > _NUM_ or _STR_ == _NUM_:    
+elif _STR_ > _NUM_ or _STR_ < _NUM_:
+elif _STR_ > _NUM_ or _STR_ > _NUM_:
+elif _STR_ > _NUM_ or _STR_ != _NUM_:
+    
+elif _STR_ < _NUM_ or _STR_ == _NUM_:    
+elif _STR_ < _NUM_ or _STR_ < _NUM_:
+elif _STR_ < _NUM_ or _STR_ > _NUM_:
+elif _STR_ < _NUM_ or _STR_ != _NUM_:
+
+elif _STR_ != _NUM_ or _STR_ < _NUM_:
+elif _STR_ != _NUM_ or _STR_ > _NUM_:
+
+elif (_STR_ == _NUM_) or (_STR_ > _NUM_):    
+elif (_STR_ == _NUM_) or (_STR_ < _NUM_):  
+
+             
+elif (_STR_ > _NUM_) or (_STR_ == _NUM_):    
+elif (_STR_ > _NUM_) or (_STR_ < _NUM_):
+elif (_STR_ > _NUM_) or (_STR_ > _NUM_):
+elif (_STR_ > _NUM_) or (_STR_ != _NUM_):
+    
+elif (_STR_ < _NUM_) or (_STR_ == _NUM_):    
+elif (_STR_ < _NUM_) or (_STR_ < _NUM_):
+elif (_STR_ < _NUM_) or (_STR_ > _NUM_):
+elif (_STR_ < _NUM_) or (_STR_ != _NUM_):
+
+
+elif (_STR_ != _NUM_) or (_STR_ < _NUM_):
+elif (_STR_ != _NUM_) or (_STR_ > _NUM_):
+   
+elif _STR_ == _NUM_ and _STR_ > _NUM_:    
+elif _STR_ == _NUM_ and _STR_ < _NUM_:  
+             
+elif _STR_ > _NUM_ and _STR_ == _NUM_:    
+elif _STR_ > _NUM_ and _STR_ < _NUM_:
+elif _STR_ > _NUM_ and _STR_ > _NUM_:
+elif _STR_ > _NUM_ and _STR_ != _NUM_:
+    
+elif _STR_ < _NUM_ and _STR_ == _NUM_:    
+elif _STR_ < _NUM_ and _STR_ < _NUM_:
+elif _STR_ < _NUM_ and _STR_ > _NUM_:
+elif _STR_ < _NUM_ and _STR_ != _NUM_:
+
+elif _STR_ != _NUM_ and _STR_ < _NUM_:
+elif _STR_ != _NUM_ and _STR_ > _NUM_:
+
+elif (_STR_ == _NUM_) and (_STR_ > _NUM_):    
+elif (_STR_ == _NUM_) and (_STR_ < _NUM_):  
+             
+elif (_STR_ > _NUM_) and (_STR_ == _NUM_):    
+elif (_STR_ > _NUM_) and (_STR_ < _NUM_):
+elif (_STR_ > _NUM_) and (_STR_ > _NUM_):
+elif (_STR_ > _NUM_) and (_STR_ != _NUM_):
+    
+elif (_STR_ < _NUM_) and (_STR_ == _NUM_):    
+elif (_STR_ < _NUM_) and (_STR_ < _NUM_):
+elif (_STR_ < _NUM_) and (_STR_ > _NUM_):
+elif (_STR_ < _NUM_) and (_STR_ != _NUM_):
+
+elif (_STR_ != _NUM_) and (_STR_ < _NUM_):
+elif (_STR_ != _NUM_) and (_STR_ > _NUM_):
+
+elif (_STR_ == _NUM_) & (_STR_ > _NUM_):    
+elif (_STR_ == _NUM_) & (_STR_ < _NUM_):  
+             
+elif (_STR_ > _NUM_) & (_STR_ == _NUM_):    
+elif (_STR_ > _NUM_) & (_STR_ < _NUM_):
+elif (_STR_ > _NUM_) & (_STR_ > _NUM_):
+elif (_STR_ > _NUM_) & (_STR_ != _NUM_):
+    
+elif (_STR_ < _NUM_) & (_STR_ == _NUM_):    
+elif (_STR_ < _NUM_) & (_STR_ < _NUM_):
+elif (_STR_ < _NUM_) & (_STR_ > _NUM_):
+elif (_STR_ < _NUM_) & (_STR_ != _NUM_):
+
+elif (_STR_ != _NUM_) & (_STR_ < _NUM_):
+elif (_STR_ != _NUM_) & (_STR_ > _NUM_):
+
+elif (_STR_ == _NUM_) | (_STR_ > _NUM_):    
+elif (_STR_ == _NUM_) | (_STR_ < _NUM_):  
+
+             
+elif (_STR_ > _NUM_) | (_STR_ == _NUM_):    
+elif (_STR_ > _NUM_) | (_STR_ < _NUM_):
+elif (_STR_ > _NUM_) | (_STR_ > _NUM_):
+elif (_STR_ > _NUM_) | (_STR_ != _NUM_):
+    
+elif (_STR_ < _NUM_) | (_STR_ == _NUM_):    
+elif (_STR_ < _NUM_) | (_STR_ < _NUM_):
+elif (_STR_ < _NUM_) | (_STR_ > _NUM_):
+elif (_STR_ < _NUM_) | (_STR_ != _NUM_):
+
+elif (_STR_ != _NUM_) | (_STR_ < _NUM_):
+elif (_STR_ != _NUM_) | (_STR_ > _NUM_):
+
+elif _STR_ == _NUM_ & _STR_ > _NUM_:    
+elif _STR_ == _NUM_ & _STR_ < _NUM_:  
+             
+elif _STR_ > _NUM_ & _STR_ == _NUM_:    
+elif _STR_ > _NUM_ & _STR_ < _NUM_:
+elif _STR_ > _NUM_ & _STR_ > _NUM_:
+elif _STR_ > _NUM_ & _STR_ != _NUM_:
+    
+elif _STR_ < _NUM_ & _STR_ == _NUM_:    
+elif _STR_ < _NUM_ & _STR_ < _NUM_:
+elif _STR_ < _NUM_ & _STR_ > _NUM_:
+elif _STR_ < _NUM_ & _STR_ != _NUM_:
+
+elif _STR_ != _NUM_ & _STR_ < _NUM_:
+elif _STR_ != _NUM_ & _STR_ > _NUM_:
+
+elif _STR_ == _NUM_ | _STR_ > _NUM_:    
+elif _STR_ == _NUM_ | _STR_ < _NUM_:  
+             
+elif _STR_ > _NUM_ | _STR_ == _NUM_:    
+elif _STR_ > _NUM_ | _STR_ < _NUM_:
+elif _STR_ > _NUM_ | _STR_ > _NUM_:
+elif _STR_ > _NUM_ | _STR_ != _NUM_:
+    
+elif _STR_ < _NUM_ | _STR_ == _NUM_:    
+elif _STR_ < _NUM_ | _STR_ < _NUM_:
+elif _STR_ < _NUM_ | _STR_ > _NUM_:
+elif _STR_ < _NUM_ | _STR_ != _NUM_:
+
+elif _STR_ != _NUM_ | _STR_ < _NUM_:
+elif _STR_ != _NUM_ | _STR_ > _NUM_:
+
+else:
+
+_STR_ = [_NUM_]
+_STR_ = [_NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ ]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , NUM_  , _NUM_ , _NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , NUM_  , _NUM_ , _NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , NUM_  , _NUM_ , _NUM_ , _NUM_]
+_STR_ = [_NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ , _NUM_ ,NUM_ , _NUM_ , _NUM_ , _NUM_]
+ 
+_STR_ = ["_STR_"]
+_STR_ = ["_STR_" , "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_", "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_", "_STR_" ]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_",  "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_"]
+_STR_ = ["_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_" , "_STR_", "_STR_" ,"_STR_" , "_STR_" , "_STR_" , "_STR_"]
+
+_STR_ = [_NUM_]
+_STR_ = [_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_ ]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_ = [_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,NUM_,_NUM_,_NUM_,_NUM_]
+ 
+_STR_ = ["_STR_"]
+_STR_ = ["_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_ = ["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+
+_STR_=[_NUM_]
+_STR_=[_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_ ]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_]
+_STR_=[_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,_NUM_,NUM_,_NUM_,_NUM_,_NUM_]
+ 
+_STR_=["_STR_"]
+_STR_=["_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+_STR_=["_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_","_STR_"]
+
+
+print(_STR_[_NUM_])
+print(_STR_[_NUM_][_NUM_])
+_STR_.append("_STR_")
+_STR_.append(_NUM_)
+_STR_.insert(_NUM_, "_STR_")
+del _STR_[_NUM_] 
+_STR_=_STR_.pop()
+_STR_.pop()
+print('_STR_' + _STR_.title() + '_STR_')
+print('_STR_' + _STR_.title())
+_STR_.remove(_STR_)
+_STR_.remove("_STR_")
+_STR_.sort()
+_STR_.clear()
+print(_STR_.sort())
+_STR_.sort(reverse=True)
+print(_STR_.sort(reverse=True))
+_STR_.title()
+print(_STR_.title())
+print(_STR_[_NUM_] , "_STR_")
+print('_STR_' + _NUM_)
+print('_STR_' + _NUM_ + '_STR_')
+print('_STR_' + _NUM_ + '_STR_' + _NUM_)
+print('_STR_' + _NUM_ + '_STR_' + _NUM_ + '_STR_' + _NUM_)
+print('_STR_' + _NUM_ + '_STR_' + _NUM_ + '_STR_' + _NUM_ + '_STR_' + _NUM_)
+
+_STR_ = input()
+_STR_ = input("_STR_")
+
+def _STR_():
+def _STR_(_STR_):
+def _STR_(_STR_ , _STR_):
+def _STR_(self , _STR_):
+
+try:
+break
+continue
+except ZeroDivisionError:
+except ValueError:
+    
+print(_NUM_<_NUM_ or _NUM_>_NUM_)
+print(_NUM_<_NUM_ and _NUM_>_NUM_)
+
+print(_STR_.capitalize())
+_STR_.extend(_STR_)
+_STR_.forward(_NUM_)

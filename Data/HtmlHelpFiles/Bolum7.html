@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Bolum7</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; } /* Alert */
+    code span.an { color: #008000; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #0000ff; } /* ControlFlow */
+    code span.ch { color: #008080; } /* Char */
+    code span.cn { } /* Constant */
+    code span.co { color: #008000; } /* Comment */
+    code span.cv { color: #008000; } /* CommentVar */
+    code span.do { color: #008000; } /* Documentation */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.im { } /* Import */
+    code span.in { color: #008000; } /* Information */
+    code span.kw { color: #0000ff; } /* Keyword */
+    code span.op { } /* Operator */
+    code span.ot { color: #ff4000; } /* Other */
+    code span.pp { color: #ff4000; } /* Preprocessor */
+    code span.sc { color: #008080; } /* SpecialChar */
+    code span.ss { color: #008080; } /* SpecialString */
+    code span.st { color: #008080; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #008080; } /* VerbatimString */
+    code span.wa { color: #008000; font-weight: bold; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="data:text/css,%40font%2Dface%20%7B%0Afont%2Dfamily%3A%20octicons%2Dlink%3B%0Asrc%3A%20url%28data%3Afont%2Fwoff%3Bcharset%3Dutf%2D8%3Bbase64%2Cd09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM%2B8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB%2FaFGpk3jaTY6xa8JAGMW%2FO62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v%2Bk%2F0an2i%2BitHDw3v2%2B9%2BDBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3%2FI7AtxEJLtzzuZfI%2BVVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy%2FLt7Kc%2B0vWY%2FgAgIIEqAN9we0pwKXreiMasxvabDQMM4riO%2BqxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw%2Bymhce7vwM9jSqO8JyVd5RH9gyTt2%2BJ%2FyUmYlIR0s04n6%2B7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv%2FocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi%2BW2%2BMjCzMIDApSwvXzC97Z4Ig8N%2FBxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh%2F8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT%2BAEjAwuDFpBmA9KMDEwMCh9i%2Fv8H8sH0%2F4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9%2FlqYwOGZxeUelN2U2R6%2BcArgtCJpauW7UQBqnFkUsjAY%2FkOU1cP%2BDAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl%2BvvmM%2FbyA48e6tWrKArm4ZJlCbdsrxksL1AwWn%2FyBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO%2F%2FsdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd%2F89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF%2B9JOS0nbaaYDCQfwCJ7Au3AHj%2BLO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm%2BEBXuAbHmIMSRMs%2B4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL%2BhD7C1xoaHeLJSEao0FEW14ckxC%2BTU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13%2F%2Blm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl%2B9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O%2FAdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB%2F%2F%2FAA8AAQAAAAAAAAAAAAAAAAABAAAAAA%3D%3D%29%20format%28%27woff%27%29%3B%0A%7D%0Abody%20%7B%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%0Atext%2Dsize%2Dadjust%3A%20100%25%3B%0Acolor%3A%20%23333%3B%0Afont%2Dfamily%3A%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20%22Segoe%20UI%22%2C%20Arial%2C%20freesans%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0Afont%2Dsize%3A%2016px%3B%0Aline%2Dheight%3A%201%2E6%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0Awidth%3A%20728px%3B%0Amax%2Dwidth%3A%2099%25%3B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%2030px%2030px%208rem%2030px%3B%0Amargin%2Dleft%3A%20auto%3B%0Amargin%2Dright%3A%20auto%3B%0A%7D%0Abody%20a%20%7B%0Abackground%2Dcolor%3A%20transparent%3B%0A%7D%0Abody%20a%3Aactive%2C%0Abody%20a%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0Abody%20strong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0Abody%20img%20%7B%0Aborder%3A%200%3B%0A%7D%0Abody%20hr%20%7B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0Abody%20pre%20%7B%0Aoverflow%3A%20auto%3B%0A%7D%0Abody%20code%2C%0Abody%20kbd%2C%0Abody%20pre%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20monospace%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20input%20%7B%0Acolor%3A%20inherit%3B%0Afont%3A%20inherit%3B%0Amargin%3A%200%3B%0A%7D%0Abody%20html%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0Abody%20input%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0Abody%20input%5Btype%3D%22checkbox%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0Apadding%3A%200%3B%0A%7D%0Abody%20table%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0Abody%20td%2C%0Abody%20th%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20%2A%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0Abody%20input%20%7B%0Afont%3A%2013px%20%2F%201%2E4%20Helvetica%2C%20arial%2C%20nimbussansl%2C%20liberationsans%2C%20freesans%2C%20clean%2C%20sans%2Dserif%2C%20%22Apple%20Color%20Emoji%22%2C%20%22Segoe%20UI%20Emoji%22%2C%20%22Segoe%20UI%20Symbol%22%3B%0A%7D%0Abody%20a%20%7B%0Acolor%3A%20%234078c0%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20a%3Ahover%2C%0Abody%20a%3Aactive%20%7B%0Atext%2Ddecoration%3A%20underline%3B%0A%7D%0Abody%20hr%20%7B%0Aheight%3A%200%3B%0Amargin%3A%2015px%200%3B%0Aoverflow%3A%20hidden%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23ddd%3B%0A%7D%0Abody%20hr%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%20hr%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dtop%3A%2015px%3B%0Amargin%2Dbottom%3A%2015px%3B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20h1%20%7B%0Afont%2Dsize%3A%2030px%3B%0A%7D%0Abody%20h2%20%7B%0Afont%2Dsize%3A%2021px%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%2016px%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%2014px%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%2011px%3B%0A%7D%0Abody%20blockquote%20%7B%0Amargin%3A%200%3B%0A%7D%0Abody%20ul%2C%0Abody%20ol%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20ol%20ol%2C%0Abody%20ul%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Droman%3B%0A%7D%0Abody%20ul%20ul%20ol%2C%0Abody%20ul%20ol%20ol%2C%0Abody%20ol%20ul%20ol%2C%0Abody%20ol%20ol%20ol%20%7B%0Alist%2Dstyle%2Dtype%3A%20lower%2Dalpha%3B%0A%7D%0Abody%20dd%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Abody%20code%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Afont%2Dsize%3A%2012px%3B%0A%7D%0Abody%20pre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Afont%3A%2012px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0A%7D%0Abody%20%2Eselect%3A%3A%2Dms%2Dexpand%20%7B%0Aopacity%3A%200%3B%0A%7D%0Abody%20%2Eocticon%20%7B%0Afont%3A%20normal%20normal%20normal%2016px%2F1%20octicons%2Dlink%3B%0Adisplay%3A%20inline%2Dblock%3B%0Atext%2Ddecoration%3A%20none%3B%0Atext%2Drendering%3A%20auto%3B%0A%2Dwebkit%2Dfont%2Dsmoothing%3A%20antialiased%3B%0A%2Dmoz%2Dosx%2Dfont%2Dsmoothing%3A%20grayscale%3B%0A%2Dwebkit%2Duser%2Dselect%3A%20none%3B%0A%2Dmoz%2Duser%2Dselect%3A%20none%3B%0A%2Dms%2Duser%2Dselect%3A%20none%3B%0Auser%2Dselect%3A%20none%3B%0A%7D%0Abody%20%2Eocticon%2Dlink%3Abefore%20%7B%0Acontent%3A%20%27%5Cf05c%27%3B%0A%7D%0Abody%3Abefore%20%7B%0Adisplay%3A%20table%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%3Aafter%20%7B%0Adisplay%3A%20table%3B%0Aclear%3A%20both%3B%0Acontent%3A%20%22%22%3B%0A%7D%0Abody%3E%2A%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%20%21important%3B%0A%7D%0Abody%3E%2A%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%20%21important%3B%0A%7D%0Abody%20a%3Anot%28%5Bhref%5D%29%20%7B%0Acolor%3A%20inherit%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20%2Eanchor%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%2Dright%3A%202px%3B%0Amargin%2Dleft%3A%20%2D18px%3B%0A%7D%0Abody%20%2Eanchor%3Afocus%20%7B%0Aoutline%3A%20none%3B%0A%7D%0Abody%20h1%2C%0Abody%20h2%2C%0Abody%20h3%2C%0Abody%20h4%2C%0Abody%20h5%2C%0Abody%20h6%20%7B%0Amargin%2Dtop%3A%201em%3B%0Amargin%2Dbottom%3A%2016px%3B%0Afont%2Dweight%3A%20bold%3B%0Aline%2Dheight%3A%201%2E4%3B%0A%7D%0Abody%20h1%20%2Eocticon%2Dlink%2C%0Abody%20h2%20%2Eocticon%2Dlink%2C%0Abody%20h3%20%2Eocticon%2Dlink%2C%0Abody%20h4%20%2Eocticon%2Dlink%2C%0Abody%20h5%20%2Eocticon%2Dlink%2C%0Abody%20h6%20%2Eocticon%2Dlink%20%7B%0Acolor%3A%20%23000%3B%0Avertical%2Dalign%3A%20middle%3B%0Avisibility%3A%20hidden%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%2C%0Abody%20h2%3Ahover%20%2Eanchor%2C%0Abody%20h3%3Ahover%20%2Eanchor%2C%0Abody%20h4%3Ahover%20%2Eanchor%2C%0Abody%20h5%3Ahover%20%2Eanchor%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%7B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Abody%20h1%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h2%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h3%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h4%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h5%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%2C%0Abody%20h6%3Ahover%20%2Eanchor%20%2Eocticon%2Dlink%20%7B%0Avisibility%3A%20visible%3B%0A%7D%0Abody%20h1%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E75em%3B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h1%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Abody%20h2%20%7B%0Apadding%2Dbottom%3A%200%2E3em%3B%0Afont%2Dsize%3A%201%2E5em%3B%0Aline%2Dheight%3A%201%2E225%3B%0A%7D%0Abody%20h2%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%3B%0A%7D%0Abody%20h3%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%0Aline%2Dheight%3A%201%2E43%3B%0A%7D%0Abody%20h3%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h4%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h4%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E2%3B%0A%7D%0Abody%20h5%20%7B%0Afont%2Dsize%3A%201em%3B%0A%7D%0Abody%20h5%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20h6%20%7B%0Afont%2Dsize%3A%201em%3B%0Acolor%3A%20%23777%3B%0A%7D%0Abody%20h6%20%2Eanchor%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0A%7D%0Abody%20p%2C%0Abody%20blockquote%2C%0Abody%20ul%2C%0Abody%20ol%2C%0Abody%20dl%2C%0Abody%20table%2C%0Abody%20pre%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20hr%20%7B%0Aheight%3A%204px%3B%0Apadding%3A%200%3B%0Amargin%3A%2016px%200%3B%0Abackground%2Dcolor%3A%20%23e7e7e7%3B%0Aborder%3A%200%20none%3B%0A%7D%0Abody%20ul%2C%0Abody%20ol%20%7B%0Apadding%2Dleft%3A%202em%3B%0A%7D%0Abody%20ul%20ul%2C%0Abody%20ul%20ol%2C%0Abody%20ol%20ol%2C%0Abody%20ol%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20li%3Ep%20%7B%0Amargin%2Dtop%3A%2016px%3B%0A%7D%0Abody%20dl%20%7B%0Apadding%3A%200%3B%0A%7D%0Abody%20dl%20dt%20%7B%0Apadding%3A%200%3B%0Amargin%2Dtop%3A%2016px%3B%0Afont%2Dsize%3A%201em%3B%0Afont%2Dstyle%3A%20italic%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20dl%20dd%20%7B%0Apadding%3A%200%2016px%3B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20blockquote%20%7B%0Apadding%3A%200%2015px%3B%0Acolor%3A%20%23777%3B%0Aborder%2Dleft%3A%204px%20solid%20%23ddd%3B%0A%7D%0Abody%20blockquote%3E%3Afirst%2Dchild%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Abody%20blockquote%3E%3Alast%2Dchild%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Abody%20table%20%7B%0Adisplay%3A%20block%3B%0Awidth%3A%20100%25%3B%0Aoverflow%3A%20auto%3B%0Aword%2Dbreak%3A%20normal%3B%0Aword%2Dbreak%3A%20keep%2Dall%3B%0A%7D%0Abody%20table%20th%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20table%20th%2C%0Abody%20table%20td%20%7B%0Apadding%3A%206px%2013px%3B%0Aborder%3A%201px%20solid%20%23ddd%3B%0A%7D%0Abody%20table%20tr%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Aborder%2Dtop%3A%201px%20solid%20%23ccc%3B%0A%7D%0Abody%20table%20tr%3Anth%2Dchild%282n%29%20%7B%0Abackground%2Dcolor%3A%20%23f8f8f8%3B%0A%7D%0Abody%20img%20%7B%0Amax%2Dwidth%3A%20100%25%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Abackground%2Dcolor%3A%20%23fff%3B%0A%7D%0Abody%20code%20%7B%0Apadding%3A%200%3B%0Apadding%2Dtop%3A%200%3B%0Apadding%2Dbottom%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%2085%25%3B%0Abackground%2Dcolor%3A%20rgba%280%2C0%2C0%2C0%2E04%29%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0Abody%20code%3Abefore%2C%0Abody%20code%3Aafter%20%7B%0Aletter%2Dspacing%3A%20%2D0%2E2em%3B%0Acontent%3A%20%22%5C00a0%22%3B%0A%7D%0Abody%20pre%3Ecode%20%7B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Afont%2Dsize%3A%20100%25%3B%0Aword%2Dbreak%3A%20normal%3B%0Awhite%2Dspace%3A%20pre%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Abody%20%2Ehighlight%20%7B%0Amargin%2Dbottom%3A%2016px%3B%0A%7D%0Abody%20%2Ehighlight%20pre%2C%0Abody%20pre%20%7B%0Apadding%3A%2016px%3B%0Aoverflow%3A%20auto%3B%0Afont%2Dsize%3A%2085%25%3B%0Aline%2Dheight%3A%201%2E45%3B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0A%7D%0A%2EsourceCode%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Abody%20%2Ehighlight%20pre%20%7B%0Amargin%2Dbottom%3A%200%3B%0Aword%2Dbreak%3A%20normal%3B%0A%7D%0Abody%20pre%20%7B%0Aword%2Dwrap%3A%20normal%3B%0A%7D%0Abody%20pre%20code%20%7B%0Adisplay%3A%20inline%3B%0Amax%2Dwidth%3A%20initial%3B%0Apadding%3A%200%3B%0Amargin%3A%200%3B%0Aoverflow%3A%20initial%3B%0Aline%2Dheight%3A%20inherit%3B%0Aword%2Dwrap%3A%20normal%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Aborder%3A%200%3B%0A%7D%0Abody%20pre%20code%3Abefore%2C%0Abody%20pre%20code%3Aafter%20%7B%0Acontent%3A%20normal%3B%0A%7D%0Abody%20kbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%2Dsize%3A%2011px%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0Abody%20%2Epl%2Dc%20%7B%0Acolor%3A%20%23969896%3B%0A%7D%0Abody%20%2Epl%2Dc1%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dv%20%7B%0Acolor%3A%20%230086b3%3B%0A%7D%0Abody%20%2Epl%2De%2C%0Abody%20%2Epl%2Den%20%7B%0Acolor%3A%20%23795da3%3B%0A%7D%0Abody%20%2Epl%2Ds%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsmi%20%7B%0Acolor%3A%20%23333%3B%0A%7D%0Abody%20%2Epl%2Dent%20%7B%0Acolor%3A%20%2363a35c%3B%0A%7D%0Abody%20%2Epl%2Dk%20%7B%0Acolor%3A%20%23a71d5d%3B%0A%7D%0Abody%20%2Epl%2Dpds%2C%0Abody%20%2Epl%2Ds%2C%0Abody%20%2Epl%2Ds%20%2Epl%2Dpse%20%2Epl%2Ds1%2C%0Abody%20%2Epl%2Dsr%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsra%2C%0Abody%20%2Epl%2Dsr%20%2Epl%2Dsre%20%7B%0Acolor%3A%20%23183691%3B%0A%7D%0Abody%20%2Epl%2Dv%20%7B%0Acolor%3A%20%23ed6a43%3B%0A%7D%0Abody%20%2Epl%2Did%20%7B%0Acolor%3A%20%23b52a1d%3B%0A%7D%0Abody%20%2Epl%2Dii%20%7B%0Abackground%2Dcolor%3A%20%23b52a1d%3B%0Acolor%3A%20%23f8f8f8%3B%0A%7D%0Abody%20%2Epl%2Dsr%20%2Epl%2Dcce%20%7B%0Acolor%3A%20%2363a35c%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dml%20%7B%0Acolor%3A%20%23693a17%3B%0A%7D%0Abody%20%2Epl%2Dmh%2C%0Abody%20%2Epl%2Dmh%20%2Epl%2Den%2C%0Abody%20%2Epl%2Dms%20%7B%0Acolor%3A%20%231d3e81%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmq%20%7B%0Acolor%3A%20%23008080%3B%0A%7D%0Abody%20%2Epl%2Dmi%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0Abody%20%2Epl%2Dmb%20%7B%0Acolor%3A%20%23333%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmd%20%7B%0Abackground%2Dcolor%3A%20%23ffecec%3B%0Acolor%3A%20%23bd2c00%3B%0A%7D%0Abody%20%2Epl%2Dmi1%20%7B%0Abackground%2Dcolor%3A%20%23eaffea%3B%0Acolor%3A%20%2355a532%3B%0A%7D%0Abody%20%2Epl%2Dmdr%20%7B%0Acolor%3A%20%23795da3%3B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Abody%20%2Epl%2Dmo%20%7B%0Acolor%3A%20%231d3e81%3B%0A%7D%0Abody%20kbd%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%203px%205px%3B%0Afont%3A%2011px%20Consolas%2C%20%22Liberation%20Mono%22%2C%20Menlo%2C%20Courier%2C%20monospace%3B%0Aline%2Dheight%3A%2010px%3B%0Acolor%3A%20%23555%3B%0Avertical%2Dalign%3A%20middle%3B%0Abackground%2Dcolor%3A%20%23fcfcfc%3B%0Aborder%3A%20solid%201px%20%23ccc%3B%0Aborder%2Dbottom%2Dcolor%3A%20%23bbb%3B%0Aborder%2Dradius%3A%203px%3B%0Abox%2Dshadow%3A%20inset%200%20%2D1px%200%20%23bbb%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%2B%2Etask%2Dlist%2Ditem%20%7B%0Amargin%2Dtop%3A%203px%3B%0A%7D%0Abody%20%2Etask%2Dlist%2Ditem%20input%20%7B%0Amargin%3A%200%200%2E35em%200%2E25em%20%2D1%2E6em%3B%0Avertical%2Dalign%3A%20middle%3B%0A%7D%0Abody%20%3Achecked%2B%2Eradio%2Dlabel%20%7B%0Az%2Dindex%3A%201%3B%0Aposition%3A%20relative%3B%0Aborder%2Dcolor%3A%20%234078c0%3B%0A%7D%0A" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="modül-7">Modül 7</h1>
+<h1 id="fonksiyonlar-global-ve-lokal-değişkenler">FONKSİYONLAR, GLOBAL VE LOKAL DEĞİŞKENLER</h1>
+<h2 id="fonksiyon-kullanımı">7.1. Fonksiyon Kullanımı</h2>
+<p>Bu bölüme kadar kullanılan fonksiyonlardan bazıları şunlardır: print( ), input( ), int( ) ve len( ) Fonksiyonlar, matematikteki fonksiyonlarla aynı işlevi görürler. y=f(x)=x*x gibi bir fonksiyon tanımlandığında verilen değeri kendisiyle çarpar. Bu görece kolay bir işlemdir. Bir sayının karesini hesaplamak gerektiğinde, formülü tekrar yazmak yerine bu fonksiyon kullanılabilir. Fonksiyonlar; kodları tekrar yazmayı ortadan kaldırmak, kodları daha iyi organize etmek sonrasında bu kodları rahat bir şekilde kullanmak için oluşturulur. Python’da ve diğer programlama dillerinde birçok fonksiyon çeşitli kütüphanelerde veya varsayılan olarak tanımlı gelir. Bu sayede en temel işlemler için bile satırlarca kodu tekrarlamaya gerek kalmaz.</p>
+<p>Fonksiyonların görevi, karmaşık işlemleri bir araya toplayarak bu işlemleri tek adımda yapmayı sağlamaktır. Fonksiyonları kullanarak bir veya birkaç adımdan oluşan işlemleri tek bir yapı altında toplamak mümkündür.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Fonksiyonun Adı</strong></th>
+<th style="text-align: center;"><strong>Parametreler - Argümanlar</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">print</td>
+<td style="text-align: center;">(“Sultan”, “Murat”, sep=“ ”, end=“”)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">input</td>
+<td style="text-align: center;">(“Argüman”)</td>
+</tr>
+</tbody>
+</table>
+<p>Her fonksiyonun bir adı (print, input, len vb.) ve işlevini yerine getirmesi için kullanabileceği parametre adı verilen yapıları vardır. Parametreler fonksiyonda tanımlı özellik ve girdileri belirtir. Bir fonksiyonu kullanırken (çağırırken) bu parametrelere verilen değerlere “argüman” denir. Aşağıda print(  ) fonksiyonu ve parametrelerinin kullanımına örnek verilmiştir. “end” ve “sep” birer parametredir. Fonksiyonlarda bazı parametreler zorunludur ve bir argüman (değer) girmek gerekir. Ancak yine bazı parametreler fonksiyon içinde ön tanımlı olarak bir değer/boş (None) veya seçmeli olarak belirlenmiştir. Bu parametrelere değer vermek gerekmez. Bunlar, isteğe bağlıdır ve kullanılmayacak özellikler için argüman girmeye gerek yoktur.</p>
+<p><strong>Örnek 1</strong></p>
+<p>Aşağıdaki örnekte print (  ) fonksiyonun “end” ve “sep” argümanlarıyla birlikte kullanımı gösterilmiştir:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Merhaba&#39;</span>, <span class="st">&#39;Mars&#39;</span>, sep<span class="op">=</span><span class="st">&#39; &#39;</span>, end<span class="op">=</span><span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>) <span class="co">#parametreleri kullanarak</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Merhaba&#39;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Merhaba&#39;</span>,<span class="st">&#39; &#39;</span>, <span class="st">&#39;Mars&#39;</span>) <span class="co">#parametreleri kullanmadan</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Merhaba&#39;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba Mars</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba Mars</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span></code></pre></div>
+<h2 id="fonksiyon-oluşturma">7.2. Fonksiyon Oluşturma</h2>
+<p>Temel fonksiyonlar, Python içinde hazır olarak yer alan fonksiyonlardır. Bu fonksiyonlar tanımlı olduğu için sadece fonksiyonadı(  ) yazarak kullanabilmektedir. Bir fonksiyon def fonksiyonAdi(parametre1, parametre2,..):şeklinde tanımlanır. Fonksiyon içindeki kodlar girinti şeklinde blok yapısında yazılır. Fonksiyon yapısı dışında o fonksiyonu kullanmak için fonksiyonAdi(argüman1, argüman2) şeklinde parametre değerleri verilerek kullanılır. Örneğin, girilen bir sayının çift bir sayı olup olmadığını bulan bir fonksiyon yazabilirsiniz. Fonksiyon bir parametreden oluşacak ve bir sayı değeri alacaktır.</p>
+<p><strong>Örnek 2</strong></p>
+<p>Bir sayının çift olup olmadığını ekrana yazan bir fonksiyon.</p>
+<p><strong>Hatırlatma:</strong> Bir sayının 2’ye bölümünden kalan yoksa o sayı çifttir varsa tektir.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sayiCiftMi (sayi):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span> sayi<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;Sayı çifttir&#39;</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> <span class="cf">else</span>: (<span class="st">&#39;Sayı tektir&#39;</span>)</span></code></pre></div>
+<p>Bir fonksiyonu oluşturduktan sonra print(  ) fonksiyonunda kullandığınız şekilde parametrelere uygun argümanları girip çağırabilirsiniz.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sayiCiftMi(<span class="dv">10</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Sayı çifttir</span></code></pre></div>
+<p>Fonksiyonun adı ve parametrelerine değerleri yazılarak fonksiyon kullanılabilir. Fonksiyon çağrıldığında verilen argümanlara göre işlem yapar. Örnekteki fonksiyon 10 sayısını kontrol ederek sonucu “Sayı çifttir” şeklinde ekrana yazdırır.</p>
+<p><strong>Örnek 3</strong></p>
+<p>Başka bir fonksiyon tanımlayabilirsiniz. Tanımlanan fonksiyon bir metni istenildiği kadar alt alta yazdırır. Bu fonksiyonda yazdırılacak metin ve yazdırılma sayısı olmak üzere iki adet parametre olacaktır.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> yazdir(metin,kacKere):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span> (<span class="dv">1</span>, (kacKere<span class="op">+</span><span class="dv">1</span>)):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (metin, end<span class="op">=</span><span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Fonksiyon çağırma</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>yazdir(<span class="st">&#39;Merhaba&#39;</span>, <span class="dv">5</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Merhaba</span></code></pre></div>
+<p>Aynı fonksiyon için parametreleri kullanıcıdan alabilirsiniz.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>yazdirilacakMetin<span class="op">=</span><span class="bu">input</span>(<span class="st">&#39;Yazdırılacak metni giriniz: &#39;</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>yazdirmaSayisi<span class="op">=</span><span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&#39;Metin kaç kez yazdırılacak: &#39;</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>yazdir(yazdirilacakMetin, yazdirmaSayisi)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Yazdırılacak metni giriniz: Kara Murat</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Metin kaç kez yazdırılacak: <span class="dv">4</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Kara Murat</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Kara Murat</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Kara Murat</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Kara Murat</span></code></pre></div>
+<p><strong>Örnek 4</strong></p>
+<p>Bir sayının asal bir sayı olup olmadığını bulan bir fonksiyon yazabilirsiniz. Fonksiyon, sayı asal ise “True”; değilse “False” değerini döndürecektir.</p>
+<p><strong>NOT</strong></p>
+<blockquote>
+<p>“for” döngüsünde sayının yarısına kadar bakmamızın nedeni bir sayının kendi değerinin yarısından önce böleni yok ise sonrasında da olmayacağı kuralıdır.</p>
+</blockquote>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> asalMi(sayi):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> sayac<span class="op">=</span><span class="dv">2</span> <span class="co"># tüm sayılar 1&#39;e bölüneceğinden 2 ile başlattık</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">while</span> sayac<span class="op">&lt;=</span><span class="bu">int</span>(sayi<span class="op">/</span><span class="dv">2</span>):</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> sayi<span class="op">%</span>sayac<span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  sayac<span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Fonksiyonu çağırma</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>asalMi(<span class="dv">113</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span></span></code></pre></div>
+<p><strong>Örnek 5</strong></p>
+<p>Verilen sayının faktöriyelini bulan bir fonksiyon tanımlayabilirsiniz. Bir sayının faktöriyeli kendisinden başlayarak 1’e kadar olan tüm sayıların çarpımıdır. 3!=3<em>2</em>1)</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> faktoriyelAl(sayi):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a> sonuc<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span> (sayi<span class="op">==</span><span class="dv">0</span> <span class="kw">or</span> sayi<span class="op">==</span><span class="dv">1</span>):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;sonuç= &#39;</span>, <span class="dv">1</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a> <span class="cf">elif</span> sayi<span class="op">&gt;</span><span class="dv">1</span>:</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, sayi<span class="op">+</span><span class="dv">1</span>, <span class="dv">1</span>):</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>   sonuc<span class="op">*=</span>i</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span> (<span class="st">&#39;sonuc=&#39;</span>, sonuc)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a> <span class="cf">else</span>: <span class="bu">print</span> (<span class="st">&#39;0 veya daha büyük sayısal bir değer girmelisiniz&#39;</span>)</span></code></pre></div>
+<p>Yukarıda tanımlanan fonksiyonu çağırmak için kullanıcıdan argüman almanız gerekmektedir.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>faktoriyelAl(<span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&#39;Faktöriyeli alınacak sayıyı giriniz: &#39;</span>)))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Faktöriyeli alınacak sayıyı giriniz: <span class="dv">5</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> sonuc<span class="op">=</span> <span class="dv">120</span></span></code></pre></div>
+<h2 id="fonksiyonlarda-parametre-türleri">7.3. Fonksiyonlarda Parametre Türleri</h2>
+<p>“faktoriyelAl” olarak tanımlanan fonksiyon “sayi” parametresiyle çalışmaktadır. Argüman olarak bir sayı verildiğinde sayının faktöriyelini hesaplamaktadır. Fonksiyonlar yaptıkları işlemlere göre farklı parametre türlerini kullanır.</p>
+<p><strong>Örnek 6</strong></p>
+<p>Döngülerde örnek olarak verilen ağaç çizme kodlarını bir fonksiyon hâline getirebilirsiniz.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> agacCiz(agacinYuksekligi, karakter<span class="op">=</span><span class="st">&#39;*&#39;</span>):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a> b<span class="op">=</span>agacinYuksekligi</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,agacinYuksekligi<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(b<span class="op">*</span><span class="st">&#39; &#39;</span>,(<span class="dv">2</span><span class="op">*</span>i<span class="op">-</span><span class="dv">1</span>)<span class="op">*</span>karakter)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  b<span class="op">-=</span><span class="dv">1</span></span></code></pre></div>
+<p>Şimdi, fonksiyonu kullanıcıdan aldığınız parametrelerle çağırabilirsiniz.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>agacYuksekligi<span class="op">=</span><span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&quot;Ağacın yüksekliği kaç satır olsun? : &quot;</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>agacKarakteri<span class="op">=</span><span class="bu">input</span>(<span class="st">&quot;Ağaç için bir sembol veya karakter girin? : &quot;</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> agacKarakteri<span class="op">!=</span><span class="st">&#39;&#39;</span> <span class="kw">and</span> agacYuksekligi<span class="op">&gt;=</span><span class="dv">1</span>:</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a> agacCiz(agacYuksekligi, agacKarakteri[<span class="dv">0</span>])</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> agacKarakteri<span class="op">==</span><span class="st">&#39;&#39;</span> <span class="kw">and</span> agacYuksekligi<span class="op">&gt;=</span><span class="dv">1</span>:</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a> agacCiz(agacYuksekligi)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: <span class="bu">print</span>(<span class="st">&#39;Hatalı giriş&#39;</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Ağacın yüksekliği kaç satır olsun? : <span class="dv">10</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Ağaç için bir sembol veya karakter giriniz :</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span>         <span class="op">*</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>           <span class="op">***</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>          <span class="op">*****</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>         <span class="op">*******</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">*********</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>       <span class="op">***********</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>      <span class="op">*************</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>     <span class="op">***************</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">*****************</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>   <span class="op">*******************</span></span></code></pre></div>
+<p>Yukarıda bir “agacCiz” fonksiyonu tanımlanmıştır. Bu fonksiyonun “agacinyuksekligi” ve karakter adlarında iki adet parametresi bulunmaktadır. “agacinYuksekligi” ağacın satır sayısını belirten bir parametredir. Bu parametreye bir argüman (değer) verilmezse fonksiyon hata verir. Böyle parametrelere “zorunlu parametre” denir. Karakter parametresi ise parametre olarak tanımlanırken bir değerle birlikte tanımlanmıştır, bu değer parametrenin varsayılan değeridir. Varsayılan değer olarak “None” boş değer verilebilir. Zorunlu parametreler dışında fonksiyonlarda kullanılan diğer parametreler için varsayılan değerler tanımlanabilir. Eğer kullanıcı karakter olarak bir giriş yapmazsa yani boş bırakırsa fonksiyon ağacı varsayılan olarak “*” karakterini kullanarak oluşturur.</p>
+<h2 id="değer-döndüren-ve-döndürmeyen-fonksiyonlar">7.4. Değer Döndüren ve Döndürmeyen Fonksiyonlar</h2>
+<p>Python’da fonksiyonlardan bazıları sadece bir işlevi yerine getirir ve görevi orada biter. Ama bazı fonksiyonlar bir değer döndürür. “int(  )” fonksiyonu verilen argümanı sayıya çevirerek döndürür. Yukarıdaki örneklerde “faktoriyelAl” ve “agacCiz” fonksiyonları bir değer döndürmemektedir. Değer döndüren fonksiyonlarda “return” ifadesi yer alır. Bir fonksiyonun sadece ekrana yazı yazdırması değer döndürdüğü anlamına gelmez. Eğer bir fonksiyonun çıktısı uygun bir değişkene atanabiliyorsa bu fonksiyon değer döndüren bir fonksiyondur.</p>
+<p><strong>Örnek 7</strong></p>
+<p>Örnekte kullanılan faktoriyelAl() fonksiyonunu değer döndüren bir fonksiyon hâline getirebilirsiniz.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> faktoriyelAl(sayi):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a> sonuc<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">if</span> (sayi<span class="op">==</span><span class="dv">0</span> <span class="kw">or</span> sayi<span class="op">==</span><span class="dv">1</span>):</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  sonuc<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a> <span class="cf">elif</span> sayi<span class="op">&gt;</span><span class="dv">1</span>:</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, sayi<span class="op">+</span><span class="dv">1</span>, <span class="dv">1</span>):</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>   sonuc<span class="op">*=</span>i</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a> <span class="cf">else</span>: sonuc<span class="op">=-</span><span class="dv">1</span> <span class="co">#hatalı bir işlem olduğunu anlamak için -1 değerini veriyoruz</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> sonuc</span></code></pre></div>
+<p>Değer döndüren fonksiyonu aşağıdaki gibi çağırabilirsiniz.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sonucumuz<span class="op">=</span>faktoriyelAl(<span class="dv">5</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#fonksiyonu bir değişkene atayabiliyoruz.</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> sonucumuz<span class="op">!=-</span><span class="dv">1</span>: <span class="co"># bir hata olup olmadığını kontrol edelim</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span>(sonucumuz)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:<span class="bu">print</span>(<span class="st">&#39;Bir hata oluştu&#39;</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">120</span></span></code></pre></div>
+<p>Kendi tanımladığınız fonksiyonların içinde temel fonksiyonları ya da tanımladığınız başka fonksiyonları da kullanabilirsiniz</p>
+<p><strong>Örnek 8</strong></p>
+<p>Kullanıcıdan liste olarak aldığı sayıların ortalamasını bulan bir fonksiyon tanımlayabilir ve bunun içinde len(  ) fonksiyonunu çağırabilirsiniz.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ortalamaBul(sayilar):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a> sayilarinToplami<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a> sayilarinOrtalamasi<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(sayilar)):</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  sayilarinToplami<span class="op">+=</span>sayilar[i]</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a> sayilarinOrtalamasi<span class="op">=</span>sayilarinToplami<span class="op">/</span><span class="bu">len</span>(sayilar)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> sayilarinOrtalamasi</span></code></pre></div>
+<p>Sayıları kullanıcıdan alarak fonksiyonunuzu çağırabilirsiniz.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sayiAdedi<span class="op">=</span><span class="bu">int</span>(<span class="bu">input</span>(<span class="st">&#39;Kaç adet sayının ortalamasını alacaksınız: &#39;</span>))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>sayilarim<span class="op">=</span>[]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,sayiAdedi):</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span> (i<span class="op">+</span><span class="dv">1</span>, <span class="st">&#39;. sayıyı giriniz?&#39;</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a> <span class="co"># indis sıfırdan başladığı için +1 kullandık</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a> sayi<span class="op">=</span><span class="bu">int</span>(<span class="bu">input</span>())</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a> sayilarim.append(sayi)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>ortalamaBul(sayilarim)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Kaç adet sayının ortalamasını alacaksınız: <span class="dv">4</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> . sayıyı giriniz?</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">10</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> . sayıyı giriniz?</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">20</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> . sayıyı giriniz?</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">30</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">4</span> . sayıyı giriniz?</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">40</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">25.0</span></span></code></pre></div>
+<p><strong>NOT</strong></p>
+<blockquote>
+<p>Fonksiyonlar bir fonksiyon da dâhil olmak üzere değer olarak her türlü veri tipini döndürebilirler.</p>
+</blockquote>
+<h2 id="global-ve-lokal-değişkenler">7.5. Global ve Lokal Değişkenler</h2>
+<p>Python’da blok yapısından ve girintilerden söz etmiştik. Python’da tanımlanan ve değer atanan değişkenler tanımlandıkları blok içinde geçerlidir. Bir değişken aynı düzeydeki veya daha içerideki girintilerde de değerini korur.</p>
+<p><strong>Örnek 9</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span> (<span class="dv">1</span>,<span class="dv">3</span>):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span> (<span class="st">&#39;i değişkenin değeri=&#39;</span>, i)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;i değişkenin son değeri=&#39;</span>, i)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> i değişkenin değeri<span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> i değişkenin değeri<span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> i değişkenin son değeri<span class="op">=</span> <span class="dv">2</span></span></code></pre></div>
+<p>“for” bloğu en dışta yer aldığı için i değeri onunla aynı hizada ve daha içerideki girintilerde tanınmakta ve değerini korumaktadır. Ancak sadece iç girintideki bir blokta değer atanan değişken dış bloklarda tanımsızdır. Bu tür değişkenlere yani kendi bloğu ve daha içerideki girintilerde tanınan değişkenlere yerel değişken denir. Bu özellik program yazarken dikkat edilmesi gereken bir durumdur.</p>
+<p><strong>Örnek 10</strong></p>
+<p>“if” bloğu içinde tanımlanan bir değişkene erişebilirsiniz.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>yas<span class="op">=</span><span class="dv">35</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> yas <span class="op">==</span><span class="dv">35</span>:</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a> deger<span class="op">=</span><span class="st">&#39;yolun yarısı&#39;</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (deger)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> yolun yarısı</span></code></pre></div>
+<p><strong>Örnek 11</strong></p>
+<p>Şart sağlanmazsa “if” bloğunun içindeki kodlar çalışmayacaktır. Örnekte bunu deneyebilirsiniz.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>yas<span class="op">=</span><span class="dv">34</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> yas <span class="op">==</span><span class="dv">35</span>:</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a> deger2<span class="op">=</span><span class="st">&#39;yolun yarısı&#39;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (deger2)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">NameError</span> Traceback (most recent call last)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">126</span><span class="op">-</span><span class="dv">3</span><span class="er">f455a188ff0</span><span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>          <span class="dv">2</span> <span class="cf">if</span> yas <span class="op">==</span><span class="dv">35</span>:</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>          <span class="dv">3</span> deger2<span class="op">=</span><span class="st">&#39;yolun yarısı&#39;</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">----&gt;</span> <span class="dv">4</span> <span class="bu">print</span> (deger2)</span></code></pre></div>
+<p>Hata mesajında deger2 adında bir değişkenin tanımlı olmadığı ifade edilmektedir. En dışta tanımlanan (girintisiz) değişkenler global değişkenlerdir. Global değişkenler ilk değerlerini tüm alt bloklara taşırlar.</p>
+<p><strong>Örnek 12</strong></p>
+<p>Alt bloklarda (iç girintide) aynı değişkene farklı bir değer atanabilir.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>yas<span class="op">=</span><span class="dv">34</span> <span class="co"># global bir değişken</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>dogumGunuMu<span class="op">=</span><span class="va">True</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> dogumGunuMu<span class="op">==</span><span class="va">True</span>:</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a> yas<span class="op">+=</span><span class="dv">1</span> <span class="co">#yerelde aynı değişken 1 artırılmıştır.</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span> (<span class="st">&#39;Nice yıllara! Yaş:&#39;</span>, yas)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Nice yıllara<span class="op">!</span> Yaş: <span class="dv">35</span></span></code></pre></div>
+<p><strong>Örnek 13</strong></p>
+<p>if koşulu sağlanamazsa bloğun içindeki kodlar atlanır. Global değişken olarak tanımlanan yas2 değerini korur.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>yas2<span class="op">=</span><span class="dv">34</span> <span class="co"># global bir değişken</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>dogumGunuMu<span class="op">=</span><span class="va">False</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> dogumGunuMu<span class="op">==</span><span class="va">True</span>:</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a> yas2<span class="op">+=</span><span class="dv">1</span> <span class="co">#yerelde aynı değişken 1 artırılmıştır.</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a> <span class="bu">print</span> (<span class="st">&#39;Nice yıllara! Yaş:&#39;</span>, yas2)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (<span class="st">&#39;Yaşınız: &#39;</span>, yas2)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> Yaşınız: <span class="dv">34</span></span></code></pre></div>
+<p><strong>Örnek 14</strong></p>
+<p>Aynı şekilde fonksiyonlar içinde tanımlanmış değişkenler yerel (lokal) değişkenler olduğu için fonksiyon çağrılmazsa hata ile karşılaşılır.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> toplamBul (sayiListesi):</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a> toplam<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span> (<span class="bu">len</span>(sayiListesi)):</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  topla<span class="op">+=</span>sayiListesi[i]</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> topla</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (topla)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="pp">NameError</span> Traceback (most recent call last)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="op">-</span><span class="dv">132</span><span class="op">-</span>e72b6ce4bac6<span class="op">&gt;</span> <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">----&gt;</span> <span class="dv">1</span> <span class="bu">print</span> (topla)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    <span class="pp">NameError</span>: name <span class="st">&#39;topla&#39;</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code></pre></div>
+<p><strong>Örnek 15</strong></p>
+<p>Programınızda global bir değişken yazarak işlemi tekrarlayabilirsiniz. topla=0</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> toplamBul (sayiListesi):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a> topla<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span> (<span class="bu">len</span>(sayiListesi)):</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  topla<span class="op">+=</span>sayiListesi[i]</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a> <span class="cf">return</span> topla</span></code></pre></div>
+<p>Fonksiyonu tanımlanmasına rağmen global değişkene atanan değer ekrana yazdırılabilir.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (topla)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">0</span></span></code></pre></div>
+<p>Şimdi de fonksiyonunuzu çağırabilirsiniz.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>toplamBul([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">15</span></span></code></pre></div>
+<p>Değişkene atanan yeni değer yani fonksiyonun sonucu görülmektedir.</p>
+</body>
+</html>
