@@ -1,0 +1,31 @@
+{
+        "Bolum10.html#modül-yazma-ve-çağırma Modül Yazma ve Çağırma": {
+                "Modul.py oluşturma": "\ndef cagir():\n    print(\"Merhaba Dunya\")\n\n\n#Bu dosyayı modul.py adıyla şu an \n#kullandığınız klasöre kaydediniz.\n#Sonra Pynar Menüdeki 'Yeni' butonuyla\n#yeni bir dosya oluşturarak modül çağırma \n#kodlarını yeni dosyaya yazınız.",
+                "Modül çağırma": "\nimport modul\nprint(dir(modul))\n\n#dir() fonksiyonu ile Modülün\n#içindeki metotları görebiliriz.\n",
+                "Modülden fonksiyon çağırma": "\nimport modul #modülü çağırdık\nmodul.cagir()#modül içindeki fonksiyonu çalıştırdık\n"
+        },
+        "Bolum10.html#hazır-modülleri-kullanımı Hazır Modülleri Kullanımı": {
+                "Math modülü": "\nimport math\nprint(dir(math))\n"
+        },
+        "Bolum10.html#random-ve-math-kütüphaneleri Random ve Math Kütüphaneleri": {
+                "math kütüphanesi": "\nimport math\nyaricap=4\nalan=math.pi*(math.pow(yaricap,2))\nprint(alan)\n#Modül içinde tanımlı bir değişkeni\n#modülAdı.değişkenAdı şeklinde çağırıp kullanabiliriz.\n#Örnekte math kütüphanesi içindeki pi değişkenini ve\n#pow() metodunu kullanarak bir dairenin alanını buluyoruz.\n",
+                "random kütüphanesi": "\nimport random\nprint(dir(random))\n",
+                "random() metodu": "\nimport random\na=random.random()\nprint(a)\n\n#random metodu 0 ile 1 arası\n#rastgele bir sayı üretir.\n#Sayı 0 olabilir fakat 1 olamaz.\n",
+                "randint() metodu": "\nimport random\nsayi=random.randint(1, 10)\nprint(sayi)\n\n#Bu fonksiyonu kullanarak 1 ile 10 arasında bir sayı\n#elde edebiliriz. 1 ve 10 dahil.\n",
+                "choice() metodu": "\nimport random\ncicekler = ['gül', 'karanfil', 'papatya','begonya','menekşe']\nprint(random.choice(cicekler))#1. rastgele seçim\nprint(random.choice(cicekler))#2. rastgele seçim\nprint(random.choice(cicekler))#3. rastgele seçim\n\n#Bu metod ile bir liste içinden rastgele bir öğe seçilebilir.\n"
+        },
+        "Bolum10.html#time-modülü Time Modülü": {
+                "time() metodu": "\nimport time\nprint (time.time())\n#çıktı bize 1 Ocak 1970'ten bu yana kaç saniye geçtiği söyler.\n",
+                "gmtime() metodu": "\nimport time\nprint (time.gmtime(time.time()))\n#gmtime() metodu saniyeleri bize okunabilir bir tarih olarak verir.\n",
+                "localtime() metodu": "\nimport time\nprint (time.localtime())\n",
+                "ctime() metodu": "\nimport time\nprint (time.ctime())\n",
+                "strftime() metodu": "\nimport time\nprint (time.strftime(\"%d/%m/%Y\"))\n#strftime() metodu zamanı istediğimiz şekilde görüntülememizi sağlar.\n#girilebilecek parametreleri öğrenmek için yardım simgesine tıklayabilirsiniz.\n",
+                "sleep() metodu": "\nimport time\nprint (\"Başlangıç : %s\" % time.ctime())\ntime.sleep( 5 )\nprint (\"Bitiş : %s\" % time.ctime())\n#sleep fonksiyonu argüman olarak saniye cinsinden süre alır\n#ve program o kadar süre ile duraklatılır. Bu örnek için 5 saniye.\n"
+        },
+        "Bolum10.html#pip-paket-yükleyici-kullanımı Pip Paket Yükleyici Kullanımı": {
+          "Pip Paket Yükleyici": "#Pip bir paket yöneticisidir. \n#Python kütüphane ve modüllerini kurmanızı sağlayan \n#yardımcı bir programdır. Python’da standart paketlerin \n#dışında bir de üçüncü parti modülleri vardır. \n#Bunlar Python geliştiricileri haricindeki kişilerce \n#yazılıp kullanımımıza sunulmuş araçlardır. \n#Bu paketler, standart paketlerin aksine dilin \n#bir parçası olmadığından, bu paketleri kullanabilmek \n#için, pip yardımıyla kurmanız gerekmektedir. \n#Bu kısımda kod bulunmamaktadır. Daha detaylı \n#bilgi için Pip Paket Yükleyici Kullanımı yardım \n#menüsünü tıklayınız."
+        },
+        "Bolum10.html#pynar-editor-pip-gui-kullanımı Pynar Editördeki PİP GUI Kullanımı": {
+          "PİP GUI Kullanımı": "#Python kütüphane ve modüllerini Pynar Editör \n#içerisinde kurmamızı sağlayan yapıdır. \n#Ayarlar Menüsü altından erişilebilir. \n#Bu kısımda kod bulunmamaktadır. \n#Daha detaylı bilgi için Pynar Editördeki \n#PİP GUI Kullanımı yardım menüsünü tıklayınız. "
+        }
+}

@@ -1,0 +1,23 @@
+{
+        "Bolum6.html#while-döngüsü While Döngüsü": {
+                "Basit While Döngüsü": "\nsayac = 1 # Döngü değişkeni\nwhile sayac < 6:\n    print(sayac)\n    sayac = sayac + 1\n",
+                "True – Break İfadeleri": "\ni = 1\nwhile True:\n    print(i)\n    i += 1\n    if i == 8:\n        break\nprint('döngü sonlandı')\n# Break ifadesi kullanılmazsa sonsuz döngü oluşur.\n"
+        },
+        "Bolum6.html#for-döngüsü For Döngüsü": {
+                "in İşleci": "\nprint('p' in 'python')\n#True\n\nprint('a' in 'python')\n#False\n",
+                "Karakter Dizilerinde İterasyon İşlemi": "\nisim = 'Mustafa'\nfor i in isim:\n    print(i, end = ',')\n",
+                "Listelerde İterasyon İşlemi": "\nsayılar = [1,2,3,4,5,6,7,8,9]\ntoplam = 0\nfor i in sayılar:\n    toplam = toplam + i\nprint('sayıların ortalaması: ', toplam / len(sayılar))\n",
+                "range Fonksiyonu": "\nprint(*range(5, 20))\n",
+                "range Fonksiyonu ile For Döngüsü 1": "\ntoplam = 0\nfor i in range(10):\n    toplam = toplam + i\nprint('1 den 10 a kadar olan sayıların toplamı: ', toplam)\n",
+                "range Fonksiyonu ile For Döngüsü 2": "\nfor i in range(20,0,-1):\n    print(i, end=',')\n# Listeyi tersten yazar\n",
+                "range Fonksiyonu ile For Döngüsü 3": "for i in range(0,100,5):\n    print(i, end=',')\n# Listeyi baştan 5'er 5'er atlayarak yazar\n"
+        },
+        "Bolum6.html#continue-ifadesi Continue İfadesi": {
+                "for döngüsü ile": "\nfor i in range(1,6):\n    if i ==2 or i==4:\n        continue\n    print(i)\n\n",
+                "while döngüsü ile": "\ni=0\nwhile i < 5:\n    i=i+1\n    if i == 2 or i==4:\n        continue\n    print(i)\n\n"
+        },
+        "Bolum6.html#iç-içe-döngüler İç İçe Döngüler": {
+                "İç içe for döngüsü": "\na = int(input('tablonun satır uzunluğunu giriniz: '))\nb = int(input('tablonun sütun uzunluğu giriniz: '))\nfor i in range(1, a + 1):\n    for j in range(1, b + 1):\n        print(j, end=' ')\n    print()\n",
+                "İç içe while döngüsü": "\ni=1\nwhile i<4:\n    j=1\n    while j<4:\n        print('i nin değeri: {} j nin değeri: {} '.format(i,j))\n        j=j+1\n    i=i+1\n\n"
+        }
+}

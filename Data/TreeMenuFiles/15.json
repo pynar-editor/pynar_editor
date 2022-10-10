@@ -1,0 +1,24 @@
+{
+        "Bolum13.html#hata-yakalama Hata Yakalama": {
+                "Hata Yakalama İşlemi": "yari_cap = int(input(\"Yarıçapı girin :\"))\npi=3.14\nif yari_cap <= 0:\n    print(\"Yarıçap sıfır ve sıfırdan küçük bir değer olamaz\")\nelse:\n    sonuc =pi*(yari_cap**2)\n    print(\"Alan = {}\".format(sonuc))"
+         },
+        "Bolum13.html#hata-türleri Hata Türleri": {
+                "SyntaxError": "yaslar = {\n    'Ahmet': 55,\n    'Ezgi': 24\n    'Mehmet': 17\n}\nprint(f'Mehmet {yaslar[\"Mehmet\"]} yaşındadır.')",
+                "ValueError ": "a, b, c, d = [3, 4, 5]\n\nint(\"kedi\")",
+                "IndexError": "liste = [3, 7, 9, 4, 6]\nprint(liste[6])",
+                "ZeroDivisionError": "sonuc = s1/0\nprint(\"Sonuc :\",sonuc)",
+                "NameError": "def toplama(x,y):\n    islem = x + y\n    return(islem)\nsonuc = topla(5,10)\nprint(sonuc)",
+                "IOError": "f = open ( \"dosya.txt\", 'r' )#dosya.txt isminde bir dosya yok",
+                "TypeError": "'2556'+12",
+                "KeyError": "D1={'1':\"aa\", '2':\"bb\", '3':\"cc\"}\nprint(D1['5'])"
+        },
+        "Bolum13.html#try-except-blokları Try-Except": {
+                "Try-Except 1": "\ns1 = int(input('Birinci Sayı :'))\ns2 = int(input('İkinci Sayı :'))\ntry:\n    sonuc = s1/s2\n    print('Sonuc :', sonuc)\nexcept ZeroDivisionError:\n    print('Sıfıra bölme hatası !')\n    print('Farklı bir sayı girin')\n\n\n# Bir blok içerisinde hata olması durumunda,\n# Python except bloğuna atlar ve\n# oradaki kodların çalıştırılmasını sağlar.\n",
+                "Try-Except 2": "\ntry:\n    s1 = int(input('Birinci Sayı :'))\n    s2 = int(input('İkinci Sayı :'))\n    sonuc = s1/s2\n    print('Sonuc :', sonuc)\nexcept ZeroDivisionError:\n    print('Sıfıra bölme hatası !')\n    print('İkinci sayıya farklı bir değer girin…')\nexcept ValueError:\n    print('Lütfen sayısal bir karakter girin..')\nexcept:\n    print('Beklenmeyen bir hata oluştu')\n\n# Kullanıcı inputlara sıfırdan farklı sayılar girerse\n# program herhangi bir hata vermeyecek\n# ve sadece try bloğu çalışacaktır.\n\n# inputlardan herhangi birine sıfır veya farklı veri türünde değer\n# girilmesi durumunda except bloğu çalışıp bilgilendirme yapacaktır.\n\n# Except bloğuna hatanın türü yazılmadığında\n# yorumlayıcı tarafından bütün hataları kapsayacaktır.\n# Bunu da sadece except bloğu ile genel\n# olarak beklenmeyen bir hata oluştu, diye mesaj ile belirtilebilir.\n"
+        },
+        "Bolum13.html#try-except-as Try Except as": {
+                "Try Except as 1": "\ntry:\n    s1 = int(input('Birinci Sayı :'))\n    sonuc = s1**2\n    print('Sonuc :', sonuc)\nexcept ValueError as hata:\n    print('Lütfen sayı giriniz')\n    print(hata)\n\n\n# Kullanıcıya Python’a ait hata mesajları\n# gösterilmek istendiğinde “as” ifadesi kullanılmaktadır.\n",
+                "Try Except as 2": "\ntry:\n    s1 = int(input('Birinci Sayı : '))\nexcept ValueError:\n    print('sayı girmediniz')\nelse:\n    try:\n        print(10/s1)\n    except ZeroDivisionError:\n        print('sayı sıfıra bölünemez')\n\n\n# Try except else, oluşabilecek hataları\n# adım adım ayıklanmak isteniyorsa\n# “else” ifadesi kullanılmaktadır.\n",
+                "Try Except as 3": "\nwhile True:\n    try:\n        x = input('Bir sayı girin: ')\n        if not x:\n            break\n        y = 1/float(x)\n    except ValueError:\n        print('Geçersiz sayı')\n        continue\n    except ZeroDivisionError:\n        print('Sıfıra bölme')\n        continue\n    print(y)\n\n\n# Kullanıcı hata aldığında programın\n# devam etmesi için böyle bir uygulama yapılabilir.\n# Continue ifadesi ile sayı yanlış girilirse\n# tekrar girilmesi sağlanmaktadır."
+        }
+}

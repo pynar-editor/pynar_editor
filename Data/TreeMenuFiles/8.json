@@ -1,0 +1,23 @@
+{
+        "Bolum7.html#fonksiyon-kullanımı Fonksiyon Oluşturma ve Kullanma": {
+                "Fonksiyon kullanma": "\nprint('Merhaba', 'Mars', sep=' ', end='\\n') #parametreleri kullanarak\nprint('Merhaba')\nprint('Merhaba',' ', 'Mars') #parametreleri kullanmadan\nprint('Merhaba')\n",
+                "Fonksiyon oluşturma": "\ndef sayiCiftMi (sayi):\n    if sayi%2==0:\n        print('Sayı çifttir')\n    else: ('Sayı tektir')\n\n\nsayiCiftMi(10)\n",
+                "Çoklu parametre": "\ndef yazdir(metin,kacKere):\n    for i in range (1, (kacKere+1)):\n        print(metin, end='\\n')\n#Fonksiyon çağırma\nyazdir('Merhaba', 5)\n",
+                "İnput ile parametre": "\ndef yazdir(metin,kacKere):\n    for i in range (1, (kacKere+1)):\n        print(metin, end='\\n')\n\n\nyazdirilacakMetin=input('Yazdırılacak metni giriniz: ')\nyazdirmaSayisi=int(input('Metin kaç kez yazdırılacak: '))\nyazdir(yazdirilacakMetin, yazdirmaSayisi)\n",
+                "Asal sayı fonksiyonu": "\ndef asalMi(sayi):\n     sayac=2 # tüm sayılar 1'e bölüneceğinden 2 ile başlattık\n     while sayac<=int(sayi/2):\n            if sayi%sayac==0:\n                    return False\n            sayac+=1\n     return True\n#Fonksiyonu çağırma\nprint(asalMi(113))\n"
+        },
+        "Bolum7.html#fonksiyonlarda-parametre-türleri Parametre Türleri": {
+                "Varsayılan değer": "\n\n#Eğer karakter girişi yapılmazsa\n#Varsayılan karakter '*' olacaktır.\ndef agacCiz(agacinYuksekligi, karakter='*'):\n    b=agacinYuksekligi\n    for i in range(1,agacinYuksekligi+1):\n        print(b*' ',(2*i-1)*karakter)\n        b-=1\n\n\n\nagacYuksekligi=int(input(\"Ağacın yüksekliği kaç satır olsun? : \"))\nagacKarakteri=input(\"Ağaç için bir sembol veya karakter girin? : \")\nif agacKarakteri!='' and agacYuksekligi>=1:\n    agacCiz(agacYuksekligi, agacKarakteri[0])\nelif agacKarakteri=='' and agacYuksekligi>=1:\n    agacCiz(agacYuksekligi)\nelse: print('Hatalı giriş')\n"
+        },
+        "Bolum7.html#değer-döndüren-ve-döndürmeyen-fonksiyonlar Değer Döndüren-Döndürmeyen Fonksiyon": {
+                "Değer Döndüren": "\n\ndef faktoriyelAl(sayi):\n    sonuc=1\n    if (sayi==0 or sayi==1):\n        sonuc=1\n    elif sayi>1:\n        for i in range(1, sayi+1, 1):\n            sonuc*=i\n    else: sonuc=-1 \n#hatalı bir işlem olduğunu anlamak için -1 değerini veriyoruz\n    return sonuc\n\nsonucumuz=faktoriyelAl(5)\n#fonksiyonu bir değişkene atayabiliyoruz.\nif sonucumuz!=-1: # bir hata olup olmadığını kontrol edelim\n    print(sonucumuz)\nelse:print('Bir hata oluştu')\n",
+                "Değer Döndürmeyen": "\n\ndef faktoriyelAl(sayi):\n    sonuc = 1\n    if (sayi==0 or sayi==1):\n        sonuc=1\n    elif sayi>1:\n        for i in range(1, sayi+1, 1):\n            sonuc*=i\n    else: sonuc=-1 \n    # hatalı bir işlem olduğunu anlamak için -1 değerini veriyoruz\n    # bir hata olup olmadığını kontrol edelim\n    if sonuc!=-1: \n        print(sonuc)\n    else:\n        print('Bir hata oluştu')\n\nfaktoriyelAl(5)\n"
+        },
+        "Bolum7.html#global-ve-lokal-değişkenler Global ve Lokal Değişkenler": {
+                "Örnek 1": "\nfor i in range (1,3):\n    print('i değişkenin değeri=', i)\nprint('i değişkenin son değeri=', i)\n",
+                "Örnek 2": "\nyas=35\nif yas ==35:\n    deger='yolun yarısı'\nprint(deger)\n",
+                "Örnek 3": "\nyas=34\nif yas ==35:\n    deger2='yolun yarısı'\nprint(deger2)\n\n#şart sağlanmadığı için if bloğuna girmeyecektir\n#ve deger2 değişkeni ulaşılamaz olacaktır.\n",
+                "Örnek 4": "\n\ndef toplamBul (sayiListesi):\n    toplam=0\n    for i in range (len(sayiListesi)):\n        topla+=sayiListesi[i]\n    return topla\nprint(topla)\n\n#fonksiyonlar içinde tanımlanmış değişkenler yerel (lokal) \n#değişkenler olduğu için fonksiyon \n#çağrılmazsa hata ile karşılaşılır.\n"
+                
+        }
+}

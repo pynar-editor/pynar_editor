@@ -1,0 +1,52 @@
+{
+    "Bolum5.html#liste-veri-tipleri Liste Veri Tipleri": {
+            "Karışık Liste" : "\nliste=[1,2,'ali',0.25]\nprint(liste)\n\n#int, string ve float gibi farklı veri tiplerini \n#içerisinde barındıran 4 elemanlı bir listedir.\n",
+            "Liste ve Dizi" : "\nmeyve =\"erik\"\nmeyve = \"ayva-\" +meyve[0:]\nprint(meyve)\nliste=['a','b']\nliste[1]=2\nprint(liste)\n\n#karakter dizisi ile liste kullanımı beraber verilmiştir. \n#Karakter dizisi string ama liste 1.indis numarasındaki \n#öge ‘b’ iken sonra int veri tipinde 2 olarak değiştirilmiştir.\n",
+            "Boş Liste" : "\nliste=[ ] #veya liste=list()\nprint(liste)\n"     
+        },
+    "Bolum5.html#liste-elemanlarına-erişim Liste Elemanlarına Erişim": {
+            "İndis ile Erişim" : "\nliste=[\"1. veri\",\"2. veri\",\"3. veri \",\"4. veri\",\"5. veri\"]\n#beş elemenlı listenin ilk verisi\nprint(liste[0])\n#beş elemenlı listenin son verisi\nprint(liste[4])\n\n#listenin indis numaraları yazılarak, \n#başlangıç ve bitiş ögelerine ulaşılmıştır.\n",
+            "İn İşleci ile Kontrol" : "\nesya = [\"ayna\", \"televizyon\", \"perde\"]\nif(\"perde\" in esya):\n    print(\"Bu değer listede var.\")\nelse:\n    print(\"Bu değer listede yok\")\n\n#Liste içindeki ögeleri kontrol edilebilir. \n#Eşya adında bir liste var. Liste tanımlanır, \n#daha sonra if karar yapısı ile \n#içindeki ögelerde “perde” olup olmadığı kontrol edilir\n",
+            "Liste Dilimleme" : "\nliste = [1,2,3,4,5]\nöge = liste[1:3]\nprint(öge)\n",
+            "Negatif İndis" : "\nliste = [ \"merhaba\", \"dünya\", \"merhaba\", \"güle güle\" ]\nprint(liste [- 1 ]) \n#son ögeyi listeler\n\nprint( liste [- 3 ]) \n#sondan üçüncü ögeyi listeler\n\nprint(liste [- 4 ]) \n#sondan dördüncü ögeyi listeler\n\nprint(liste[::-1]) \n#sondan başa doğru listeleme yapmak için kullanılır\n"
+
+    },
+    "Bolum5.html#temel-liste-metotları Temel Liste Metotları": {
+            "append kullanımı" : "\ntakimlar=[\"gs\",\"fb\",\"bjk\"]\ntakimlar.append(\"ts\")\nprint(takimlar)\n",
+            "insert kullanımı" : "\nsebzeler =[\"lahana\",\"marul\",\"pırasa\",\"ıspanak\",\"fasulye\"]\nsebzeler.insert(2,\"patlıcan\")\nprint(sebzeler)\n",
+            "copy kullanımı" : "\niller1 =[\"konya\",\"karaman\",\"kocaeli\",\"kayseri\",\"kahramanmaraş\"]\niller2=[]\niller2 = iller1.copy()\nprint(iller2)\n",
+            "count kullanımı" : "\ntakimlar = ['GS','FB','BJK','TS']\nprint(takimlar.count('FB'))\n\n#takimlar listesinde ‘FB’ ögesinin \n#kaç adet olduğu count metodu bulunmuştur.\n",
+            "extend kullanımı" : "\nkus1=[\"bıldırcın\",\"papağan\",\"kartal\",\"akbaba\",\"şahin\"]\nkus2=[\"baykuş\",\"muhabbet\"]\nkus1.extend(kus2)\nprint(kus1)\n",
+            "index kullanımı" : "\nsebzeler =[\"lahana\",\"marul\",\"pırasa\",\"ıspanak\",\"fasulye\"]\nprint(sebzeler.index(\"ıspanak\"))\n",
+            "clear kullanımı" : "\nliste =[\"ayva\",\"nar\",\"kiraz\",\"kayısı\",\"Üzüm\"]\nliste.clear()\nprint(liste)\n",
+            "pop kullanımı" : "\nsebzeler =[\"lahana\",\"marul\",\"pırasa\",\"ıspanak\",\"fasulye\"]\nsebzeler.pop(2)\nprint(sebzeler)\n",
+            "remove kullanımı" : "\nsehirler =[\"adana\",\"ağrı\",\"bursa\",\"konya\",\"ankara\"]\nsehirler.remove(\"konya\")\nprint(sehirler)\n",
+            "reverse kullanımı" : "\nsayilar=[10,20,30,40,50,60,70]\nsayilar.reverse()\nprint(sayilar)\n",
+            "sort kullanımı" : "\nisimler=[\"elif\",\"ayşe\",\"kemal\",\"kaan\",\"hafsa\"]\nisimler.sort()\nprint(isimler)\n",
+            "del kullanımı" : "\ntakimlar = ['GS','FB','BJK','TS']\ndel takimlar[2]\nprint(takimlar)\n"
+    },
+    "Bolum5.html#len-fonksiyonu-ile-uzunluk-bilgisi Len() Fonksiyonu ile Uzunluk Bilgisi": {
+            "String Uzunluğu" : "\na=\"Galatasaray\"\nprint(len(a))\n",
+            "Dizi Uzunluğu" : "\ntakimlar = ['GS','FB','BJK','TS']\nprint( len(takimlar))\n",
+            "Liste Uzunluğu" : "\nliste1, liste2 = ['abc',56,74 ,'python'], [12, 'opencv','a']\nprint(\"İlk liste uzunlugu : \", len(liste1))\nprint(\"İkinci listenin uzunluğu : \", len(liste2))\n"
+    },
+    "Bolum5.html#iç-içe-listeler İç İçe Listeler": {
+            "Append ile Liste Eklemek" : "\nsebzeler=[]\nsebzeler.append(['yeşil','ıspanak'])\nsebzeler.append(['beyaz','lahana'])\nsebzeler.append(['turuncu','havuç'])\nsebzeler.append(['siyah','turp'])\nsebzeler.append(['kırmızı','domates'])\n#Girilen verilerin listelenmesi\nprint(sebzeler)\n#Sebzeler adındaki listede 4 adet eleman bulunmaktadır. \n#indis ile ulaşılırsa:\nprint(sebzeler[0])\n",
+            "İndis ile Listeye Erişme" : "\nsebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]\nsebze=sebzeler[1]\nprint(sebze)\n",
+            "Matrisin elemanına Erişme" : "\nsebzeler=[['yeşil','ıspanak'],['beyaz','lahana'],['turuncu','havuç']]\nprint(sebzeler[2][1])\n\n#Burada sebzeler listesinin 2. indisindeki listenin \n#1.indisindeki elemana ulaşıyoruz\n",
+            "Çoklu Liste Ataması" : "\n# 3 Adet liste oluşturalım.\nbirinci_liste = [1,2,3]\nikinci_liste = ['a','b','c']\nucuncu_liste= [40,50,60]\nson_liste= [birinci_liste,ikinci_liste,ucuncu_liste]\nprint(son_liste)\n"
+    },
+    "Bolum5.html#veri-tipi-dönüşümleri Veri Tipi Dönüşümleri": {
+            "Örnek 1" : "\nliste=[1,2,3,4,5,'ankara']\nprint(liste)\nliste[0]=str(\"kocaeli\")\nliste[2]=float(1.5)\nliste[5]=int(20)\nprint(liste)\n\n\n#liste adında bir liste örneği tanımlanmıştır.\n#İçindeki elemanları 1,2,3,4,5,’ankara’ ‘dır. \n#İndis numarasına göre liste [0] değeri önce 1 iken veri tipi \n#dönüşümünden dolayı ‘kocaeli’ olmuştur. \n#Liste [2]’in değeri ise ilk başta 3’tür. \n#Daha sonra float veri tipinde 1.5 değerini almıştır. \n#Son olarak liste[5]’in değeri ‘ankara’dır. \n#Liste[5]’e int veri tipinde bir değer kaydedilerek 20 olmuştur.\n",
+            "Örnek 2" : "\nmeyve=\"elma\"\nliste=list(meyve)\nprint(liste)\n\n#Herhangi bir string türünde veriyi \n#parçalayarak da liste oluşturulabilir\n",
+            "Örnek 3" : "\nliste=list(range(1,15,2))\nprint(liste)\nliste.sort()\nprint(liste)\nliste.reverse()\nprint(liste)\n",
+            "Örnek 4" : "\nbilgi=input(\"bilgilerinizi araya virgül koyarak yazınız: \")\nliste=bilgi.split(\",\")\nprint(liste)\n",
+            "Örnek 5" : "\ncumle=\"23 nisan herkese mutlu olsun\"\nkelimeler=cumle.split(\" \")\nprint(\"cümlenizde \",len(kelimeler),\"adet kelime vardır\")\n"
+    }
+}
+
+
+
+
+
+

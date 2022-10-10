@@ -1,0 +1,83 @@
+{
+	"Temel \n Komutlar":
+	{
+		"icon":":/icon/images/temel.png",
+		"jsonfile":"1.json"
+	},
+	"Değişkenler":
+	{
+		"icon": ":/icon/images/variables.png",
+		"jsonfile":"2.json"
+	},
+	"Veri Tipleri":
+	{
+		"icon": ":/icon/images/datastructure.png",
+		"jsonfile":"3.json"
+	},
+	"Operatörler":
+	{
+		"icon": ":/icon/images/maths.png",
+		"jsonfile":"4.json"
+	},
+	"Koşullu ve \n Mantıksal \n İfadeler":
+	{
+		"icon": ":/icon/images/logic.png",
+		"jsonfile":"5.json"
+	},
+	"Listeler":
+	{
+		"icon": ":/icon/images/cube.png",
+		"jsonfile":"6.json"
+	},
+	"Döngüler":
+	{
+		"icon": ":/icon/images/loops.png",
+		"jsonfile":"7.json"
+	},
+	"Fonksiyonlar":
+	{
+		"icon": ":/icon/images/function.png",
+		"jsonfile":"8.json"
+	},
+	"Turtle \n Kütüphanesi":
+	{
+		"icon": ":/icon/images/turtle.png",
+		"jsonfile":"9.json"
+	},
+	"Sözlükler":
+	{
+		"icon": ":/icon/images/book.png",
+		"jsonfile":"10.json"
+	},
+	"Demetler":
+	{
+		"icon": ":/icon/images/tuple.png",
+		"jsonfile":"11.json"
+	},
+	"Modüller":
+	{
+		"icon": ":/icon/images/module.png",
+		"jsonfile":"12.json"
+	},
+	"Veri \n Yapıları":
+	{
+		"icon": ":/icon/images/datastructure.png",
+		"jsonfile":"13.json"
+	},
+	"Dosyalar":
+	{
+		"icon": ":/icon/images/files.png",
+		"jsonfile":"14.json"
+	},
+	"Hata ve \n İstisnalar":
+	{
+		"icon": ":/icon/images/error-white.png",
+		"jsonfile":"15.json"
+	},
+	"Görsel \n Bileşenler":
+	{
+		"icon": ":/icon/images/visualc.png",
+		"jsonfile":"16.json",
+		"forceNewPage":"True"
+	}
+}

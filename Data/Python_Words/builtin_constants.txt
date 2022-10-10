@@ -1,0 +1,12 @@
+False
+True
+None
+NotImplemented
+Ellipsis
+__debug__
+quit
+exit
+copyright
+credits
+license
+__future__

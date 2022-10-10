@@ -1,0 +1,14 @@
+{
+
+	"Bolum2.html#değişkenler Değişken oluşturma ve atama" :{
+			"Tamsayı" : "\nsayi1=5\nprint('Değişkenin değeri:',sayi1)\n",
+			"Ondalıklı" : "\nsayi1=10.2\nprint('Değişkenin değeri:',sayi1)\n",
+			"Metin" : "\nsayi1='Murat'\nprint('Değişkenin değeri:',sayi1)\n"
+			},
+	"Bolum2.html#ornek7 Çoklu atama" :{
+			"çok değişkene tek değer" : "\na=b=c=1\nprint('1. sayı=', a)\nprint('2. sayı=', b)\nprint('3. sayı=', c)\n",
+			"çok değişkene çok değer" : "\nadi, soyadi, yasi='Ceyda', 'BİLEN', 13\nprint('Adı=', adi)\nprint('Soyadı=', soyadi,)\nprint('Yaşı=', yasi)\n",
+			"Sıralı Atama" : "\nadi='Aziz'; soyadi='SANCAR'; yasi=73\nprint('Adı=', adi)\nprint('Soyadı=', soyadi,)\nprint('Yaşı=', yasi)\n"
+			}
+
+}

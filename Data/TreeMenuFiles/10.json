@@ -1,0 +1,27 @@
+{
+        "Bolum9.html#sözlük-oluşturma Sözlük Oluşturma": {
+                "Boş bir sozluk": "\nsozluk1 = {}\nprint(sozluk1)\n\n#Süslü parantezler içi boş bırakılarak\n#boş bir sözlük oluşturulabilir.\n",
+                "integer ile oluşturulan keyler": "\nsozluk2 = {1: 'adana', 2: 'adıyaman'}\nprint(sozluk2)\n\n#İstersek sadece key'ler sadece integer'lardan oluşabilir\n",
+                "string ve integer ile oluşan keyler": "\nsozluk3 = {'isim': 'ali', 1: [5, 4, 3]}\nprint(sozluk3)\n\n#Listelerdeki gibi sözlüklerde de bir veri tipi\n#kısıtlaması yoktur. Hem string hem integer\n#değerler key olarak kullanılabilir.\n#Key'e ait olan değer bir liste de olabilir.\n",
+                "dict fonksiyonu": "\nsozluk4 = dict({1:'erik', 2:'ayva'})\nprint(sozluk4)\n\n#Sözlükler dict() fonksiyonu kullanılarak örnekteki\n#gibi de oluşturulabilir.\n"
+        },
+        "Bolum9.html#sözlük-anahtar-ve-değerlerine-erişim Sözlük Anahtar ve Değerlerine Erişim": {
+                "keys() metodu": "\niller = {'konya': '42', 'istanbul': '34', 'ankara': '06'}\nprint(iller.keys())\n\n#keys() fonksiyonu sadece sözlükteki anahtarları döndürür.\n",
+                "values() metodu": "\niller = {'konya': '42', 'istanbul': '34', 'ankara': '06'}\nprint(iller.values())\n\n#values() fonksiyonu sadece sözlükteki değerleri döndürür.\n"
+        },
+        "Bolum9.html#sözlüklerde-eleman-seçme-silme-ekleme-değiştirme Sözlüklerde Eleman Seçme, Ekleme, Değiştirme": {
+                "Eleman Seçme": "\nmeyveler={\"Adı\": \"Portakal\",\"Türü\": \"Turunçgiller\",\"Kg\": 20}\nprint(meyveler[\"Adı\"])\nprint(meyveler[\"Kg\"])\n\n#sözlükAdı[anahtarAdı] şeklinde bir sözlükteki değeri seçebilirsiniz.\n",
+                "Eleman Ekleme": "\n# deger ekleme\nkisi_bilgileri = {'ad': 'ali', 'yas': 40, 'memleketi': 'konya'}\nkisi_bilgileri['adres'] = 'nişantaşı'\nprint(kisi_bilgileri)\n\n#Olmayan bir anahtara değer ataması yapılırsa,\n#o anahtar sözlüğe eklenir ve değer ataması yapılır.\n",
+                "Eleman Değiştirme": "\nsozluk = {'isim': 'ahmet', 'yas': 40}\n# deger değiştirme\nsozluk['yas'] = 45\nprint(sozluk['yas'])\n\n#zaten varolan bir anahtara atama yapılırsa\n#yeni değer eskisiyle değişir.\n"
+        },
+        "Bolum9.html#sözlükte-eleman-silme-işlemleri Sözlüklerde Eleman Silme": {
+                "pop() metodu": "\nkisi_bilgileri = {'Adı': 'Ekrem', 'Soyadı': 'Yıldırır', 'Yaşı': 40}\nprint(kisi_bilgileri)\nkisi_bilgileri.pop('Yaşı')\nprint(kisi_bilgileri)\n\n#pop() metodu, öğeyi belirtilen\n#anahtar adıyla kaldırmak için kullanılır.\n",
+                "popitem() metodu": "\nkisi_bilgileri = {'Adı': 'Ekrem', 'Soyadı': 'Yıldırır', 'Yaşı': 40}\nprint(kisi_bilgileri)\nkisi_bilgileri.popitem()\nprint(kisi_bilgileri)\n\n#popitem() metodu, eklenen son öğeyi kaldırmak için kullanılır\n",
+                "del(parametre) anahtar sözcüğü": "\nkisi_bilgileri = {'Adı': 'Ekrem', 'Soyadı': 'Yıldırır', 'Yaşı': 40}\ndel kisi_bilgileri['Yaşı']\nprint(kisi_bilgileri)\n\n#del (parametre) anahtar sözcüğü, belirtilen anahtar adına \n#sahip öğeyi kaldırmak için kullanılmaktadır.\n#del ve pop arasındaki fark ise del bir anahtarı sadece siler.\n#fakat pop kullanarak bir anahtarı silip, o anahtarı ve değerini\n#bir başka değişkene atayabilirsiniz.\n#Örneğin: yasi=kisi_bilgileri.pop(\"Yaşı\")\n",
+                "clear() anahtar sözcüğü": "\nsozluk = {'black': 'siyah', 'green': 'yeşil', 'white': 'beyaz', }\nprint(sozluk)\nsozluk.clear()\nprint(sozluk)\n\n#clear() metodu sözlükteki tüm anahtarları ve değerleri temizler.\n"
+        },
+        "Bolum9.html#sözlükler-üzerinde-gezinme Sözlükler Üzerinde Gezinme": {
+                "get() fonksiyonu": "\nsozluk = {'ad': 'ali', 1: [5, 4]}\nprint(sozluk['ad'])\nprint(sozluk.get(1))\n\n#get() fonksiyonu, girilen anahtarın değerini döndürür.\n",
+                "Köşeli parantez içerisinde": "\nsozluk1 = {'sıfır': 0, 'bir': 1, 'iki': 2, 'üç': 3}\nprint(sozluk1)\n# 'bir' anahtarına karşılık gelen değeri buluyoruz.\nprint(sozluk1['bir'])\n# 'iki' anahtarına karşılık gelen değeri buluyoruz.\nprint(sozluk1['iki'])\n"
+        }
+}

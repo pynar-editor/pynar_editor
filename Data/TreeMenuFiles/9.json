@@ -1,0 +1,26 @@
+{
+        "Bolum8.html#turtle-kaplumbağa-ile-çalışma Turtle (kaplumbağa) ile Çalışma": {
+                "İleri yönde çizgi çizme": "\nimport turtle\nkalem = turtle.Turtle()\nkalem.forward(100)\nturtle.done()\n"
+        },
+        "Bolum8.html#temel-hareket-işlemleri Temel Hareket İşlemleri": {
+                "right ve forward fonksiyonları": "\nimport turtle\nkalem=turtle.Turtle()\nkalem.forward(100)\nkalem.right(90)\nkalem.forward(100)\nturtle.done()\n",
+                "right ve backward fonksiyonları": "\nimport turtle\nkalem=turtle.Turtle()\nkalem.backward(100)\nkalem.right(90)\nkalem.backward(100)\nturtle.done()\n",
+                "left ve forward fonksiyonları": "\nimport turtle\nkalem=turtle.Turtle()\nkalem.left(45)\nkalem.forward(50)\nturtle.done()\n",
+                "Açı kullanarak şekil çizme": "\nimport turtle\nkalem=turtle.Turtle()\nkalem.forward(50)\nkalem.right(120)\nkalem.forward(50)\nkalem.right(120)\nturtle.done()\n"
+        },
+        "Bolum8.html#işaretçi-ve-çizim-araçları İşaretçi ve Çizim Araçları": {
+                "pencolor, pensize ve color uygulaması": "\nimport turtle\nkalem=turtle.Turtle()\nkalem.pencolor('red')\nkalem.pensize(3)\nkalem.forward(100)\nkalem.left(90)\nkalem.color('#ACE515')\nkalem.pensize(8)\nkalem.forward(100)\nkalem.left(90)\nkalem.pencolor('yellow')\nkalem.pensize(6)\nkalem.forward(100)\nkalem.left(90)\nkalem.color('#2259C1')\nkalem.pensize(1)\nkalem.forward(100)\nkalem.left (90)\nturtle.done()\n",
+                "dot ile çizim uygulaması": "\nimport turtle\nkalem = turtle.Turtle()\nfor i in range(5):\n    kalem.dot()\n    kalem.forward(20)\nturtle.done()\n",
+                "dot ile çizgisiz şekil uygulaması": "\nimport turtle\n\nkalem = turtle.Turtle()\nkalem.up()\nfor i in range(5):\n    kalem.dot()\n    kalem.forward(20)\nturtle.done()\n",
+                "shape ve goto fonksiyonları 1": "\nimport turtle\n\nkalem = turtle.Turtle()\nkalem.shape('turtle')\nkalem.forward(100)\nkalem.penup()\nkalem.goto(0, 100)\nfor i in range(5):\n    kalem.dot()\n    kalem.forward(20)\nturtle.done()\n",
+                "shape ve goto fonksiyonları 2": "\nimport turtle\n\nkalem = turtle.Turtle()\nkalem.shape('turtle')\nfor i in range(4):\n    kalem.up()\n    kalem.forward(20)\n    kalem.dot()\n    kalem.down()\n    kalem.forward(20)\n    kalem.dot()\nturtle.done()\n"
+        },
+        "Bolum8.html#turtle-ile-geometrik-şekiller-çizme Turtle ile Geometrik Şekiller Çizme": {
+                "turtle ile kare çizme": "\nimport turtle\nkalem = turtle.Turtle()\nkalem.pencolor('red')\nkalem.pensize(3)\nfor i in range(4):\n    kalem.forward(100)\n    kalem.left(90)\nturtle.done()\n",
+                "turtle ile altıgen çizme": "\nimport turtle\nkalem = turtle.Turtle()\nkalem.pencolor('blue')\nkalem.pensize(3)\nfor i in range(6):\n    kalem.forward(100)\n    kalem.left(60)\nturtle.done()\n",
+                "İstenen kenar sayısında çokgen çizdirme": "\nimport turtle\nkalem = turtle.Turtle()\nkalem.pencolor('red')\nkalem.pensize(3)\nkenar_sayısı = int(\n    input(' çizmek istediğiniz çokgenin kenar sayısını giriniz'))\nfor i in range(kenar_sayısı):\n    kalem.forward(50)\n    kalem.left(360/kenar_sayısı)\nturtle.done()\n",
+                "circle fonksiyonu ile 3 farklı yarıçapta ve renkte çember çizdirme": "\nimport turtle\nkalem = turtle.Turtle()\nkalem.pencolor('orange')\nkalem.pensize(2)\nkalem.circle(20)\nkalem.pencolor('red')\nkalem.circle(30)\nkalem.pencolor('blue')\nkalem.circle(40)\nturtle.done()\n",
+                "İç içe döngüler ile desen çizdirme": "\nimport turtle\nkalem = turtle.Turtle()\nkalem.color('green')\nfor i in range(6):\n    for j in range(6):\n        kalem.forward(50)\n        kalem.left(60)  # iç döngü\n    kalem.left(60)  # dış döngü\nturtle.done()\n",
+                "Desen çizen fonksiyon uygulaması": "\nimport turtle\n\ndef desen_çiz(kenar_uzunluğu=50, iç_kenar=3, tur_sayısı=3):\n    if(tur_sayısı < 1 or iç_kenar < 3):\n        print('hatalı veri girdiniz')\n    else:\n        kalem = turtle.Turtle()\n    for i in range(tur_sayısı):\n        for j in range(iç_kenar):\n            kalem.forward(kenar_uzunluğu)\n            kalem.left(360/iç_kenar)\n        kalem.left(360/tur_sayısı)\n\n\ndesen_çiz()\ndesen_çiz(60, 4, 5)\ndesen_çiz(70, 6, 10)\nturtle.done()\n"
+        }
+}

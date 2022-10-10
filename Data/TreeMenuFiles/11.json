@@ -1,0 +1,15 @@
+{
+        "Bolum9.html#demet-tuple-oluşturma-ve-eleman-işlemleri Demet (tuple) Oluşturma ve Eleman İşlemleri": {
+                "Boş bir demet oluşturma": "\ndemet = ()\nprint(demet)\n",
+                "İndis içeren demet oluşturma": "\ndemet = ('Python', 'Java', 2020, 'JavaScript')\nprint(demet)\n",
+                "Tek elemanlı demet oluşturma": "\nmeyveler = ('erik',)\nprint(meyveler)\n"
+        },
+        "Bolum9.html#demetlerin-temel-metotları Demetlerin Temel Metotları": {
+                "index() metodu": "\n# Demet oluşturalım.\ndemet = ('lale', 'kardelen', 'zambak', 'papatya')\n# 'zambak' elemanının indeksini buluyoruz.\nprint(demet.index('zambak'))\n",
+                "count() metodu": "\ndemet = ('Python', 'Java', 'C#', 'Delphi', 'C++', 'Java', 'Java')\nprint(demet.count('Java'))\n"
+        },
+        "Bolum9.html#demetler-üzerinde-gezinme Demetler Üzerinde Gezinme": {
+                "for döngüsü": "\ndeneme = (1, 2, 3, 4, 5, 6, 7)\nfor eleman in deneme:\n    print(eleman)\n",
+                "sorted() metodu": "\ndemet = ('lale', 'kardelen', 'zambak', 'papatya')\nprint(sorted(demet))\n"
+        }
+}

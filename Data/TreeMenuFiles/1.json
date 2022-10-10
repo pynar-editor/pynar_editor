@@ -1,0 +1,21 @@
+{
+	"Bolum3.html#print-fonksiyonu print()": {
+		"Tek Tırnak ile kullanım": "\nprint('merhaba dünya')\n# metinler tek tırnak ile yazdırılabilir.\n",
+		"Çift tırnak ile kullanım": "\nprint(\"merhaba dünya\")\n# metinler çift tırnak ile yazdırılabilir.\n",
+		"Tırnaksız kullanım": "\nprint(5)\n# değişkenler veya sayısal değerler tırnaksız yazdırılır!\n",
+		"print() içinde alt satıra geçirme": "\nprint('Üç\\nTunç\\nTas')\n# \\n işareti bir alt satıra yazdırır.",
+		"print() içinde TAB işareti": "\nprint('Üç \\t Tunç \\t Tas')\n# \\t işareti TAB tuşu kadar boşluk basar.",
+		"print() içinde end parametresi": "\nprint('Üç',end=' ')\nprint('Tunç',end=' ')\nprint('Tas')\n# end=' ' ifadesiyle print işini bitirince alt satıra geçmez boşluk basar.",
+		"print() içinde sep parametresi": "\nprint('pazartesi','salı','çarşamba',sep='-')\n# sep='-' ifadesiyle print içindeki her öğe arasına tire(-) eklenerek basılır.",
+		"print() içinde format parametresi": "\nprint(\"Ali {} yaşında, kardeşi {} yaşındadır.\".format(12,9))\n# İlk {} ifadesine 12, ikinci {} ifadesine 9 yerleşir."
+	},
+	"Bolum3.html#input-fonksiyonu input()": {
+		"sade input() kullanımı": "\nprint('Adınız nedir?')\nad=input()\nprint('merhaba',ad)\n",
+		"input() içinde mesaj verme": "\nad=input('Adınız nedir?')\nprint('merhaba',ad)\n",
+		"input() ile sayısal bilgi alma": "\nx=int(input('Bir sayı gir'))\ny=int(input('Bir sayı daha gir'))\nprint('Toplam:' , x+y)\n"
+	},
+	"Bolum2.html#yorum-satırlarını-kullanma Yorum Satırları": {
+		"Tek satır yorum (#)": "\n#Burası yorum satırıdır.\nprint('Merhaba Dünya')\n",
+		"Çok satır yorum (''')": "\n'''Birden çok \nsatırlı yorum.'''\nprint('Merhaba Dünya')\n"
+	}
+}

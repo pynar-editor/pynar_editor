@@ -1,0 +1,46 @@
+{
+	"Bolum2.html#aritmetik-operatörler Aritmetik Operatörler" :{
+			"Toplama (+)" : "\ns1=5\ns2=3\nprint(s1+s2) # 8 yazar\n",
+			"Metin Toplama (+)" : "\nprint('Geli'+'bolu') # Gelibolu yazar\n",
+			"Çıkarma (-)" : "\ns1=5\ns2=3\nprint(s1-s2) # 2 yazar\n",
+			"Çarpma (*)" : "\ns1=5\ns2=3\nprint(s1*s2) # 15 yazar\n",
+			"Metin-Sayı Çarpma (*)" : "\nprint('Geli'*3) # GeliGeliGeli yazar\n",
+			"Bölme (/)" : "\ns1=5\ns2=3\nprint(s1/s2) # 1.6666666666666667 yazar\n",
+			"Tam Bölme (//)" : "\ns1=5\ns2=3\nprint(s1//s2) # 1 yazar\n",
+			"Kuvvet Alma (**)" : "\ns1=5\ns2=3\nprint(s1**s2) # 125 yazar\nprint(49**(0.5))# 7.0 yazar (üs 0-1 aralığında ise kök alır.)",
+			"Mod Alma(%)" : "\ns1=5\ns2=2\nprint(s1%s2) # 5'in 2'ye bölümünden kalan.\n# İPUCU: 2'ye bölümden kalan 0 ise sayı çift, 1 ise sayı tektir."
+			},
+	"Bolum2.html#ilişkisel-operatörler İlişkisel Operatörler" :{
+			"Eşittir (==)" : "\ns1=5\ns2=3\nprint(s1==s2) # Yanlış(False)\nprint('Emre'=='emre')# Yanlış, Küçük büyük harf duyarlılığına dikkat ediniz.\nprint('Emre'=='Emre')# Doğru(True).",
+			"Eşit değildir (!=)" : "\ns1=5\ns2=3\nprint(s1!=s2) # Doğru(True)\n",
+			"Büyüktür (>)" : "\ns1=5\ns2=3\nprint(s1>s2) # Doğru(True)\n",
+			"Küçüktür (<)" : "\ns1=5\ns2=3\nprint(s1<s2) # Yanlış(False)\n",
+			"Metinlerde Büyük-Küçük" : "\nprint('z'>'a') #Doğru(True)\n# Karakter dizileri, alfabetik olarak\n# sıralandığından sonra gelen ifade \n# daha büyük olarak değerlendirilir.\n",
+			"Büyük Eşit (>=)" : "\ns1=5\ns2=3\nprint(s1>=s2) # Doğru(True)\n",
+			"Küçük Eşit (<=)" : "\ns1=5\ns2=3\nprint(s1<=s2) # Yanlış(False)\n",
+			"is Operatörü" : "\ns1=5\ns2=3\nprint(s1 is s2) # '==' operatörü ile aynıdır.\n",
+			"is not Operatörü" : "\ns1=5\ns2=3\nprint(s1 is not s2) # '!=' operatörü ile aynıdır.\n",
+			"in Operatörü" : "\n# 'Bilişim' içinde 'Bil' var mı? Var bu yüzden True\nprint('Bil' in 'Bilişim') \n",
+			"not in Operatörü" : "\n# 'Bilişim' içinde 'Bil' yok mu? Var bu yüzden False\nprint('Bil' not in 'Bilişim') \n"
+			},
+	"Bolum2.html#atama-operatörleri Atama Operatörleri" :{
+			"Artırarak atama (+=)" : "\ns1=5\ns1+=3\nprint(s1)# s1'in değerini  3 arttır\n",
+			"Eksilterek atama (-=)" : "\ns1=5\ns1-=3\nprint(s1)# s1'in değerini 3 eksilt\n",
+			"Çarparak atama (*=)" : "\ns1=5\ns1*=3\nprint(s1)# s1'in değerinin 3 katını al\n",
+			"Bölerek atama (/=)" : "\ns1=5\ns1/=3\nprint(s1)# s1'in değerini 3'e böl\n",
+			"Kuvvet alarak atama (**=)" : "\ns1=5\ns1**=3\nprint(s1)# s1'in değerinin küpünü al\n",
+			"Tam sayı bölerek atama (//=)" : "\ns1=5\ns1//=3\nprint(s1)# s1'in değerini 3'e bölümünü tamsayı yap\n",
+			"Mod alarak atama (%=)" : "\ns1=5\ns1%=3\nprint(s1)# s1'in değerinin 3'e bölümünden kalanını al\n"
+	},
+	"Bolum2.html#mantıksal-operatörler Mantıksal Operatörleri" :{
+			"or(VEYA) operatörü (sayısal)" : "\ns1=5\nprint(s1<6 or s1>10)\n# s1 6'dan küçükmü VEYA s1 10 dan büyük mü? Doğru(True)\n",
+			"or(VEYA) operatörü (metin)" : "\nad='Elif'\nprint(ad=='Elif' or ad=='Emre')\n# ad Elif mi VEYA ad Emre mi? Doğru(True)\n",
+			"and(VE) operatörü (sayısal)" : "\ns1=5\nprint(s1<6 and s1>10)\n# s1 6'dan küçükmü VE s1 10 dan büyük mü?\n# s1 aynı anda 6 dan küçük ve 10 dan büyük olamaz! Yanlış(False)\n",
+			"and(VE) operatörü (metin)" : "\nad='Elif'\nprint(ad=='Elif' and ad=='Emre')\n# ad Elif mi VE ad Emre mi?\n# ad aynı anda Elif ve Emre olamaz! Yanlış(False)\n",
+			"not(DEĞİL) operatörü (sayısal)" : "\ns1=5\nprint(not(s1<6))\n# s1 6'dan küçük DEĞİLmi? s1=5 olduğu için s1<6 koşulu DOĞRU\n# fakat not(DEĞİL) ifadesi bunu YANLIŞ yapar.\n",
+			"not(DEĞİL) operatörü (metin)" : "\nad='Elif'\nprint(not(ad=='Elif'))\n# ad Elif olduğundan DOĞRU\n# fakat not(DEĞİL) ifadesi bunu YANLIŞ yapar.\n"
+	},
+	"Bolum2.html#operatörlerde-öncelik-sırası Operatörlerde Öncelik Sırası" :{
+			"Öncelik Kuralları":"\n# Parantez içindeki işlemler her zaman önceliklidir\n# Bölme ve çarpma, toplama ve çıkarmaya göre önceliklidir.\n# Aynı derecedeki operatörlerde işlem önceliği soldan sağa doğrudur.\n# İşlemlerde farklı öncelik belirtmek için en iyi yol parantez kullanmaktır.\nprint(6*5/(2+8))\n# 2+8=10 sonra 5/10=0.5 sonra 6*0.5=3\nprint(6*5/2+8)\n# 5/2=2.5 sonra 2.5*6=15 sonra 15+8=23"
+	}
+}

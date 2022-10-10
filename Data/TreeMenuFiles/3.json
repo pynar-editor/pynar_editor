@@ -1,0 +1,28 @@
+{
+	"Bolum2.html#sayısal-int-float-ve-complex-veri-tipleri Sayısal Tipler": {
+		"int": "\nr=2\nprint('Yarıçap:',r)\n",
+		"float": "\npi=3.14\nprint('PI Sayısı:',pi)\n",
+		"complex": "\nkarsayi=4+5j\nprint('Karmaşık sayı:',karsayi)\n"
+	},
+	"Bolum2.html#karakter-dizisi-string-veri-tipi Karakter Dizisi(String)": {
+		"Tanımlama": "\nisim=\"Mustafa\"\nprint('Adınız:',isim)\n"
+	},
+	"Bolum2.html#karakter-dizilerinde-string-dilimleme-işlemleri String Dilimleme": {
+		"Örnek 1": "\n#ifadenin ilk karakterini yazar.\nisim=\"Mustafa\"\nprint(isim[0])\n",
+		"Örnek 2": "\n#M=0,u=1,s=2,t=3,a=4,f=5,a=6\n#Dikkat! ikinci karakter dahil, beşinci hariç!\nisim=\"Mustafa\"\nprint(isim[2:5])\n",
+		"Örnek 3": "\n#M=0,u=1,s=2,t=3,a=4,f=5,a=6\n#3. karakterden sonuncu karaktere kadar yazar.\nisim=\"Mustafa\"\nprint(isim[3::])\n",
+		"Örnek 4": "\n#M=-7,u=-6,s=-5,t=-4,a=-3,f=-2,a=-1\n#karakter dizisinin en sondan ikinci karakterini yazar.\n#Ters indisler (-1)'den başlar!\nisim=\"Mustafa\"\nprint(isim[-2])\n",
+		"Örnek 5": "\n#M=0,u=1,s=2,t=3,a=4,f=5,a=6\n#indisi 0' dan 5'ye kadar olan (5 dahil değil) karakterleri yazar.\nisim=\"Mustafa\"\nprint(isim[:5])\n",
+		"Örnek 6": "\n#M=0,u=1,s=2,t=3,a=4,f=5,a=6\n#başlangıç indisinden sonra tüm karakterleri yazar.\nisim=\"Mustafa\"\nprint(isim[4:])\n",
+		"Örnek 7": "\n#M=0,u=1,s=2,t=3,a=4,f=5,a=6\n#0'dan 6'ya kadar 2'şer artarak 0,2,4. karakterleri yazar. \nisim=\"Mustafa\"\nprint(isim[0:6:2])\n"
+	},
+	"Bolum2.html#type-metodu-kullanımı Veri tipini Öğrenme": {
+		"type() Metodu": "\nd1=5 #tamsayı\nd2=10.556 #ondalıklı\nd3=\"1\" #string\nd4=4+5j #karmaşık\nprint('d1 veri tipi: ', type(d1))\nprint('d2 veri tipi: ', type(d2))\nprint('d3 veri tipi: ', type(d3))\nprint('d4 veri tipi: ', type(d4))\n"
+	},
+	"Bolum2.html#veri-tiplerini-dönüştürmek Veri tiplerini Dönüştürme": {
+		"Metin -> tamsayı": "\nm1=\"5\"\nm2=\"3\"\nprint(m1+m2) # 53 yazar(metin 5 ve metin 3'ü birleştirir).\nprint(int(m1)+int(m2)) #8 yazar (sayı 5 ve sayı 3'ü toplar)\n",
+		"Ondalıklı -> tamsayı": "\ns1=5.3\ns2=3.9\nprint(s1+s2) # 9.2 yazar\nprint(int(s1)+int(s2)) #8 yazar (tamsayıya dönüşürken ondalıklar silindi)\n",
+		"Tamsayı -> ondalıklı": "\ns1=5\ns2=3\nprint(s1+s2) # 8 yazar\nprint(float(s1)+float(s2)) #8.0 yazar (ondalığa dönüşürken ondalık kısım eklendi)\n",
+		"Tamsayı -> metin": "\ns1=5\ns2=3\nprint(s1+s2) # 8 yazar\nprint(str(s1)+str(s2)) #53 yazar(metin 5 ve metin 3'ü birleştirir).\n"
+	}
+}

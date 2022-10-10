@@ -1,0 +1,25 @@
+{
+        "Bolum11.html#sayıların-ileri-seviye-özellikleri Sayıların İleri Seviye Özellikleri": {
+                "Onluk tabandaki bir sayıyı ikilik tabana çevirme": "\nprint(bin(5))\n# 0b101\n\n\n# 0b ifadesi sayının ikilik tabanda olduğunu belirtmektedir.\n# 101 ifadesi ise sağdan itibaren “iki üzeri sıfır çarpı 1 +\n# iki üzeri bir çarpı 1 + iki üzeri iki çarpı 2\n# şeklinde tanımlanmaktadır.”\n# Bu işlemin sonucu (2^0*1) + (2^1*0) + (2^2*1) = 5\n# olarak hesaplanmaktadır.\n",
+                "Onluk tabandaki bir sayıyı onaltılık tabana çevirme": "\nprint(hex(18))\n# 0x12\n\n\n# 0x ifadesi sayının 16’lık sistemde olduğunu göstermektedir.\n# (16^0 * 2) + (16^1 * 2) = 2 + 16 = 18\n# olarak hesaplanır.\n"
+        },
+        "Bolum11.html#sayılar-üzerinde-uygulanabilen-fonksiyonlar Sayılar Üzerinde Uygulanabilen Fonksiyonlar": {
+                "abs() Fonksiyonu": "\nprint(abs(-10))\n# 10\n\nprint(abs(15))\n# 15\n\n# Fonksiyon tek parametre alır ve sayının mutlak değerini hesaplar.\n",
+                "round() Fonksiyonu": "\nprint(round(5.7))\n# 6\nprint(round(5.5))\n# 6\n\n# Fonksiyon bir sayıyı belirli kriterlere göre\n# yukarı veya aşağı yuvarlamak için kullanılır.\n",
+                "chr() Fonksiyonu": "\nprint(chr(100))\n# d\nprint(chr(65))\n# A\n\n# chr() fonksiyonu, kendisine parametre olarak verilen\n# bir tam sayının karakter olarak (ASCII) karşılığını verir.\n",
+                "max() Fonksiyonu": "\nprint(max(3, 5, 7, 8, 9))\n# 9\nliste = [3, 8, 2, 6, 15]\nprint(max(liste))\n# 15\n\n# max() fonksiyonu, bir dizi içindeki sayıların\n# en büyüğünü verir.\n",
+                "min() Fonksiyonu": "\nprint(min(4, 7, 1, 2, 9))\n# 1\nliste = [4, 7, 6, 9, 3]\nprint(min(liste))\n# 3\n\n# min() fonksiyonu, bir dizi içindeki sayıların\n# en küçüğünü verir.\n",
+                "pow() Fonksiyonu": "\nprint(pow(9,0.5))\n# 3\nprint(pow(3,4))\n# 3\n\n# Bir sayının üssünü almak için kullanılır.\n# İki adet parametre alır,\n# birinci parametre üssü alınacak sayıyı,\n# ikinci parametre ise kuvvetini ifade eder.\n",
+                "sum() Fonksiyonu": "\nprint(sum([5, 3, 8, 6]))\n# 22\n\n# sum() fonksiyonu, dizi içerisindeki değerlerin\n# toplamını bulmamızı sağlar.\n# sum() fonksiyonuna girilen değerler\n# liste ya da tupple türünden olması gerekmektedir.\n"
+        },
+        "Bolum11.html#ileri-seviye-karakter-dizileri-string İleri Seviye Karakter Dizileri özel metotları(String)": {
+                "replace() Fonksiyonu": "\na = 'python'\n\nprint(a.replace('p', 'P'))\n# Python\n\n# replace() fonksiyonu,\n# bir karakter dizisi içindeki karakterleri\n# başka karakterlerle değiştirmeyi sağlar.\n# replace() fonksiyonu iki adet parametre alır.\n# Birinci parametre değişecek karakter ya da karakterleri,\n# ikinci parametre ise yerine gelecek karakter\n# ya da karakterleri ifade eder.\n",
+                "split() Fonksiyonu": "\na = 'Milli Eğitim Bakanlığı'\n\nprint(a.split())\n# ['Milli', 'Eğitim', 'Bakanlığı']\n\n# split() fonksiyonu bir karakter dizisine\n# verilen kurala göre bölme işlemi yapar.\n# Eğer split() fonksiyonuna parametre verilmezse\n# boşluk karakterine göre yapar.\n",
+                "upper() ve lower() fonksiyonları": "\nprint('Merhaba dünya'.upper())\n# MERHABA DÜNYA\nprint('Merhaba DÜNYA'.lower())\n# merhaba dünya\n\n# Bu fonksiyonlar karakter dizilerini\n# büyük veya küçük harfe çevirme işlemini yapar.\n",
+                "join() fonksiyonu": "\nprint('-'.join(['Merhaba', 'Dünya']))\n# Merhaba-Dünya\n#split() fonksiyonunun tam tersi işlem yapar.\n# Liste içerisinde bulunan karakter dizilerini\n# verilen kurala göre birleştirmek için kullanılır.\n",
+                "capitalize fonksiyonu": "\na = 'python programlama dili'\n\nprint(a.capitalize())\n# Python programlama dili\n# capitalize() fonksiyonu karakter dizilerinin\n# sadece ilk harfini büyük yapmak için kullanılır.\n",
+                "find() fonksiyonu": "\na = 'armağan'\n\nprint(a.find('a'))\n# 0\n# find() fonksiyonu karakter dizisi içerisindeki,\n# bir karakterin konumunu sorgular.\n# Bulduğu ilk değeri döndürür.\n",
+                "rfind() fonksiyonu": "\na = 'armağan'\n\nprint(a.rfind('a'))\n# 5\n# find() fonksiyonun benzeri işlemi yapar\n# ancak arama işlemini\n# sağ taraftan başlayarak yapar.\n",
+                "isdigit() fonksiyonu": "\nmetin = '12345'\nprint(metin.isdigit())\n# True\nmetin = 'asd123'\nprint(metin.isdigit())\n# False\n\n# isdigit() fonksiyonu,\n# karaktere dizisinin bir sayısal değer olup olmadığını kontrol eder.\n# Eğer karakter dizisindeki tüm karakterler rakamdan oluşuyorsa True,\n# değilse False değeri döndürür.\n"
+        }
+}

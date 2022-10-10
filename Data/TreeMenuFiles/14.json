@@ -1,0 +1,12 @@
+{
+        "Bolum12.html#dosya-okuma-yazma-işlemleri Dosya Okuma Yazma İşlemleri": {
+                "Dosya Yazma" : "\nwith open (\"deneme.txt\",\"w\") as dosya:\n    dosya.write (\"dosya silinip sıfırdan yazıldı \")\n\n#Dosya Yazma kipinde açıldığında\n#Eğer dosya varsa içi silinir.\n#Yoksa boş bir dosya oluşturulur.\n",
+                "Dosya Okuma" : "\ndosya = open (\"deneme.txt\",\"r\")\nbelge=dosya.read()\nprint (belge)\ndosya.close()\n\n\n#Olmayan dosya okuma kipinde\n#açılmaya çalışırsa hata verecektir.\n",
+                "Okuma ve Yazma" : "\ndosya = open(\"deneme.txt\",\"r+\")\nbelge=dosya.read()\nprint(belge)\ndosya.write(\"\\n bu metin en sona eklendi\")\ndosya.close()\n\n\n#yoksa hata üretilir.\n#var ise dosya oluşturulmaz\n#dosyanın istenen bölümlerine eklemeler yapılır.\n#eski bilgiler silinmez\n",
+                "Genişletme kipi" : "\ndosya = open (\"deneme.txt\",\"a\")\ndosya.write (\"bu metin dosyanın sonuna yazıldı\")\ndosya.close()\n\n\n#yoksa dosya oluşturulur.\n#var ise dosyanın sonuna ekleme yapılır.\n#eski bilgiler silinmez.\n#Sadece okuma işlemi yapamazsınız.\n"
+        },
+        "Bolum12.html#dosyaların-özel-metotları Dosyaların Özel Metotları":{
+                "Örnek 1" : "\ndosya=open(\"deneme.txt\",\"r\")\n# dosyamızı for döngüsü ile okuyoruz\nfor veri in dosya:\n    print(veri)\n#imlecin nerede olduğunu ekrana yazdırıyoruz\nprint(dosya.tell())\n# imleci 10. bayta taşıyoruz\ndosya.seek(10)\n#imlecin bulunduğu yerden 20 bayt veri okuyoruz\nprint(dosya.read(20))\n#imlecin nerede olduğunu görüntülüyoruz\nprint(dosya.tell())\ndosya.close()\n",
+                "Örnek 2" : "\ndosya=open(\"deneme.txt\",\"r+\")\ndosya.seek(20)\n#dosyada 20. bayta gittik\ndosya.write(\"20. bayttan itibaren yazdık\")\n#20. bayttan sonraki verilerin üzerine yazdık\nprint(dosya.tell())\n# imlecin 47. bayta geldiğini öğreneceğiz\n#burda dosyadan okuma yaparsak 47. bayttan sonrası okunacak\nprint(dosya.read())\n# listemizdeki verileri en sona yazıyoruz\nliste=[\"1\",\"2\",\"3\",\"4\"]\n#listedeki veriler string olmazsa hata alırız.\ndosya.writelines (liste)\n"
+        }
+    }

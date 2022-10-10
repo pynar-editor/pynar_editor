@@ -1,0 +1,23 @@
+{
+        "Bolum4.html#koşullu-ve-mantiksal-ifadeler Mantıksal İfadeler ve Bağlaçlar": {
+                "True": "\nkullaniciAdi = 'Admin'\nkullaniciParola = '123456'\nprint(kullaniciAdi == 'Admin' and kullaniciParola == '123456')\n#True\n",
+                "False": "\nkullaniciAdi ='User'\nkullaniciParola = '612345'\nprint(kullaniciAdi == 'Admin' and kullaniciParola == '123456')\n#False\n"
+        },
+        "Bolum4.html#python-blok-yapısı Blok Yapısı": {
+                "Girinti": "\nprint('Blok yapısı')\n    print('Girinti')\n#Girinti hatası oluşur.\n"
+        },
+        "Bolum4.html#if-yapısı if Yapısı": {
+                "Tek koşullu": "\nyasi = 20\nif (yasi >= 18):\n    print('Oy kullanabilirsiniz.')\nprint('Program bitti.')\n#Oy kullanabilirsiniz.\n",
+                "Birden fazla koşullu": "\nyasi = 17\nadi = 'Tahsin'\nif (yasi >= 18):\n    print('1. Şart sağlandı.')\nif (adi == 'Tahsin'):\n    print('2. Şart sağlandı')\nprint('Normal program akışı girinti yok.')\n# 2. Şart sağlandı\n# Normal program akışı girinti yok.\n"
+        },
+        "Bolum4.html#iç-içe-koşul-ifadeleri İç İçe Koşul": {
+                "Örnek 1": "\nkullaniciAdi = 'Admin'\nkullaniciParola = '123456'\nif (kullaniciAdi == 'Admin'):\n    print('Kullanıcı adı doğru')\n    if (kullaniciParola == '123456'):\n        print('Giriş başarılı.')\n#Kullanıcı adı doğru\n#Giriş başarılı.\n"
+        },
+        "Bolum4.html#if-else-yapısı if-else Yapısı": {
+                "Örnek 1": "\nyasi = int(input('Lütfen yaşınızı giriniz: '))\n \nyabanciDil = True\nif (yasi >= 18 and yasi < 35 and yabanciDil == True):\n    # Aşağıdaki kodun çalışması için 3 şartın da sağlanması gerekir.\n    print('Mülakata katılabilirsiniz.')\nelse:\n    print('Şartlarınız tutmuyor.')\n",
+                "Örnek 2": "\nsayi1 = int(input('Lütfen bir sayı giriniz: '))\nif (sayi1 % 2 == 0):\n    print('Girdiğiniz sayı çifttir.')\nelse:\n    print('Girdiğiniz sayı tektir: ')\n# Lütfen bir sayı giriniz: 12\n# Girdiğiniz sayı çifttir.\n"
+        },
+        "Bolum4.html#if-elif-else-yapısı if-elif-else Yapısı": {
+                "Örnek 1": "\nsinavPuani=int(input('Puanınız giriniz (0-100): '))\nif sinavPuani >= 85:\n    print('Pek iyi')\nelif sinavPuani >= 70:\n    print('İyi')\nelif sinavPuani >= 55:\n    print('Orta')\nelif sinavPuani >= 45:\n    print('geçer')\nelse:\n    print('Kaldı')\n"
+        }
+}
