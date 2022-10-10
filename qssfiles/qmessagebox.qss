@@ -1,0 +1,53 @@
+QMessageBox[state="normal"] {
+  background-color: #e8f2c6;
+  border-left:1px solid #acd33b;
+  border-right:1px solid #acd33b;
+  border-bottom:1px solid #acd33b;
+  border-top: 8px solid #00ccff;
+}
+
+QMessageBox[state="critical"] {
+  background-color: #e8f2c6;
+  border-left:1px solid #acd33b;
+  border-right:1px solid #acd33b;
+  border-bottom:1px solid #acd33b;
+  border-top: 8px solid #ff0000;
+
+}
+
+QMessageBox[state="question"]{
+  background-color: #e8f2c6;
+  border-left:1px solid #acd33b;
+  border-right:1px solid #acd33b;
+  border-bottom:1px solid #acd33b;
+  border-top: 8px solid #ffcc00;
+}
+
+QLabel{
+    min-width:460px;
+    max-width:460px;
+    width:460px;
+    border-top:1px solid #e8f2c6;
+    border-left:1px solid #e8f2c6;
+    border-right:1px solid #e8f2c6;
+    border-bottom:1px solid #acd33b;
+    color:#51557E;
+    background-color: #e8f2c6;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+}
+QPushButton{
+    background-color: #00ccff;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 5px 18px 5px 18px;
+    margin: 4px 2px;
+}
+QPushButton:hover
+{
+    background: #58c1e7;
+}
+

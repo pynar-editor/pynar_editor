@@ -1,0 +1,56 @@
+QTabWidget::pane {
+    background: #394b58;
+    border-color: #6b899f;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    color: #6b899f;
+}
+QTabBar::tab{
+    height: 25px;
+    width: 100px;
+}
+
+QTabWidget::tab-bar:top {
+    top: 1px;
+}
+
+QTabWidget::tab-bar:bottom {
+    bottom: 1px;
+}
+
+QTabWidget::tab-bar:left {
+    right: 1px;
+}
+
+QTabWidget::tab-bar:right {
+    left: 1px;
+}
+
+QTabBar::tab:selected {
+    color: #6b899f;
+    border-color: #6b899f;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    color: #6b899f;
+    background: #394b58;
+}
+
+QTabBar::tab:!selected {
+    background: transparent;
+    color: #6b899f;
+}
+
+QTabBar::tab:!selected:hover {
+    background: #6b899f;
+    color: black;
+}
+
+QTabBar::tab:top:last, QTabBar::tab:bottom:last,
+QTabBar::tab:top:only-one, QTabBar::tab:bottom:only-one {
+    margin-right: 2;
+}
+
+QTabBar::tab:left:last, QTabBar::tab:right:last,
+QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
+    margin-bottom: 0;
+}
